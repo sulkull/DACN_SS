@@ -1,0 +1,259 @@
+.fomo-notification.fomo-notification-animation-vertical {
+  -webkit-animation-fill-mode:forwards;
+  -o-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+}
+
+.fomo-notification.fomo-notification-position-bottom-left {
+  -webkit-animation-duration:1s;
+  -o-animation-duration:1s;
+  animation-duration:20s;
+}
+
+.fomo-notification.fomo-notification-position-bottom-left.fomo-notification-animation-vertical.fomo-notification-hide {
+  -webkit-animation-name:fomoSlideOutVerticalBottom;
+  -o-animation-name:fomoSlideOutVerticalBottom;
+  animation-name:fomoSlideOutVerticalBottom;
+}
+
+@media only screen and (max-width:479px) {
+  .fomo-notification.fomo-notification-mobile-position-bottom {
+    width:calc(100% - 20px);
+    left:10px !important;
+  }
+}
+
+@media only screen and (max-width:479px) {
+  .fomo-notification.fomo-notification-mobile-position-bottom {
+    bottom:20px;
+    top:auto;
+  }
+  .fomo-notification.fomo-notification-mobile-position-bottom.fomo-notification-animation-vertical.fomo-notification-hide {
+    -webkit-transform:translateX(0) translateY(0);
+    -o-transform:translateX(0) translateY(0);
+    transform:translateX(0) translateY(0);
+    -webkit-animation-name:fomoSlideOutVerticalBottom;
+    -o-animation-name:fomoSlideOutVerticalBottom;
+    animation-name:fomoSlideOutVerticalBottom;
+  }
+}
+
+.fomo-notification {
+  display:none;
+  width:320px;
+  border:0;
+  bottom:150px;
+  left:20px;
+  position:fixed;
+  text-align:left;
+  z-index:99999;
+  font-family:National,arial,sans-serif;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+  font-weight:400;
+  border-radius:6px;
+  -webkit-box-shadow:2px 2px 10px 2px hsla(0,0%,60%,.2);
+  box-shadow:2px 2px 10px 2px hsla(0,0%,60%,.2);
+  background-color:#fff;
+}
+
+.fomo-notification:hover #fomo-close {
+  opacity:.8;
+  visibility:visible;
+}
+
+.fomo-notification *,
+.fomo-notification:after,
+.fomo-notification:before {
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+.fomo-notification .fomo-notification-container {
+  display:table !important;
+  display:-webkit-box !important;
+  display:-ms-flexbox !important;
+  display:flex !important;
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  align-items:center;
+  height:80px;
+}
+
+.fomo-notification .fomo-notification-content-wrapper {
+  margin:0;
+  height:100%;
+  color:gray;
+  padding-left:20px;
+  padding-right:20px;
+  border-radius:0 6px 6px 0;
+  -webkit-box-flex:1;
+  -ms-flex:1;
+  flex:1;
+  display:table-cell !important;
+  display:-webkit-box !important;
+  display:-ms-flexbox !important;
+  display:flex !important;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  -webkit-box-pack:center;
+  -ms-flex-pack:center;
+  justify-content:center;
+  vertical-align:middle;
+}
+
+.fomo-notification .fomo-notification-content-wrapper .fomo-notification-content {
+  font-family:inherit !important;
+  margin:0 !important;
+  padding:0 !important;
+  font-size:16px;
+  line-height:16px;
+}
+
+.fomo-notification .fomo-notification-content-wrapper small {
+  margin-top:3px !important;
+  display:block !important;
+  font-size:10px !important;
+  opacity:.5;
+}
+
+.fomo-notification .fomo-notification-content-wrapper small {
+  margin-right:6px;
+  vertical-align:middle;
+}
+
+.fomo-notification .fomo-notification-image-wrapper {
+  max-height:80px;
+  width:80px;
+  overflow:hidden;
+  display:table-cell !important;
+  vertical-align:middle;
+  border-radius:6px 0 0 6px;
+}
+
+.fomo-notification .fomo-notification-image-wrapper img {
+  max-width:100% !important;
+  max-height:100% !important;
+  width:100%;
+  height:auto;
+  vertical-align:middle;
+  display:block;
+  margin:0 auto;
+}
+
+.fomo-notification #fomo-close {
+  position:absolute;
+  top:8px;
+  right:8px;
+  height:12px;
+  width:12px;
+  cursor:pointer;
+  opacity:0;
+  visibility:hidden;
+  -webkit-transition:.2s ease-in-out;
+  -o-transition:.2s ease-in-out;
+  transition:.2s ease-in-out;
+  -webkit-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  transform:rotate(45deg);
+}
+
+@media only screen and (max-width:479px) {
+  .fomo-notification #fomo-close {
+    opacity:.8;
+    visibility:visible;
+  }
+}
+
+.fomo-notification #fomo-close:before {
+  content:"";
+  display:block;
+  width:100%;
+  height:2px;
+  background-color:gray;
+  position:absolute;
+  left:0;
+  top:5px;
+}
+
+.fomo-notification #fomo-close:after {
+  content:"";
+  display:block;
+  height:100%;
+  width:2px;
+  background-color:gray;
+  position:absolute;
+  left:5px;
+  top:0;
+}
+
+.fomo-notification-font-sm .fomo-notification-content-wrapper .fomo-notification-content {
+  font-size:12px;
+  line-height:14px;
+}
+
+.fomo-notification-v2-curved {
+  border-radius:40px;
+}
+
+.fomo-notification-v2-curved .fomo-notification-image-wrapper {
+  border-radius:40px 0 0 40px;
+  padding:4px;
+}
+
+.fomo-notification-v2-curved .fomo-notification-image-wrapper img {
+  border-radius:50%;
+}
+
+.fomo-notification-v2-curved:not(.fomo-notification-no-image) .fomo-notification-content-wrapper {
+  padding:0 20px;
+}
+
+.fomo-notification-v2-curved .fomo-notification-content-wrapper {
+  border-radius:0 40px 40px 0;
+}
+
+.fomo-notification-v2-curved #fomo-close {
+  right:12px;
+  top:calc(50% - 1px);
+  -webkit-transform:rotate(45deg) translateY(-50%);
+  -o-transform:rotate(45deg) translateY(-50%);
+  transform:rotate(45deg) translateY(-50%);
+}
+
+.fomo-notification-v2-curved .fomo-notification-image-wrapper {
+  padding:4px;
+}
+
+.fomo-notification .fomo-notification-image-wrapper {
+  padding:10px !important;
+}
+
+.fomo-notification .fomo-notification-content-wrapper {
+  padding-left:5px !important;
+  padding-right:10px !important;
+}
+
+.fomo-notification .fomo-notification-content-wrapper .fomo-notification-content {
+  font-size:12px !important;
+  line-height:1.45 !important;
+  color:black;
+  font-family:'Montserrat',sans-serif !important;
+  font-weight:600;
+}
+
+.fomo-notification .fomo-notification-content-wrapper small {
+  font-size:11px !important;
+  font-weight:400;
+}
+
+.fomo-notification .fomo-notification-container {
+  height:auto;
+  padding:6px;
+}
+
+.fomo-notification {
+  border-radius:50px !important;
+}
