@@ -26,7 +26,7 @@ def index(request):
             "LoaiSanPhams": LoaiSanPham.objects.all(),
             "TinTucs": TinTuc.objects.all().order_by('-id')[:3],
     }
-    return render(request, 'simso/home.html', Data)
+    return render(request, 'simso/index.html', Data)
 
 def sanpham(request, id):
     # Lấy dữ liệu từ database

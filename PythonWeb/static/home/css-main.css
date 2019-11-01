@@ -61,11 +61,10 @@
             padding: 16px
         }
         
-        body {
-            &.in-transition {
+        body .in-transition {
                 transition: transform 900ms ease
-            }
-        }
+                }
+
         
         td,
         th {
@@ -465,7 +464,7 @@
         [class^="iconmobile-"],
         [class*="iconmobile-"],
         .spritestlvn {
-            background-image: url('images/spritestlvn.png');
+            background-image: url('img/spritestlvn.png');
             background-repeat: no-repeat;
             display: inline-block;
             height: 30px;
@@ -856,7 +855,7 @@
             font-weight: bold;
             text-transform: uppercase;
             text-align: center;
-            background-image: url("images/menu_sp.gif");
+            background-image: url("img/menu_sp.gif");
             background-repeat: no-repeat
         }
         
@@ -1592,7 +1591,7 @@
         }
         
         .phongthuy_wp form {
-            background: url(images/form-phongthuy.png);
+            background: url(img/form-phongthuy.png);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 100% 100%;
@@ -2084,7 +2083,7 @@
             height: 36px;
             position: absolute;
             top: 2px;
-            background: url('images/phone0.png') no-repeat top;
+            background: url('img/phone0.png') no-repeat top;
             -webkit-animation: Rotate 1300ms linear 1300ms 5;
             animation: Rotate 1300ms linear 1300ms 5;
             animation-iteration-count: infinite;
@@ -2235,7 +2234,7 @@
             left: 6px;
             width: 25px;
             height: 25px;
-            background: url(images/phone0.png) no-repeat top
+            background: url(img/phone0.png) no-repeat top
         }
         
         .hotline-right a:hover,
