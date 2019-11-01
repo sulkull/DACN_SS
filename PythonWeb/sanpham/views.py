@@ -26,7 +26,7 @@ def index(request):
             "LoaiSanPhams": LoaiSanPham.objects.all(),
             "TinTucs": TinTuc.objects.all().order_by('-id')[:3],
     }
-    return render(request, 'pages/home.html', Data)
+    return render(request, 'simso/home.html', Data)
 
 def sanpham(request, id):
     # Lấy dữ liệu từ database
@@ -35,7 +35,7 @@ def sanpham(request, id):
     Data = {'sanpham': sanpham,
             "LoaiSanPhams": LoaiSanPham.objects.all(),
             }
-    return render(request, 'pages/sanpham.html', Data)
+    return render(request, 'simso/sanpham.html', Data)
 
 def sanphamtheoloai(request, id):
     #Lấy dữ liệu từ database
@@ -58,8 +58,8 @@ def sanphamtheoloai(request, id):
             "SanPhamMois": SanPham.objects.order_by('-NgayNhap')[:10],
             "TinTucs": TinTuc.objects.all().order_by('-id')[:3],
             }
-    return render(request, 'pages/sanphamtheoloai.html', Data)
+    return render(request, 'simso/sanphamtheoloai.html', Data)
 
 def error(request):
-    return render(request, 'pages/error.html')
+    return render(request, 'simso/error.html')
 

@@ -43,7 +43,7 @@ def ketquatimkiem(request):
             "LoaiSanPhams": LoaiSanPham.objects.all(),
             "Max": maxprice,
             }
-    return render(request, 'pages/ketquatimkiem.html', Data)
+    return render(request, 'simso/ketquatimkiem.html', Data)
 
 
 def ketquatimkiemtintuc(request):
@@ -74,5 +74,5 @@ def ketquatimkiemtintuc(request):
     Data = {"TinTucs": TinTucs,
             "LoaiSanPhams": LoaiSanPham.objects.all(),
             }
-    return render(request, 'pages/news.html', Data)
+    return render(request, 'simso/news.html', Data)
 

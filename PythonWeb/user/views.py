@@ -23,7 +23,7 @@ def dangky(request):
             request.session['user_id'] = form.getiduser().id
             return redirect('user:xacthuc')
 
-    return render(request, 'pages/dangky.html', {'form': form, "LoaiSanPhams": LoaiSanPham.objects.all()})
+    return render(request, 'simso/dangky.html', {'form': form, "LoaiSanPhams": LoaiSanPham.objects.all()})
 
 
 def verify(request):
@@ -45,7 +45,7 @@ def verify(request):
         else:
             current_site = get_current_site(request)
             mail_subject = 'Kích hoạt tài khoản của bạn.'
-            message = render_to_string('pages/activeemail.html', {
+            message = render_to_string('simso/activeemail.html', {
                 'user': user,
                 'domain': current_site.domain,
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
@@ -56,9 +56,9 @@ def verify(request):
                 mail_subject, message, to=[to_email]
             )
             email.send()
-            return render(request, 'pages/success.html', {"LoaiSanPhams": LoaiSanPham.objects.all()})
+            return render(request, 'simso/success.html', {"LoaiSanPhams": LoaiSanPham.objects.all()})
 
-    return render(request, 'pages/verify.html', {"LoaiSanPhams": LoaiSanPham.objects.all()})
+    return render(request, 'simso/verify.html', {"LoaiSanPhams": LoaiSanPham.objects.all()})
 
 
 def checkcode(request):
@@ -79,7 +79,7 @@ def checkcode(request):
             return redirect('sanpham:home')
         else:
             error = "Mã xác thực không đúng!!!"
-    return render(request, 'pages/confirm.html', {"LoaiSanPhams": LoaiSanPham.objects.all(), "Error": error})
+    return render(request, 'simso/confirm.html', {"LoaiSanPhams": LoaiSanPham.objects.all(), "Error": error})
 
 def activate(request, uidb64, token):
     try:
@@ -93,7 +93,7 @@ def activate(request, uidb64, token):
         login(request, user)
         return redirect('sanpham:home')
     else:
-        return render(request, 'pages/error.html', {"LoaiSanPhams": LoaiSanPham.objects.all()})
+        return render(request, 'simso/error.html', {"LoaiSanPhams": LoaiSanPham.objects.all()})
 
 
 def thongtintaikhoan(request):
@@ -148,7 +148,7 @@ def thongtintaikhoan(request):
     Data = {"User": user,
             "LoaiSanPhams": LoaiSanPham.objects.all(),
             "form": form}
-    return render(request, 'pages/thongtintaikhoan.html', Data)
+    return render(request, 'simso/thongtintaikhoan.html', Data)
 
 
 def doimatkhau(request):
@@ -166,4 +166,4 @@ def doimatkhau(request):
 
     Data = {"LoaiSanPhams": LoaiSanPham.objects.all(),
             "form": form}
-    return render(request, 'pages/doimatkhau.html', Data)
+    return render(request, 'simso/doimatkhau.html', Data)

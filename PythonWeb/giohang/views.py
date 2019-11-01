@@ -38,7 +38,7 @@ def cart_home(request):
     Data = {"LoaiSanPhams": LoaiSanPham.objects.all(),
             "GioHangs": cart_obj,
             "CTGHs": ctgh_obj}
-    return render(request, 'pages/cart.html', Data)
+    return render(request, 'simso/cart.html', Data)
 
 
 #Cập nhật giỏ hàng
@@ -123,7 +123,7 @@ def cart_updatesl(request):
 #Giỏ hàng trống
 def cart_empty(request):
     Data = {"LoaiSanPhams": LoaiSanPham.objects.all(),}
-    return render(request, 'pages/giohangtrong.html', Data)
+    return render(request, 'simso/giohangtrong.html', Data)
 
 #Đặt hàng
 def checkout_home(request):
@@ -155,7 +155,7 @@ def checkout_home(request):
             "User": user,
             "Error": error,
             }
-    return render(request, 'pages/checkout.html', Data)
+    return render(request, 'simso/checkout.html', Data)
 
 #Đặt hàng thành công
 def thanhcong(request):
@@ -177,7 +177,7 @@ def thanhcong(request):
 
     #Gửi thông tin hóa đơn cho người dùng và admin
     mail_subject = '[CichlibShop] Thông tin hóa đơn.'
-    message = render_to_string('pages/thongtinhoadon.html', {
+    message = render_to_string('simso/thongtinhoadon.html', {
         'user': user,
         'Ctghs': ctgh,
         'Cart_obj': cart_obj,
@@ -193,7 +193,7 @@ def thanhcong(request):
 
 
     mail_subject_admin = 'Bạn có một đơn đặt hàng mới.'
-    message_admin = render_to_string('pages/thongtinhoadonadmin.html', {
+    message_admin = render_to_string('simso/thongtinhoadonadmin.html', {
         'User': user,
         'Ctghs': ctgh,
         'Cart_obj': cart_obj,
@@ -216,4 +216,4 @@ def thanhcong(request):
     del request.session['cart_id']
 
     Data = {"LoaiSanPhams": LoaiSanPham.objects.all(),}
-    return render(request, 'pages/thanhcong.html', Data)
+    return render(request, 'simso/thanhcong.html', Data)

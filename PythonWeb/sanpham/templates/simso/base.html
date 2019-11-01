@@ -1,0 +1,18 @@
+{% include 'header.html' %}
+{% load static %}
+
+<div id="main">
+        {% block index %}
+
+        {% endblock %}
+
+    <nav>
+        {% include 'cot-trai.html' %}
+    </nav>
+
+    <aside>
+	    {% include 'cot-phai.html' %}
+    </aside>
+
+</div>
+{% include 'footer.html' %}

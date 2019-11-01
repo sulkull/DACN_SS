@@ -22,7 +22,7 @@ def home(request):
     Data = {"TinTucs": TinTucs,
             "LoaiSanPhams": LoaiSanPham.objects.all(),
             }
-    return render(request, 'pages/news.html', Data)
+    return render(request, 'simso/news.html', Data)
 
 def tintuc(request, id):
     # Lấy dữ liệu từ database
@@ -32,7 +32,7 @@ def tintuc(request, id):
             "TinTucKhacs": TinTuc.objects.all().order_by('-id').exclude(id=id)[:10],
             "LoaiSanPhams": LoaiSanPham.objects.all(),
             }
-    return render(request, 'pages/tintuc.html', Data)
+    return render(request, 'simso/tintuc.html', Data)
 
 
 

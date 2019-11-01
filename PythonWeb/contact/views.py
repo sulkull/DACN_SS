@@ -22,7 +22,7 @@ def home(request):
         lienhe_obj.save()
 
         mail_subject_admin = 'Bạn có một tin nhắn mới.'
-        message_admin = render_to_string('pages/chitiettinnhan.html', {
+        message_admin = render_to_string('simso/chitiettinnhan.html', {
             'HoTen': hoten,
             'Email': email,
             'SDT': sdt,
@@ -36,6 +36,6 @@ def home(request):
         email_admin.mixed_subtype = 'related'
         email_admin.send()
 
-        return render(request, 'pages/guitinnhanthanhcong.html', Data)
+        return render(request, 'simso/guitinnhanthanhcong.html', Data)
 
-    return render(request, 'pages/contact.html', Data)
+    return render(request, 'simso/contact.html', Data)
