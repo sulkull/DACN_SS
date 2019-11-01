@@ -1,0 +1,19 @@
+<div class="row row_disable">
+    <h3 class="single_title" style="float:left;">Tin tức</h3>
+    <a class="single_title" href="{% url 'tintuc:news' %}" style="float:right; color:#007bff;">Xem tất cả</a>
+</div>
+<div class="row">
+    {% for tintuc in TinTucs %}
+        <div class="col-lg-4 col-sm-6">
+            <a href="{% url 'tintuc:tintuc' tintuc.id %}">
+                <div class="from_blog_item">
+                    <img class="img-fluid" src="{{tintuc.CoverImage.url}}" alt="{{tintuc.Title}}" style="height:300px; width:270px;">
+                    <div class="f_blog_text">
+                        <h6>{{tintuc.Title|slice:':220'}}</h6>
+                        <p>{{tintuc.Date}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    {% endfor %}
+</div>

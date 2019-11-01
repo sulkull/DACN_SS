@@ -1,0 +1,8 @@
+<form method="post" action="{% url 'giohang:update' %}" class="form">
+    {% csrf_token %}
+    <input type="hidden" name="product_id" value="{{sanpham.id}}" />
+    <input type="hidden" name="current_url" value="http://{{request.get_host}}{{request.get_full_path}}" />
+    <button type="submit" class="add_cart_btn" id="add_cart_{{sanpham.id}}">
+        Thêm vào giỏ hàng
+    </button>
+</form>

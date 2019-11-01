@@ -1,0 +1,180 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block title %}
+Sản phẩm theo loại
+{% endblock %}
+
+{% block cssblock %}
+    <!-- Icon css link -->
+    <link href="{% static 'home/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'home/vendors/line-icon/css/simple-line-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'home/vendors/elegant-icon/style.css' %}" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="{% static 'home/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Rev slider css -->
+    <link href="{% static 'home/vendors/revolution/css/settings.css' %}" rel="stylesheet">
+    <link href="{% static 'home/vendors/revolution/css/layers.css' %}" rel="stylesheet">
+    <link href="{% static 'home/vendors/revolution/css/navigation.css' %}" rel="stylesheet">
+
+    <!-- Extra plugin css -->
+    <link href="{% static 'home/vendors/owl-carousel/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'home/vendors/bootstrap-selector/css/bootstrap-select.min.css' %}" rel="stylesheet">
+    <link href="{% static 'home/vendors/vertical-slider/css/jQuery.verticalCarousel.css' %}" rel="stylesheet">
+
+    <link href="{% static 'home/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'home/css/responsive.css' %}" rel="stylesheet">
+    <link href="{% static 'home/css/PagedList.css' %}" rel="stylesheet" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .l_p_info {
+            display: none;
+        }
+        .l_product_item:hover .l_p_info {
+            height: 300px;
+            display: block;
+            font-size: 15px;
+        }
+        .l_product_item:hover .l_p_img {
+            display: none;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <h2 style="text-align:center;">Danh sách sản phẩm</h2>
+    <div class="row" style="margin-top:10px;">
+        {% if SanPhamTheoLoais %}
+            {% for sanpham in SanPhamTheoLoais %}
+
+                <!--Kiểm tra giảm giá của sản phẩm-->
+                {% if sanpham.GiamGia == 0 %}
+                    <style>
+                        #giamgia_{{sanpham.id}} {
+                            display: none;
+                        }
+
+                        #gia_{{sanpham.id}}{
+                            display: none;
+                        }
+                    </style>
+                {% endif %}
+
+                <!--Kiểm tra số lượng sản phẩm-->
+                {% if sanpham.SoLuong == 0 %}
+                    <style>
+                        #add_cart_{{sanpham.id}} {
+                            cursor: not-allowed;
+                            pointer-events: none;
+                        }
+                    </style>
+                {% else %}
+                    <style>
+                        #hethang_{{sanpham.id}} {
+                            display: none;
+                        }
+                    </style>
+                {% endif %}
+
+                <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="l_product_item">
+                        <div class="l_p_img">
+                            <a href="{% url 'sanpham:sanpham' sanpham.id %}" style="color: black;">
+                                <img class="img-fluid" src="{{sanpham.Anh.url}}" alt="{{sanpham.TenSanPham}}" style="width: 300px; height:300px;"/>
+                                <h5 id="giamgia_{{sanpham.id}}" class="sale">{{sanpham.GiamGia}}%</h5>
+                                <h5 id="hethang_{{sanpham.id}}" class="sale">Hết hàng</h5>
+                            </a>
+                        </div>
+                        <a href="{% url 'sanpham:sanpham' sanpham.id %}" style="color: black;">
+                            <div class="l_p_info">
+                                <span>Tên sản phẩm: {{sanpham.TenSanPham}}</span>
+                                <br />
+                                <span>Số lượng: {{sanpham.SoLuong}}</span>
+                                <br />
+                                <span>Giảm giá: {{sanpham.GiamGia}}%</span>
+                                <br />
+                                <span>Mô tả: {{sanpham.MoTa|slice:"0:100"}}...</span>
+                            </div>
+                        </a>
+                        <div class="l_p_text">
+                            <ul>
+                                <li>
+                                    {% include 'pages/themvaogiohang.html'%}
+                                </li>
+                            </ul>
+                            <h4 style="text-align: center;">{{sanpham.TenSanPham}}</h4>
+                            <h5 id="gia_{{sanpham.id}}" style="text-align: center;"><del>{{sanpham.Gia}} VNĐ</del></h5>
+                            <h5 style="text-align: center;">{{sanpham.GiaChinhThuc}} VNĐ</h5>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h3 style="color: red;">Không có sản phẩm nào !!!</h3>
+        {% endif %}
+    </div>
+
+    <!--Phân trang-->
+    <div style="text-align:center;">
+        {% if SanPhamTheoLoais.has_other_pages %}
+            <ul class="pagination">
+                {% if SanPhamTheoLoais.has_previous %}
+                    <li><a href="?page={{ SanPhamTheoLoais.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                    <li class="disabled"><span>&laquo;</span></li>
+                {% endif %}
+                {% for i in SanPhamTheoLoais.paginator.page_range %}
+                    {% if SanPhamTheoLoais.number == i %}
+                        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                    {% else %}
+                        <li><a href="?page={{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if SanPhamTheoLoais.has_next %}
+                    <li><a href="?page={{ SanPhamTheoLoais.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                    <li class="disabled"><span>&raquo;</span></li>
+                {% endif %}
+            </ul>
+        {% endif %}
+    </div>
+{% endblock  %}
+
+{% block jsblock %}
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{% static 'home/js/jquery-3.2.1.min.js' %}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'home/js/popper.min.js' %}"></script>
+    <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+    <!-- Rev slider js -->
+    <script src="{% static 'home/vendors/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script src="{% static 'home/vendors/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+    <script src="{% static 'home/vendors/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+    <script src="{% static 'home/vendors/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+    <script src="{% static 'home/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+    <script src="{% static 'home/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+    <script src="{% static 'home/vendors/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+    <script src="{% static 'home/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+    <!-- Extra plugin css -->
+    <script src="{% static 'home/vendors/counterup/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'home/vendors/counterup/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'home/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'home/vendors/bootstrap-selector/js/bootstrap-select.min.js' %}"></script>
+    <script src="{% static 'home/vendors/image-dropdown/jquery.dd.min.js' %}"></script>
+    <script src="{% static 'home/js/smoothscroll.js' %}"></script>
+    <script src="{% static 'home/vendors/isotope/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'home/vendors/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'home/vendors/magnify-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'home/vendors/vertical-slider/js/jQuery.verticalCarousel.js' %}"></script>
+    <script src="{% static 'home/vendors/jquery-ui/jquery-ui.js' %}"></script>
+    <script src="{% static 'home/js/theme.js' %}"></script>
+{% endblock %}
