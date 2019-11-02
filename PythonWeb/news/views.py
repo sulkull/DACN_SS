@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import TinTuc
-from sanpham.models import LoaiSanPham
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
@@ -20,7 +19,6 @@ def home(request):
         TinTucs = paginator.page(paginator.num_pages)
 
     Data = {"TinTucs": TinTucs,
-            "LoaiSanPhams": LoaiSanPham.objects.all(),
             }
     return render(request, 'simso/news.html', Data)
 
@@ -30,7 +28,6 @@ def tintuc(request, id):
 
     Data = {'TinTuc': tintuc,
             "TinTucKhacs": TinTuc.objects.all().order_by('-id').exclude(id=id)[:10],
-            "LoaiSanPhams": LoaiSanPham.objects.all(),
             }
     return render(request, 'simso/tintuc.html', Data)
 

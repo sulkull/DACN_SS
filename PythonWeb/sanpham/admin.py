@@ -1,24 +1,47 @@
 from typing import List
 from django.contrib import admin
-from .models import LoaiSanPham, SanPham
+from .models import SanPham, SimNamSinh, SimTheoGia, SimTheoLoai, NhaMang
 # Register your models here.
 
 
 # Hiển thị bảng sản phẩm trên trang admin
-
 class SanPhamAdmin(admin.ModelAdmin):
-    list_display = ['TenSanPham', 'Gia', 'MoTaNgan', 'Anh', 'NgayNhap', 'SoLuong', 'GiamGia', 'MaLSP','id', ]
-    list_filter = ['NgayNhap', 'MaLSP']
-    search_fields = ['TenSanPham']
+    list_display = ['SoSim', 'Gia', 'Anh', 'Mang', 'NgayNhap', 'get_loaisims','id', ]
+    list_filter = ['NgayNhap',]
+    search_fields = ['SoSim']
     list_per_page = 5
 
 
-# Hiển thị bảng loại sản phẩm trên trang admin
-class LSPAdmin(admin.ModelAdmin):
-    list_display = [ 'TenLSP','id']
-    search_fields = ['TenLSP']
+# Hiển thị bảng nhà mạng
+class NhaMangAdmin(admin.ModelAdmin):
+    list_display = [ 'title','id']
+    search_fields = ['title']
     list_per_page = 5
 
 
-admin.site.register(LoaiSanPham,LSPAdmin)
+# Hiển thị bảng Sim theo loại
+class SimTheoLoaiAdmin(admin.ModelAdmin):
+    list_display = [ 'title','id']
+    search_fields = ['title']
+    list_per_page = 5
+
+
+# Hiển thị bảng Sim theo giá
+class SimTheoGiaAdmin(admin.ModelAdmin):
+    list_display = [ 'title','id']
+    search_fields = ['title']
+    list_per_page = 5
+
+
+# Hiển thị bảng Sim theo năm
+class SimTheoNamAdmin(admin.ModelAdmin):
+    list_display = [ 'title','id']
+    search_fields = ['title']
+    list_per_page = 5
+
+
+admin.site.register(NhaMang,NhaMangAdmin)
+admin.site.register(SimTheoLoai,SimTheoLoaiAdmin)
+admin.site.register(SimTheoGia,SimTheoGiaAdmin)
+admin.site.register(SimNamSinh,SimTheoNamAdmin)
 admin.site.register(SanPham, SanPhamAdmin)

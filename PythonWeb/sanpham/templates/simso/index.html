@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
+
 {% block index %}
-    {% load static %}
+
+{% load static %}
+{% load humanize %}
 <!---------Index -------------->
             <article>
                 <!----from tim kiem--->
@@ -53,16 +56,19 @@
                         <div class="photo-grid clearfix">
                             <ul class="clearfix">
 
-                                <li>
-                                    <div style=" padding: 2px; ">
-                                        <a href="0845880055.html">
-                                            <div class="simcard">
-                                                <div class="nha-mang-vinaphone spritestlvn"></div>
-                                                <div class="so-sim-home">0845.88.00.55</div> 510.000₫ </div>
-                                        </a>
-                                    </div>
-                                </li>
+                                {% for sanpham in SanPhamMois %}
 
+                                    <li>
+                                        <div style=" padding: 2px; ">
+                                            <a href="{% url 'sanpham:sanpham' sanpham.id %}">
+                                                <div class="simcard">
+                                                    <div class="nha-mang-{{ sanpham.Mang| lower }} spritestlvn"></div>
+                                                    <div class="so-sim-home">{{ sanpham.SoSim }}</div>{{ sanpham.Gia|intcomma }}₫ </div>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                {% endfor %}
                             </ul>
                         </div>
                         <!-- /photo-grid -->
@@ -79,25 +85,21 @@
                     <div class="container-home">
                         <div class="photo-grid clearfix">
                             <ul class="clearfix">
-                                <li>
-                                    <div style=" padding: 2px; ">
-                                        <a href="0823159999.html">
-                                            <div class="simcard">
-                                                <div class="nha-mang-vinaphone spritestlvn"></div>
-                                                <div class="so-sim-home">0823.15.9999</div> 233.000.000₫ </div>
-                                        </a>
-                                    </div>
-                                </li>
 
-                                <li>
-                                    <div style=" padding: 2px; ">
-                                        <a href="0355999989.html">
-                                            <div class="simcard">
-                                                <div class="nha-mang-viettel spritestlvn"></div>
-                                                <div class="so-sim-home">0355.9999.89</div> 33.690.000₫ </div>
-                                        </a>
-                                    </div>
-                                </li>
+                                {% for sanpham in SanPhams %}
+
+                                    <li>
+                                        <div style=" padding: 2px; ">
+                                            <a href="{% url 'sanpham:sanpham' sanpham.id %}">
+                                                <div class="simcard">
+                                                    <div class="nha-mang-{{ sanpham.Mang| lower }} spritestlvn"></div>
+                                                    <div class="so-sim-home">{{ sanpham.SoSim }}</div>{% load humanize %} {{ sanpham.Gia|intcomma }}₫ </div>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                {% endfor %}
+
                             </ul>
                         </div>
                     </div>

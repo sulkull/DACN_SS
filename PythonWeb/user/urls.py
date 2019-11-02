@@ -2,13 +2,11 @@ from django.urls import path
 from django.conf.urls import url
 from . import views
 from django.contrib.auth import views as auth_views
-from sanpham.models import LoaiSanPham
 
 app_name = 'user'
 urlpatterns = [
     path("dangky/", views.dangky, name='dangky'),
-    path("dangnhap/", auth_views.LoginView.as_view(template_name='simso/dangnhap.html',
-                                                   extra_context= {"LoaiSanPhams": LoaiSanPham.objects.all()}),
+    path("dangnhap/", auth_views.LoginView.as_view(template_name='simso/dangnhap.html',),
          name='dangnhap'),
     path("dangxuat/", auth_views.LogoutView.as_view(next_page='/'), name='dangxuat'),
     path("thongtintaikhoan/", views.thongtintaikhoan, name='thongtintaikhoan'),

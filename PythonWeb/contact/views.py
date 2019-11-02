@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from sanpham.models import LoaiSanPham
 from .models import LienHe
 from django.template.loader import render_to_string
 from django.core.mail import EmailMessage
@@ -8,7 +7,6 @@ from user.models import CustomerUser
 # Create your views here.
 def home(request):
     Data = {
-        "LoaiSanPhams": LoaiSanPham.objects.all(),
     }
 
     if request.method == 'POST':

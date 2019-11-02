@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from sanpham.models import SanPham, LoaiSanPham
+from sanpham.models import SanPham
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q, Max
 from news.models import TinTuc
@@ -40,7 +40,6 @@ def ketquatimkiem(request):
     except EmptyPage:
         SanPhams = paginator.page(paginator.num_pages)
     Data = {"SanPhams": SanPhams,
-            "LoaiSanPhams": LoaiSanPham.objects.all(),
             "Max": maxprice,
             }
     return render(request, 'simso/ketquatimkiem.html', Data)
@@ -72,7 +71,6 @@ def ketquatimkiemtintuc(request):
     except EmptyPage:
         TinTucs = paginator.page(paginator.num_pages)
     Data = {"TinTucs": TinTucs,
-            "LoaiSanPhams": LoaiSanPham.objects.all(),
             }
     return render(request, 'simso/news.html', Data)
 

@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect, HttpResponse
 from .forms import DangKyForm, ThongTinForm, DoiMatKhauForm
-from sanpham.models import LoaiSanPham
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_text
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
@@ -23,7 +22,7 @@ def dangky(request):
             request.session['user_id'] = form.getiduser().id
             return redirect('user:xacthuc')
 
-    return render(request, 'simso/dangky.html', {'form': form, "LoaiSanPhams": LoaiSanPham.objects.all()})
+    return render(request, 'simso/dangky.html', {'form': form,})
 
 
 def verify(request):
@@ -56,9 +55,9 @@ def verify(request):
                 mail_subject, message, to=[to_email]
             )
             email.send()
-            return render(request, 'simso/success.html', {"LoaiSanPhams": LoaiSanPham.objects.all()})
+            return render(request, 'simso/success.html',)
 
-    return render(request, 'simso/verify.html', {"LoaiSanPhams": LoaiSanPham.objects.all()})
+    return render(request, 'simso/verify.html', )
 
 
 def checkcode(request):
@@ -79,7 +78,7 @@ def checkcode(request):
             return redirect('sanpham:home')
         else:
             error = "Mã xác thực không đúng!!!"
-    return render(request, 'simso/confirm.html', {"LoaiSanPhams": LoaiSanPham.objects.all(), "Error": error})
+    return render(request, 'simso/confirm.html', )
 
 def activate(request, uidb64, token):
     try:
@@ -93,7 +92,7 @@ def activate(request, uidb64, token):
         login(request, user)
         return redirect('sanpham:home')
     else:
-        return render(request, 'simso/error.html', {"LoaiSanPhams": LoaiSanPham.objects.all()})
+        return render(request, 'simso/error.html',)
 
 
 def thongtintaikhoan(request):
@@ -146,7 +145,6 @@ def thongtintaikhoan(request):
         user.NgaySinh = ngaysinh
         user.save()
     Data = {"User": user,
-            "LoaiSanPhams": LoaiSanPham.objects.all(),
             "form": form}
     return render(request, 'simso/thongtintaikhoan.html', Data)
 
@@ -164,6 +162,5 @@ def doimatkhau(request):
             user.save()
             return HttpResponseRedirect('/user/dangnhap')
 
-    Data = {"LoaiSanPhams": LoaiSanPham.objects.all(),
-            "form": form}
+    Data = {"form": form}
     return render(request, 'simso/doimatkhau.html', Data)

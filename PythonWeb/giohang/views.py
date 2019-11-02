@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.core.mail import EmailMessage
 from .models import GioHang, CTGH, CTGHMoi
-from sanpham.models import SanPham, LoaiSanPham
+from sanpham.models import SanPham
 from hoadon.models import HoaDon
 from user.models import CustomerUser
 
@@ -35,7 +35,7 @@ def cart_home(request):
     if not sanphams:
         return redirect('giohangtrong/')
 
-    Data = {"LoaiSanPhams": LoaiSanPham.objects.all(),
+    Data = {
             "GioHangs": cart_obj,
             "CTGHs": ctgh_obj}
     return render(request, 'simso/cart.html', Data)
@@ -122,7 +122,7 @@ def cart_updatesl(request):
 
 #Giỏ hàng trống
 def cart_empty(request):
-    Data = {"LoaiSanPhams": LoaiSanPham.objects.all(),}
+    Data = {}
     return render(request, 'simso/giohangtrong.html', Data)
 
 #Đặt hàng
@@ -148,7 +148,7 @@ def checkout_home(request):
         else:
             error = "Vui lòng kiểm tra thông tin đặt hàng"
 
-    Data = {"LoaiSanPhams": LoaiSanPham.objects.all(),
+    Data = {
             "Order_obj": order_obj,
             "Cart_obj": cart_obj,
             "CTGHs": ctgh,
@@ -215,5 +215,5 @@ def thanhcong(request):
         order_obj.save()
     del request.session['cart_id']
 
-    Data = {"LoaiSanPhams": LoaiSanPham.objects.all(),}
+    Data = {}
     return render(request, 'simso/thanhcong.html', Data)

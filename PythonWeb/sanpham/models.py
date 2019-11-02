@@ -44,36 +44,22 @@ class SimNamSinh(models.Model):
         verbose_name_plural = 'Sim năm sinh'
 
 
-# Tạo bảng loại sản phẩm
-class LoaiSanPham(models.Model):
-    TenLSP = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.TenLSP
-    class Meta:
-        verbose_name_plural = 'Loại sản phẩm'
-
-
 # Tạo bảng sản phẩm
 class SanPham(models.Model):
-    MaLSP = models.ForeignKey(LoaiSanPham, on_delete=models.CASCADE)
-    TenSanPham = models.CharField(max_length=100)
+    LoaiSims = models.ManyToManyField(SimTheoLoai, blank=True)
+    SoSim = models.CharField(max_length=100)
     Gia = models.IntegerField(default=0)
-    MoTa = models.TextField()
+    Mang = models.ForeignKey(NhaMang, on_delete=models.CASCADE, null=True)
     Anh = models.ImageField(null=True)
     NgayNhap = models.DateTimeField(auto_now_add=True)
-    SoLuong = models.IntegerField(default=1)
-    GiamGia = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.TenSanPham
+        return self.SoSim
+
+    def get_loaisims(self):
+        return " - ".join([s.title for s in self.LoaiSims.all()])
 
     class Meta:
         verbose_name_plural = 'Sản Phẩm'
 
-    @property
-    def GiaChinhThuc(self):
-        return (int)(self.Gia - self.Gia * self.GiamGia / 100)
 
-    def MoTaNgan(self):
-        return truncatechars(self.MoTa, 100)
