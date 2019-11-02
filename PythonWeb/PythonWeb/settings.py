@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = '%s3xu-d(%y$#k%^9-#8m8yq4!$((9s00(9go#=5i3o*##orbxc'
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
 
 # Application definition
 
@@ -79,21 +77,21 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'PythonWeb.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-'default': {
-    'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'db_sim',
-    'HOST': 'localhost',
-    'PORT': '3306',
-    'USER': 'root',
-    'PASSWORD': '',
-    'OPTIONS': {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_sim',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': '',
+        'OPTIONS': {
 
             'charset': 'utf8mb4',
+            'init_command': 'SET storage_engine=MyISAM',  # fix loi khong tao dc admin
         },
         # Tell Django to build the test database with the 'utf8mb4' character set
         'TEST': {
@@ -102,7 +100,6 @@ DATABASES = {
         }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -122,7 +119,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -136,12 +132,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
 
 AUTH_USER_MODEL = 'user.CustomerUser'
 
@@ -158,13 +152,3 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'ntxl1588@gmail.com'
 EMAIL_HOST_PASSWORD = '1231234q'
 EMAIL_PORT = 587
-
-
-
-
-
-
-
-
-
-

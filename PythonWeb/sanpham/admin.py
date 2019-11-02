@@ -5,8 +5,9 @@ from .models import LoaiSanPham, SanPham
 
 
 # Hiển thị bảng sản phẩm trên trang admin
+
 class SanPhamAdmin(admin.ModelAdmin):
-    list_display = ['id', 'TenSanPham', 'Gia', 'MoTaNgan', 'Anh', 'NgayNhap', 'SoLuong', 'GiamGia', 'MaLSP']
+    list_display = ['TenSanPham', 'Gia', 'MoTaNgan', 'Anh', 'NgayNhap', 'SoLuong', 'GiamGia', 'MaLSP','id', ]
     list_filter = ['NgayNhap', 'MaLSP']
     search_fields = ['TenSanPham']
     list_per_page = 5
@@ -14,7 +15,7 @@ class SanPhamAdmin(admin.ModelAdmin):
 
 # Hiển thị bảng loại sản phẩm trên trang admin
 class LSPAdmin(admin.ModelAdmin):
-    list_display = ['id', 'TenLSP']
+    list_display = [ 'TenLSP','id']
     search_fields = ['TenLSP']
     list_per_page = 5
 

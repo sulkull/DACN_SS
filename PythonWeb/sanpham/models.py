@@ -1,7 +1,48 @@
 from django.db import models
 from django.template.defaultfilters import truncatechars
 
+
 # Create your models here.
+
+##
+# Tạo danh muc san pham _Duc
+##
+class SimTheoGia(models.Model):
+    title = models.CharField(max_length=100)
+
+    class Meta:
+        verbose_name_plural = 'Sim theo giá'
+
+
+class NhaMang(models.Model):
+    title = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = 'Nhà mạng'
+
+
+class SimTheoLoai(models.Model):
+    title = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = 'Sim theo loại'
+
+
+class SimNamSinh(models.Model):
+    title = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = 'Sim năm sinh'
+
 
 # Tạo bảng loại sản phẩm
 class LoaiSanPham(models.Model):
@@ -9,6 +50,9 @@ class LoaiSanPham(models.Model):
 
     def __str__(self):
         return self.TenLSP
+    class Meta:
+        verbose_name_plural = 'Loại sản phẩm'
+
 
 # Tạo bảng sản phẩm
 class SanPham(models.Model):
@@ -21,9 +65,11 @@ class SanPham(models.Model):
     SoLuong = models.IntegerField(default=1)
     GiamGia = models.IntegerField(default=0)
 
-
     def __str__(self):
         return self.TenSanPham
+
+    class Meta:
+        verbose_name_plural = 'Sản Phẩm'
 
     @property
     def GiaChinhThuc(self):

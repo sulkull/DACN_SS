@@ -4,10 +4,12 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from sanpham.models import SanPham
 
+
 # Create your models here.
 
 class LoaiNguoiDung(models.Model):
     TenLoai = models.CharField(max_length=10)
+
     def __str__(self):
         return self.TenLoai
 
@@ -22,6 +24,7 @@ class CustomerUser(AbstractUser):
 
     def HoTen(self):
         return self.first_name + " " + self.last_name
+
 
 class BinhLuanDanhGia(models.Model):
     MaKH = models.ForeignKey(CustomerUser, on_delete=models.CASCADE)
