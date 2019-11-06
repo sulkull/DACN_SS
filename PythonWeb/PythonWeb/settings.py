@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'hoadon',
     'news',
     'contact',
+    'CauHinh',
 
 ]
 
