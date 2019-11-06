@@ -10,24 +10,19 @@ from news.models import TinTuc
 def index(request):
 
     # Lấy dữ liệu từ database
+    km = SanPham.objects.filter(TacVu='khuyenmai')
+    vip = SanPham.objects.filter(TacVu='vip')
+    vipdn = SanPham.objects.filter(TacVu='vipdn')
+    thuong = SanPham.objects.filter(TacVu='thuong')
 
-    simvips = SimTheoLoai.objects.get(title='Vip')
-    sanpham = simvips.sanpham_set.get_queryset().order_by('id')
 
-    #Phân trang
-    page = request.GET.get('page', 1)
-    paginator = Paginator(sanpham, 6)
-    try:
-        SanPhams = paginator.page(page)
-    except PageNotAnInteger:
-        SanPhams = paginator.page(1)
-    except EmptyPage:
-        SanPhams = paginator.page(paginator.num_pages)
-
-    Data = {"SanPhams": SanPhams,
-            "SanPhamMois": SanPham.objects.all().order_by('-NgayNhap')[:10],
-    }
-    return render(request, 'simso/index.html', Data)
+    Data = {"sim": SanPham.objects.all(),
+            "km":km,
+            "vip": vip,
+            "vipdn": vipdn,
+            "thuong": thuong,
+            }
+    return render(request, "simso/index.html", Data)
 
 def sanpham(request, id):
     # Lấy dữ liệu từ database

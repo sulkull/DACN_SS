@@ -1,8 +1,17 @@
 from django.db import models
 from django.template.defaultfilters import truncatechars
+from PythonWeb.utils import get_unique_slug
+
+##
+# Chọn sim vip _ thường
+##
 
 
-# Create your models here.
+SIM_CHOICES = (
+    ('thuong', 'Sim Thường'),
+    ('khuyenmai', 'Sim Khuyến Mãi'),
+    ('vip', 'Sim Vip'),
+    ('vipdn', 'Sim Vip Doanh Nhân'))
 
 ##
 # Tạo danh muc san pham _Duc
@@ -45,8 +54,11 @@ class SimNamSinh(models.Model):
 
 
 # Tạo bảng sản phẩm
+
 class SanPham(models.Model):
-    LoaiSims = models.ManyToManyField(SimTheoLoai, blank=True)
+    LoaiSims = models.ManyToManyField(SimTheoLoai, blank=True,default=0)
+    slug = models.SlugField(max_length=20,null=False,default='')
+    TacVu = models.CharField(max_length=100,choices=SIM_CHOICES,default='thuong')
     SoSim = models.CharField(max_length=100)
     Gia = models.IntegerField(default=0)
     Mang = models.ForeignKey(NhaMang, on_delete=models.CASCADE, null=True)
@@ -56,8 +68,13 @@ class SanPham(models.Model):
     def __str__(self):
         return self.SoSim
 
-    def get_loaisims(self):
-        return " - ".join([s.title for s in self.LoaiSims.all()])
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = get_unique_slug(self, 'title', 'slug')
+        super().save(*args, **kwargs)
+
+    # def get_loaisims(self):
+    #     return " - ".join([s.title for s in self.LoaiSims.all()])
 
     class Meta:
         verbose_name_plural = 'Sản Phẩm'

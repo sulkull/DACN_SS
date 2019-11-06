@@ -4,13 +4,13 @@ from django.template.loader import render_to_string
 from django.core.mail import EmailMessage
 from user.models import CustomerUser
 
+
 # Create your views here.
 def home(request):
     Data = {
     }
 
     if request.method == 'POST':
-
         hoten = request.POST.get('name')
         email = request.POST.get('email')
         sdt = request.POST.get('sdt')

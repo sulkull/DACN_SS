@@ -26,88 +26,42 @@
                 <br/>
 
                 <div class="number_01 "><i class="spritestlvn sprite-vip"></i>
-                    <h2><a href="index.html" target="_blank">Sim vip doanh nhân</a></h2> </div>
+                    <h2><a href="/" target="_blank">Sim vip doanh nhân</a></h2> </div>
                 <div class="wrapper">
-                    <div class="container-home">
-                        <div class="photo-grid clearfix">
-                            <ul class="clearfix">
-
-                                <li>
-                                    <div style=" padding: 2px; ">
-                                        <a href="0814358555.html">
-                                            <div class="simcard">
-                                                <div class="nha-mang-vinaphone spritestlvn"></div>
-                                                <div class="so-sim-home">0814.358.555</div> 3.400.000₫ </div>
-                                        </a>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <!-- /photo-grid -->
-                    </div>
+                    {% include 'sub/sim-doanh-nhan.html' %}
                     <!-- /container-home -->
                 </div>
                 <!-- /wrapper -->
                 <div class="number_01 "> <i class="spritestlvn sprite-sale"></i>
                     <h2><a href="sim-gia-re.html" target="_blank">Sim khuyến mãi trong ngày</a></h2> </div>
                 <div class="wrapper">
-                    <div class="container-home">
-                        <div class="photo-grid clearfix">
-                            <ul class="clearfix">
-
-                                {% for sanpham in SanPhamMois %}
-
-                                    <li>
-                                        <div style=" padding: 2px; ">
-                                            <a href="{% url 'sanpham:sanpham' sanpham.id %}">
-                                                <div class="simcard">
-                                                    <div class="nha-mang-{{ sanpham.Mang| lower }} spritestlvn"></div>
-                                                    <div class="so-sim-home">{{ sanpham.SoSim }}</div>{{ sanpham.Gia|intcomma }}₫ </div>
-                                            </a>
-                                        </div>
-                                    </li>
-
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <!-- /photo-grid -->
-
-                    </div>
+                    {% include 'sub/sim-khuyen-mai.html' %}
                     <!-- /container-home -->
-                    <br> <a href="sim-gia-re.html" style=" font-size: 16px; color: #fff; background: #4CAF50; padding: 10px; border-radius: 5px; ">Xem thêm ...</a>
+                    <br>
+                    <a href="sim-gia-re.html" style=" font-size: 16px; color: #fff; background: #4CAF50; padding: 10px; border-radius: 5px; ">Xem thêm ...</a>
                     <br>
                     <br> </div>
                 <!-- /wrapper -->
                 <div class="number_01 "><i class="spritestlvn sprite-like"></i>
                     <h2><a href="sim-theo-gia/tu-5-trieu-den-10-trieu.html" target="_blank">Sim VIP</a></h2> </div>
                 <div id="wrapper" class="wrapper">
-                    <div class="container-home">
-                        <div class="photo-grid clearfix">
-                            <ul class="clearfix">
-
-                                {% for sanpham in SanPhams %}
-
-                                    <li>
-                                        <div style=" padding: 2px; ">
-                                            <a href="{% url 'sanpham:sanpham' sanpham.id %}">
-                                                <div class="simcard">
-                                                    <div class="nha-mang-{{ sanpham.Mang| lower }} spritestlvn"></div>
-                                                    <div class="so-sim-home">{{ sanpham.SoSim }}</div>{% load humanize %} {{ sanpham.Gia|intcomma }}₫ </div>
-                                            </a>
-                                        </div>
-                                    </li>
-
-                                {% endfor %}
-
-                            </ul>
-                        </div>
-                    </div>
+                    {% include 'sub/sim-vip.html' %}
 
                     <br> <a href="sim-theo-gia/tu-5-trieu-den-10-trieu.html" style=" font-size: 16px; color: #fff; background: #4CAF50; padding: 10px; border-radius: 5px; ">Xem thêm ...</a>
                     <br>
                     <br> </div>
+
+                <div class="number_01 "><i class="spritestlvn sprite-like"></i>
+                    <h2><a href="/" target="_blank">Sim Giá Rẻ</a></h2> </div>
+                <div id="wrapper" class="wrapper">
+                    {% include 'sub/sim-gia-re.html' %}
+
+                    <br> <a href="sim-theo-gia/tu-5-trieu-den-10-trieu.html" style=" font-size: 16px; color: #fff; background: #4CAF50; padding: 10px; border-radius: 5px; ">Xem thêm ...</a>
+                    <br>
+                    <br> </div>
+
                 <center> </center>
+
                 <form action="#" method="get" id="chitietsim"></form>
                 <script type="text/javascript">
                     function ctsim(sosim) {

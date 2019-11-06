@@ -6,7 +6,7 @@ from .models import SanPham, SimNamSinh, SimTheoGia, SimTheoLoai, NhaMang
 
 # Hiển thị bảng sản phẩm trên trang admin
 class SanPhamAdmin(admin.ModelAdmin):
-    list_display = ['SoSim', 'Gia', 'Anh', 'Mang', 'NgayNhap', 'get_loaisims','id', ]
+    list_display = ['SoSim','slug', 'Gia', 'Anh', 'Mang', 'NgayNhap','id', ]
     list_filter = ['NgayNhap',]
     search_fields = ['SoSim']
     list_per_page = 5
