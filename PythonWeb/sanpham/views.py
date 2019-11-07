@@ -1,5 +1,7 @@
+from django.db.models import Max
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
+from django.utils.crypto import random
 from django.views.generic import ListView
 
 from .models import SanPham, SimTheoLoai, SimNamSinh, NhaMang, SimTheoGia
@@ -43,12 +45,12 @@ class Category(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(Category, self).get_context_data(**kwargs)
-        context['stl'] = SimTheoLoai.objects.all()
+        context['stl'] = SimTheoLoai.objects.order_by('?') #hien thi thu tu ngau nhien
         context['sns'] = SimNamSinh.objects.all()
         context['nm'] = NhaMang.objects.all()
         context['stg'] = SimTheoGia.objects.all()
-
         return context
+
 
 
 

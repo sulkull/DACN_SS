@@ -258,22 +258,25 @@
             </tr>
         </thead>
         <tbody>
+        {% for sim in sim %}
             <tr>
                 <td class="hide480"><span class="sott">1</span>
                 </td>
-                <td><span class="simso"><a href="0981755289">0981.755.<span>289</span>
+                <td><span class="simso"><a href="{% url 'sanpham:sanpham' sim.slug %}"><span>{{ sim.SoSim }}</span>
                     </a>
                     </span>
                 </td>
-                <td><strong>499.000₫</strong>
+                <td><strong>{{ sim.Gia|intcomma }}₫</strong>
                 </td>
-                <td class="hide480"><span class="lg-viettel">viettel</span>
+                <td class="hide480"><span class="lg-{{ sim.Mang | lower}}">{{ sim.Mang }}</span>
                 </td>
-                <td class="hide480 hide555"> <span class="cat2">Sim Hợp Mệnh Thổ</span>
+                <td class="hide480 hide555"> <span class="cat2">{% for ls in stl|slice:"1" %}{{ ls.title}}{% endfor %}</span>
+
                 </td>
-                <td class=""><span class="news2 btn-mua" onclick="ctsim('0981755289')">Mua sim</span>
+                <td class=""><span class="news2 btn-mua" ><a href="{% url 'sanpham:sanpham' sim.slug %}" style="color: white">Mua sim</a> </span>
                 </td>
             </tr>
+        {% endfor %}
         </tbody>
     </table>
     <div class="pagination" align="center"> <span class="page active">1</span>

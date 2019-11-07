@@ -6,7 +6,7 @@ from . import views
 app_name = 'sanpham'
 urlpatterns = [
     path('', views.index, name='simso'),
-    path("sanpham/<str:slug>/", views.sanpham, name='sanpham'),
+    path("sanpham/<str:slug>.html", views.sanpham, name='sanpham'),
     path('<str:slug>', Category.as_view(), name='category'),
 
 ]
