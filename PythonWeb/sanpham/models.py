@@ -18,6 +18,14 @@ SIM_CHOICES = (
 ##
 class SimTheoGia(models.Model):
     title = models.CharField(max_length=100,verbose_name='Tiêu đề')
+    slug = models.SlugField(max_length=20, null=False, default='')
+
+    def __str__(self):
+        return self.title
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = get_unique_slug(self, 'title', 'slug')
+        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name_plural = 'Sim theo giá'
@@ -25,9 +33,14 @@ class SimTheoGia(models.Model):
 
 class NhaMang(models.Model):
     title = models.CharField(max_length=100,verbose_name='Tiêu đề')
+    slug = models.SlugField(max_length=20, null=False, default='')
 
     def __str__(self):
         return self.title
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = get_unique_slug(self, 'title', 'slug')
+        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name_plural = 'Nhà mạng'
@@ -35,9 +48,14 @@ class NhaMang(models.Model):
 
 class SimTheoLoai(models.Model):
     title = models.CharField(max_length=100,verbose_name='Tiêu đề')
+    slug = models.SlugField(max_length=20, null=False, default='')
 
     def __str__(self):
         return self.title
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = get_unique_slug(self, 'title', 'slug')
+        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name_plural = 'Sim theo loại'
@@ -45,9 +63,14 @@ class SimTheoLoai(models.Model):
 
 class SimNamSinh(models.Model):
     title = models.CharField(max_length=100,verbose_name='Tiêu đề')
+    slug = models.SlugField(max_length=20, null=False, default='')
 
     def __str__(self):
         return self.title
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = get_unique_slug(self, 'title', 'slug')
+        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name_plural = 'Sim năm sinh'
@@ -56,12 +79,14 @@ class SimNamSinh(models.Model):
 # Tạo bảng sản phẩm
 
 class SanPham(models.Model):
-    LoaiSims = models.ManyToManyField(SimTheoLoai, blank=True,default=0,verbose_name='Loại sim')
+    LoaiSims = models.ManyToManyField(SimTheoLoai,default=0,verbose_name='Loại sim')
     slug = models.SlugField(max_length=20,null=False,default='')
     TacVu = models.CharField(max_length=100,choices=SIM_CHOICES,default='thuong',verbose_name='Tác vụ trang chủ')
     SoSim = models.CharField(max_length=100,verbose_name='Nhập số sim')
     Gia = models.IntegerField(default=0,verbose_name='Nhập giá bán')
     Mang = models.ForeignKey(NhaMang, on_delete=models.CASCADE, null=True,verbose_name='Nhà Mạng')
+    LoaiGia = models.ForeignKey(SimTheoGia, on_delete=models.CASCADE, null=True, verbose_name='Sim theo giá ')
+    NamSinh = models.ForeignKey(SimNamSinh, on_delete=models.CASCADE, null=True, verbose_name='Theo năm sinh ')
     Anh = models.ImageField(null=True,verbose_name='Hình đại diện')
     NgayNhap = models.DateTimeField(auto_now_add=True,verbose_name='Ngày nhập')
 

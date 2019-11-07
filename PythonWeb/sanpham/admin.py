@@ -15,29 +15,33 @@ class SanPhamAdmin(admin.ModelAdmin):
 
 # Hiển thị bảng nhà mạng
 class NhaMangAdmin(admin.ModelAdmin):
-    list_display = [ 'title','id']
+    list_display = [ 'title','id','slug']
     search_fields = ['title']
+    exclude = ['slug', ]
     list_per_page = 5
 
 
 # Hiển thị bảng Sim theo loại
 class SimTheoLoaiAdmin(admin.ModelAdmin):
-    list_display = [ 'title','id']
+    list_display = [ 'title','id','slug']
     search_fields = ['title']
+    exclude = ['slug', ]
     list_per_page = 5
 
 
 # Hiển thị bảng Sim theo giá
 class SimTheoGiaAdmin(admin.ModelAdmin):
-    list_display = [ 'title','id']
+    list_display = [ 'title','id','slug']
     search_fields = ['title']
+    exclude = ['slug', ]
     list_per_page = 5
 
 
 # Hiển thị bảng Sim theo năm
 class SimTheoNamAdmin(admin.ModelAdmin):
-    list_display = [ 'title','id']
+    list_display = [ 'title','id','slug']
     search_fields = ['title']
+    exclude = ['slug', ]
     list_per_page = 5
 
 
