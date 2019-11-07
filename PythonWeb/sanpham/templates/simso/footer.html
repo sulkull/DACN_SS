@@ -1,3 +1,5 @@
+{% load static %}
+{% static "" as baseUrl %}
 <footer>
             <div style="text-align: center;">
                 <div class='bch' style=" columns: 455px 2; ">
@@ -126,6 +128,9 @@
     </noscript>
     <br>
     <br>
+
+<script defer type="text/javascript" src="{% static 'home/script.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'home/css-main.css' %}">
     </body>
 <!----- DwebTech.Net ----- By Minh Duc -->
 </html>

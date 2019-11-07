@@ -1,7 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-
-from CauHinh.models import CauHinhSeo
 from .models import SanPham, SimTheoLoai
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from giohang.models import GioHang, CTGH
@@ -21,6 +19,7 @@ def index(request):
             "vip": vip,
             "vipdn": vipdn,
             "thuong": thuong,
+
             }
     return render(request, "simso/index.html", Data)
 
@@ -35,11 +34,4 @@ def sanpham(request, slug):
 def error(request):
     return render(request, 'simso/error.html')
 
-def seo(request):
-    seo = CauHinhSeo.objects.all()
-    context = {
-        'seo': seo,
-
-    }
-    return render(request, 'simso/header.html',context)
 
