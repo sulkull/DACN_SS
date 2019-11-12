@@ -10,7 +10,7 @@
     {% seo as meta  %}
     {% for meta in meta %}
     {% if sanpham.SoSim == Null %}
-    <title>{{ meta.title }}</title>
+    <title>{% block title %} {{ meta.title }} {% endblock %}</title>
     {% else %}
         {% block seo %}
         {% endblock %}
