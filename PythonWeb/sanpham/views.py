@@ -82,7 +82,7 @@ def simtheogia(request, slug):
     stg1 = SimTheoGia.objects.get(slug=slug)
     sanpham = stg1.sanpham_set.all()
 
-    stl = SimTheoLoai.objects.all()
+    stl = SimTheoLoai.objects.order_by('?')
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
@@ -106,7 +106,7 @@ def simtheomang(request, slug):
     nm1 = NhaMang.objects.get(slug=slug)
     sanpham = nm1.sanpham_set.all()
 
-    stl = SimTheoLoai.objects.all()
+    stl = SimTheoLoai.objects.order_by('?')
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
@@ -129,7 +129,7 @@ def simtheoloai(request, slug):
     stl1 = SimTheoLoai.objects.get(slug=slug)
     sanpham = stl1.sanpham_set.all()
 
-    stl = SimTheoLoai.objects.all()
+    stl = SimTheoLoai.objects.order_by('?')
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
@@ -153,7 +153,7 @@ def simnamsinh(request, slug):
     sns1 = SimNamSinh.objects.get(slug=slug)
     sanpham = sns1.sanpham_set.all()
 
-    stl = SimTheoLoai.objects.all()
+    stl = SimTheoLoai.objects.order_by('?')
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
     stg = SimTheoGia.objects.all()
