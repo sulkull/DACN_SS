@@ -46,8 +46,10 @@ INSTALLED_APPS = [
     'news',
     'contact',
     'CauHinh',
+    'sitetree',
 
     #plugin them vao
+
 
 
 

@@ -178,13 +178,14 @@
                 </div>
             </li>
         </ul>
-        <div class="choosedfilter"> <a id="choosedfilter" class="reset" href="javascript:resetFilter();">Xóa tất cả<i class="ic-clearfil"></i></a> </div>
+        <div class="choosedfilter">
+            <a id="choosedfilter" class="reset" href="javascript:resetFilter();">Xóa tất cả<i class="ic-clearfil"></i></a> </div>
         <table id="contentdanhsachsim" width="100%" border="0" cellpadding="8" cellspacing="0" bgcolor="#CCCCCC" style="display:none">
             <tbody>
                 <tr>
                     <td id="lblLocdanhsachsim" width="0%" align="right" valign="middle" bgcolor="#FFFF99"></td>
                     <td width="100%" align="left" valign="middle" bgcolor="#FFFF99">
-                        <form style=" margin-bottom: 0px; " id="filter_form" name="filter_form" method="get" action="sim-theo-gia/duoi-500-nghin.html?do=filter">
+                        <form style=" margin-bottom: 0px; " id="filter_form" name="filter_form" method="get" action="./{{ stl1.slug}}?do=filter">
                             <select name="m10so_filter" id="m10so_filter" style="width:22%" onchange="submit_filter();">
                                 <option value="0">10/11 số</option>
                                 <option value="10">10 số</option>
