@@ -1,8 +1,9 @@
 from django.urls import path
-from . import views
+from timkiem.views import timkiem_nangcao
 
-app_name = 'timkiem'
+app_name='timkiem'
 urlpatterns = [
-    path('ketquatimkiemsanpham/', views.ketquatimkiem, name='ketquatimkiem'),
-    path('ketquatimkiemtintuc/', views.ketquatimkiemtintuc, name='ketquatimkiemtintuc'),
+     path('', timkiem_nangcao, name='timkiem'),
+
+
 ]

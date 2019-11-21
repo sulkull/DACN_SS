@@ -122,7 +122,7 @@ def simtheomang(request, slug):
             "nm": nm,
             "stg": stg_dsx,
             }
-    return render(request, 'simso/category/sim-theo-mang.html', Data)
+    return render(request, 'category/sim-theo-mang.html', Data)
 
 def simtheoloai(request, slug):
 
@@ -145,7 +145,7 @@ def simtheoloai(request, slug):
             "nm": nm,
             "stg": stg_dsx,
             }
-    return render(request, 'simso/category/sim-theo-loai.html', Data)
+    return render(request, 'category/sim-theo-loai.html', Data)
 
 
 def simnamsinh(request, slug):
@@ -172,3 +172,9 @@ def simnamsinh(request, slug):
     return render(request, 'simso/category/sim-nam-sinh.html', Data)
 
 
+def tknc(request, slug):
+    sp = SanPham.objects.get(slug=slug)
+    Data = {
+            'sp':sp,
+            }
+    return render(request, 'includes/timkiem/timkiem-nangcao.html', Data)
