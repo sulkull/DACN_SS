@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Đổi mật khẩu
+{% endblock %}
+
+{% block index %}
+    <article>
+    <h2 style="text-align:center">Đổi mật khẩu</h2>
+    <form method="post" action="">
+        {% csrf_token %}
+        <div class="form-horizontal">
+            <hr />
+            <div class="form-group" style="width: 500px; margin:auto; margin-top:20px; ">
+                <span class="control-label col-md-2">Mật khẩu hiện tại</span>
+                <div class="col-md-12">
+                    {{form.password}}
+                    {{ form.errors.password}}
+                </div>
+            </div>
+            <div class="form-group" style="width: 500px; margin:auto; margin-top:20px; ">
+                <span class="control-label col-md-2">Mật khẩu mới</span>
+                <div class="col-md-12">
+                    {{form.newpassword}}
+                    {{ form.errors.newpassword}}
+                </div>
+            </div>
+            <div class="form-group" style="width: 500px; margin:auto; margin-top:20px; ">
+                <span class="control-label col-md-2">Nhập lại mật khẩu mới</span>
+                <div class="col-md-12">
+                    {{form.renewpassword}}
+                    {{ form.errors.renewpassword}}
+                </div>
+            </div>
+            <div class="form-group" style="width: 500px; margin:auto; margin-top:20px; ">
+                <input type="submit" value="Cập nhật" class="btn btn-primary" style="margin: auto; display: block;"/>
+            </div>
+        </div>
+    </form>
+    </article>
+{% endblock  %}
+

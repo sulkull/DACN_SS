@@ -6,7 +6,7 @@ from django.contrib.auth import views as auth_views
 app_name = 'user'
 urlpatterns = [
     path("dangky/", views.dangky, name='dangky'),
-    path("dangnhap/", auth_views.LoginView.as_view(template_name='simso/dangnhap.html',),
+    path("dangnhap/", auth_views.LoginView.as_view(template_name='simso/page-user/dangnhap.html',),
          name='dangnhap'),
     path("dangxuat/", auth_views.LogoutView.as_view(next_page='/'), name='dangxuat'),
     path("thongtintaikhoan/", views.thongtintaikhoan, name='thongtintaikhoan'),
@@ -15,4 +15,5 @@ urlpatterns = [
         views.activate, name='activate'),
     path("xacthuc/", views.verify, name='xacthuc'),
     path("xacthucsdt/", views.checkcode, name='xacthucsdt'),
+
 ]

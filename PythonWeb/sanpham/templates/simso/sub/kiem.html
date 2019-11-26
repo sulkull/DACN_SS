@@ -1,0 +1,124 @@
+
+<style>
+    .table-search tbody tr td{
+        border-right: 1px solid #dddddd;
+    }
+    .table-search tr th{
+        border-right: 1px solid #dddddd;
+        border-bottom: 1px solid #dddddd;
+        padding: 0px;
+        font-style: 14px;
+        text-transform: none;
+        font-weight: normal;
+    }
+    #paginate-pos {
+        text-align: center;
+    }
+    .table-search thead tr th.wrap-text{
+        white-space: normal;
+        text-align: center;
+    }
+
+</style>
+<div class="col-sm-12">
+    <div>
+        <h4 class="title" style="font-weight: 550;text-transform: none;">Thông tin khách hàng</h4>
+        <p style="padding-left: 10px; font-size: 14px;">Họ và tên: <span style="font-weight: 550"> <p id="demo"></p></span></p>
+
+        <h4 class="title" style="font-weight: 550;text-transform: none;">Kết quả</h4>
+        <p style="padding-left: 10px;font-size: 13px;"> - Tên quý khách mệnh  "<span style="font-weight: 550"></span>" mang "<span style="font-weight: 550"></span>" vận, quý khách nên sử dụng các số điện thoại mệnh "<span style="font-weight: 550">Kim</span>" và mang "<span style="font-weight: 550">Cân bằng</span>" vận!</p>
+
+
+        <p style="font-size: 13px;">Dựa vào thông tin phong thủy theo tên của bạn. Hệ thống gợi ý những số phù hợp với bạn như kết quả số bên dưới.</p>
+        <p style="color: #777;">(*) Nội dung luận giải trên chỉ mang tính chất tham khảo</p>
+    </div>
+    <div class="col-sm-12">
+        <img src='https://chonso.mobifone.vn/wap/resources/images/nguhanh.jpg' style='max-height: 330px;max-width:250;  display: block; margin-left: auto; margin-right: auto; margin-top: 10px;'>
+    </div>
+    <h5 style="font-weight: 550; text-align: center;">Các số điện thoại phù hợp với bạn</h5>
+</div>
+
+
+<input type="hidden" id="total" value="" />
+<input type="hidden" id="page" value="" />
+<input type="hidden" id="total" value="" />
+<input type="hidden" id="searchType" name="searchType" value="" />
+
+<div class="div_ul text-center" id="paginate-pos-fengshui"></div>
+
+
+
+<script type="text/javascript" >
+
+
+    $("#paginate-pos-fengshui").bootpag({
+        total: $("#total").val(),
+        maxVisible: 5,
+        firstLastUse: true,
+        page: $("#page").val(),
+        first: '←',
+        last: '→',
+        wrapClass: 'pagination',
+        activeClass: 'active',
+        disabledClass: 'disabled'
+    }).on('page', function (event, num) {
+        search_number_page_fengshui(num);
+    });
+
+    function search_number_page_fengshui(page) {
+        var _uri = $("body").attr("uri");
+        $("#searchResultByFengShui").html('<div class="text-center"><img src="' + _uri + '/resources/images/loading.gif" /> Đang tải dữ liệu...</div>');
+        var formdata = $(".search_number").serialize();
+        $("#searchResultByFengShui").load(_uri + "/tracuu/search-by-fengshui.html?" + formdata + "&page=" + page + "&p=true");
+        $(window).scrollTop($('#searchResultByFengShui').offset().top);
+        return false;
+    }
+
+
+    if ($("#total").val() == 1) {
+        $(".next").addClass("disabled");
+        $(".last").addClass("disabled");
+    }
+    if ($("#page").val() == $(".last").attr("data-lp")) {
+        $(".next").addClass("disabled");
+        $(".last").addClass("disabled");
+    }
+    $(".currencyHtml").each(function () {
+        formatCurrencyHtml(this);
+    });
+    $('.table-responsive').scroll(function (e) {
+        if ($(this).scrollLeft() > 42)
+        {
+            $(".fixed-column").css("position", "absolute");
+            $(".hidden-column").css("display", "block");
+            $(".hidden-column").css("width", $(".fixed-column").width());
+            $(".hidden-column").css("height", $(".fixed-column").height());
+            $(".fixed-column").css("opacity", "1");
+            $(".fixed-column").css("left", "0px");
+            $("th.fixed-column").css("margin-top", "-1px");
+            $("th.fixed-column").css("height", "39px");
+            $(".fixed-column").css("width", "100px");
+            $(".fixed-column").css("padding-right", "3px");
+            $(".fixed-column").css("background-color", "white");
+            $(".fixed-column").css("border-top", "1px solid #dddddd");
+            $(".fixed-column").css("border-left", "1px solid #dddddd");
+            $("th.fixed-column").css("padding-left", "3px");
+            $("th.fixed-column").css("vertical-align", "middle");
+            $(".fixed-column").css("background-color", "#EEE");
+        } else
+        {
+            $(".fixed-column").css("position", "relative");
+            $("th.fixed-column").css("border-top", "none");
+            $(".fixed-column").css("background-color", "");
+            $("th.fixed-column").css("padding-top", "10px");
+            $(".fixed-column").css("left", "0px");
+            $(".hidden-column").css("display", "none");
+        }
+    }
+    );
+    $(document).ready(function () {
+        $(".hidden-column").css("display", "none");
+        $(".searchNumBtn .button").css("text-decoration", "initial");
+    });
+    document.getElementById("demo").innerHTML =  $("#so");
+</script>

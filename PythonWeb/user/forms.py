@@ -6,17 +6,17 @@ from django.core.exceptions import ObjectDoesNotExist
 
 class DangKyForm(forms.Form):
 
-    username = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Tài khoản'}))
+    username = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Tài khoản','label':'Tài khoản'}))
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Email'}))
     password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Mật khẩu'}))
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Nhập lại mật khẩu'}))
     firstname = forms.CharField(max_length=200, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Họ'}))
     lastname = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Tên'}))
     choices = [('0', 'Nam'), ('1', 'Nữ'), ('2', 'Không xác định')]
-    gioitinh = forms.ChoiceField(choices= choices, widget=forms.RadioSelect)
+    gioitinh = forms.ChoiceField(choices= choices, widget=forms.RadioSelect(attrs={'class':'form-check-input'}))
     ngaysinh = forms.DateField(widget=forms.DateInput(attrs={'class': 'form-control', 'placeholder': 'Ngày sinh', 'type': 'date'}))
     sdt = forms.CharField(max_length=10, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Số điện thoại'}))
-    diachi = forms.CharField(max_length=1000, widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Địa chỉ'}))
+    diachi = forms.CharField(max_length=400, widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Địa chỉ'}))
 
     def clean_password2(self):
         if 'password1' in self.cleaned_data:

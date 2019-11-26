@@ -1,5 +1,10 @@
+import operator
+
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect, HttpResponse
+from django.views.generic import ListView
+
+from sanpham.models import *
 from .forms import DangKyForm, ThongTinForm, DoiMatKhauForm
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_text
@@ -9,11 +14,33 @@ from .tokens import account_activation_token
 from django.core.mail import EmailMessage
 from user.models import CustomerUser
 from django.contrib.auth import login, authenticate
+
 import nexmo
+class Dataview(ListView):
+    model = SanPham
+    context_object_name = 'sp'
+    queryset = SanPham.objects.all()
+
+    def get_context_data(self, **kwargs):
+        context = super(Dataview, self).get_context_data(**kwargs)
+        context['stl'] = SimTheoLoai.objects.all()
+        context['sns'] = SimNamSinh.objects.all()
+        context['nm']= NhaMang.objects.all()
+        context['stg'] = SimTheoGia.objects.all()
+        # Sắp xếp danh mục sim theo giá theo title
+        return context
 
 
 # Create your views here.
 def dangky(request):
+    #########
+    stl = SimTheoLoai.objects.all()
+    sns = SimNamSinh.objects.all()
+    nm = NhaMang.objects.all()
+    stg = SimTheoGia.objects.all()
+    # Sắp xếp danh mục sim theo giá theo title
+    stg_dsx = sorted(stg, key=operator.attrgetter('title'))
+    ########
     form = DangKyForm()
     if request.method == 'POST':
         form = DangKyForm(request.POST)
@@ -22,7 +49,15 @@ def dangky(request):
             request.session['user_id'] = form.getiduser().id
             return redirect('user:xacthuc')
 
-    return render(request, 'simso/dangky.html', {'form': form,})
+    Data = {
+        'form': form,
+        "stl": stl,
+        "sns": sns,
+        "nm": nm,
+        "stg": stg_dsx,
+    }
+
+    return render(request, 'simso/page-user/dangky.html', Data)
 
 
 def verify(request):
@@ -37,14 +72,14 @@ def verify(request):
 
             response = client.start_verification(
                 number=sdt,
-                brand="CichlidShop",
+                brand="SimSoDucLoc",
                 code_length="4")
             request.session['request_id'] = response["request_id"]
             return redirect('user:xacthucsdt')
         else:
             current_site = get_current_site(request)
             mail_subject = 'Kích hoạt tài khoản của bạn.'
-            message = render_to_string('simso/activeemail.html', {
+            message = render_to_string('simso/page-user/activeemail.html', {
                 'user': user,
                 'domain': current_site.domain,
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
@@ -55,9 +90,9 @@ def verify(request):
                 mail_subject, message, to=[to_email]
             )
             email.send()
-            return render(request, 'simso/success.html',)
+            return render(request, 'simso/page-user/success.html',)
 
-    return render(request, 'simso/verify.html', )
+    return render(request, 'simso/page-user/verify.html', )
 
 
 def checkcode(request):
@@ -78,7 +113,7 @@ def checkcode(request):
             return redirect('sanpham:home')
         else:
             error = "Mã xác thực không đúng!!!"
-    return render(request, 'simso/confirm.html', )
+    return render(request, 'simso/page-user/confirm.html', )
 
 def activate(request, uidb64, token):
     try:
@@ -92,13 +127,13 @@ def activate(request, uidb64, token):
         login(request, user)
         return redirect('sanpham:home')
     else:
-        return render(request, 'simso/error.html',)
+        return render(request, 'simso/page-user/error.html',)
 
 
 def thongtintaikhoan(request):
     user = request.user
     if not user.is_authenticated:
-        return HttpResponseRedirect('/user/dangnhap')
+        return HttpResponseRedirect('/user/dangnhap/')
     firstname = user.first_name
     lastname = user.last_name
     email = user.email
@@ -146,13 +181,13 @@ def thongtintaikhoan(request):
         user.save()
     Data = {"User": user,
             "form": form}
-    return render(request, 'simso/thongtintaikhoan.html', Data)
+    return render(request, 'simso/page-user/thongtintaikhoan.html', Data)
 
 
 def doimatkhau(request):
     user = request.user
     if not user.is_authenticated:
-        return HttpResponseRedirect('/user/dangnhap')
+        return HttpResponseRedirect('/user/dangnhap/')
     form = DoiMatKhauForm()
     if request.method == 'POST':
         form = DoiMatKhauForm(request.POST, user=request.user)
@@ -160,7 +195,7 @@ def doimatkhau(request):
         if form.is_valid():
             user.set_password(form['renewpassword'].value())
             user.save()
-            return HttpResponseRedirect('/user/dangnhap')
+            return HttpResponseRedirect('/user/dangnhap/')
 
     Data = {"form": form}
-    return render(request, 'simso/doimatkhau.html', Data)
+    return render(request, 'simso/page-user/doimatkhau.html', Data)

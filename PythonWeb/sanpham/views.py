@@ -60,28 +60,13 @@ def sanpham(request, slug):
     return render(request, 'simso/detail-sim/detail-sim.html', Data)
 
 def error(request):
-    return render(request, 'simso/error.html')
-
-# class Category(ListView):
-#     model = SanPham
-#     context_object_name = 'sim'
-#     queryset = SanPham.objects.all()
-#     template_name = 'simso/category/category-index.html'
-#
-#     def get_context_data(self, **kwargs):
-#         context = super(Category, self).get_context_data(**kwargs)
-#         context['stl'] = SimTheoLoai.objects.all()
-#         context['sns'] = SimNamSinh.objects.all()
-#         context['nm'] = NhaMang.objects.all()
-#         context['stg'] = SimTheoGia.objects.all()
-#         return context
+    return render(request, 'simso/page-user/error.html')
 
 
 def simtheogia(request, slug):
 
     stg1 = SimTheoGia.objects.get(slug=slug)
     sanpham = stg1.sanpham_set.all()
-
     stl = SimTheoLoai.objects.order_by('?')
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
@@ -105,7 +90,6 @@ def simtheomang(request, slug):
 
     nm1 = NhaMang.objects.get(slug=slug)
     sanpham = nm1.sanpham_set.all()
-
     stl = SimTheoLoai.objects.order_by('?')
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
@@ -128,7 +112,6 @@ def simtheoloai(request, slug):
 
     stl1 = SimTheoLoai.objects.get(slug=slug)
     sanpham = stl1.sanpham_set.all()
-
     stl = SimTheoLoai.objects.order_by('?')
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
@@ -178,3 +161,12 @@ def tknc(request, slug):
             'sp':sp,
             }
     return render(request, 'includes/timkiem/timkiem-nangcao.html', Data)
+
+def diem(request):
+
+    return render(request, 'simso/sub/tinhdiem.html')
+
+def diem2(request):
+    a = request.GET.get('so')
+
+    return render(request, 'simso/sub/kiem.html')

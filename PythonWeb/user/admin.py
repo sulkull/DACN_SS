@@ -5,7 +5,7 @@ from .models import CustomerUser, BinhLuanDanhGia, LoaiNguoiDung
 
 
 class CustomerUserAdmin(admin.ModelAdmin):
-    list_display = ['id', 'username', 'email', 'first_name', 'last_name', 'GioiTinh', 'NgaySinh', 'SDT', 'DiaChi', 'MaLND']
+    list_display = ['username','id', 'email', 'first_name', 'last_name', 'GioiTinh', 'NgaySinh', 'SDT', 'DiaChi', 'MaLND']
     search_fields = ['Username']
     list_per_page = 10
 
