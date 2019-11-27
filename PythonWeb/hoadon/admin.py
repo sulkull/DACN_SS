@@ -12,3 +12,4 @@ class HoaDonAdmin(admin.ModelAdmin):
 
 
 admin.site.register(HoaDon, HoaDonAdmin)
+

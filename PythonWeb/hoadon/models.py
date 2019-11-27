@@ -6,11 +6,11 @@ from django.db.models.signals import pre_save, post_save
 
 # Create your models here.
 class HoaDon(models.Model):
-    GH = models.ForeignKey(GioHang, on_delete=models.CASCADE, null=True, blank=True)
-    NgayDatHang = models.DateTimeField(auto_now_add=True)
-    ThanhToan = models.BooleanField(default=False)
-    GiaoHang = models.BooleanField(default=False)
-    TongTien = models.FloatField(default=0)
+    GH = models.ForeignKey(GioHang, on_delete=models.CASCADE, null=True, blank=True, verbose_name='Giỏ hàng')
+    NgayDatHang = models.DateTimeField(auto_now_add=True, verbose_name='Ngày đặt hàng')
+    ThanhToan = models.BooleanField(default=False, verbose_name='Thanh toán')
+    GiaoHang = models.BooleanField(default=False, verbose_name='Giao hàng')
+    TongTien = models.FloatField(default=0, verbose_name='Tổng tiền')
 
     def __str__(self):
         return str(self.id)
@@ -28,6 +28,9 @@ class HoaDon(models.Model):
         if user.DiaChi and user.SDT and user.email and tongtien > 0:
             return True
         return False
+
+    class Meta:
+        verbose_name_plural = 'Hóa đơn'
 
 
 def post_save_cart_total(sender, instance, created, *args, **kwargs):

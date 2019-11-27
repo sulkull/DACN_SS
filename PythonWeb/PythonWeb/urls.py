@@ -26,10 +26,10 @@ urlpatterns = [
     # Tạo đường dẫn liên kết với các app
     path('', include('sanpham.urls')),
     path('user/', include('user.urls')),
-    path('giohang/', include('giohang.urls')),
-    path('timkiem/', include('timkiem.urls')),
-    path('tintuc/', include('news.urls')),
-    path('lienhe/', include('contact.urls')),
+    path('gio-hang/', include('giohang.urls')),
+    path('tim-kiem/', include('timkiem.urls')),
+    #path('tintuc/', include('news.urls')),
+    #path('lienhe/', include('contact.urls')),
 ]
 
 if settings.DEBUG:

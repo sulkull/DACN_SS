@@ -65,6 +65,21 @@ def dangky(request):
 def verify(request):
     id = request.session['user_id']
     user = CustomerUser.objects.get(id=id)
+
+    stl = SimTheoLoai.objects.all()
+    sns = SimNamSinh.objects.all()
+    nm = NhaMang.objects.all()
+    stg = SimTheoGia.objects.all()
+    # Sắp xếp danh mục sim theo giá theo title
+    stg_dsx = sorted(stg, key=operator.attrgetter('title'))
+
+    Data = {
+        "stl": stl,
+        "sns": sns,
+        "nm": nm,
+        "stg": stg_dsx,
+    }
+
     if request.method == 'POST':
         if request.POST.get("verify") == 'sdt':
             key = 'd3541bdb'
@@ -92,9 +107,9 @@ def verify(request):
                 mail_subject, message, to=[to_email]
             )
             email.send()
-            return render(request, 'simso/page-user/success.html',)
+            return render(request, 'simso/page-user/success.html', Data)
 
-    return render(request, 'simso/page-user/verify.html', )
+    return render(request, 'simso/page-user/verify.html', Data)
 
 
 def checkcode(request):
@@ -103,6 +118,21 @@ def checkcode(request):
     secret = '9Tn3HaqVhJX1pVKW'
     client = nexmo.Client(key=key, secret=secret)
     request_id = request.session['request_id']
+
+    stl = SimTheoLoai.objects.all()
+    sns = SimNamSinh.objects.all()
+    nm = NhaMang.objects.all()
+    stg = SimTheoGia.objects.all()
+    # Sắp xếp danh mục sim theo giá theo title
+    stg_dsx = sorted(stg, key=operator.attrgetter('title'))
+
+    Data = {
+        "stl": stl,
+        "sns": sns,
+        "nm": nm,
+        "stg": stg_dsx,
+    }
+
     if request.method == 'POST':
         code = request.POST.get('code')
         response = client.check_verification(request_id, code=code)
@@ -115,9 +145,23 @@ def checkcode(request):
             return redirect('sanpham:simso')
         else:
             error = "Mã xác thực không đúng!!!"
-    return render(request, 'simso/page-user/confirm.html', )
+    return render(request, 'simso/page-user/confirm.html', Data)
 
 def activate(request, uidb64, token):
+    stl = SimTheoLoai.objects.all()
+    sns = SimNamSinh.objects.all()
+    nm = NhaMang.objects.all()
+    stg = SimTheoGia.objects.all()
+    # Sắp xếp danh mục sim theo giá theo title
+    stg_dsx = sorted(stg, key=operator.attrgetter('title'))
+
+    Data = {
+        "stl": stl,
+        "sns": sns,
+        "nm": nm,
+        "stg": stg_dsx,
+    }
+
     try:
         uid = force_text(urlsafe_base64_decode(uidb64))
         user = CustomerUser.objects.get(pk=uid)
@@ -129,13 +173,21 @@ def activate(request, uidb64, token):
         login(request, user)
         return redirect('sanpham:simso')
     else:
-        return render(request, 'simso/page-user/error.html',)
+        return render(request, 'simso/page-user/error.html', Data)
 
 
 def thongtintaikhoan(request):
     user = request.user
     if not user.is_authenticated:
         return HttpResponseRedirect('/user/dang-nhap/')
+
+    stl = SimTheoLoai.objects.all()
+    sns = SimNamSinh.objects.all()
+    nm = NhaMang.objects.all()
+    stg = SimTheoGia.objects.all()
+    # Sắp xếp danh mục sim theo giá theo title
+    stg_dsx = sorted(stg, key=operator.attrgetter('title'))
+
     firstname = user.first_name
     lastname = user.last_name
     email = user.email
@@ -182,7 +234,12 @@ def thongtintaikhoan(request):
         user.NgaySinh = ngaysinh
         user.save()
     Data = {"User": user,
-            "form": form}
+            "form": form,
+            "stl": stl,
+            "sns": sns,
+            "nm": nm,
+            "stg": stg_dsx,
+            }
     return render(request, 'simso/page-user/thongtintaikhoan.html', Data)
 
 
@@ -191,6 +248,14 @@ def doimatkhau(request):
     if not user.is_authenticated:
         return HttpResponseRedirect('/user/dang-nhap/')
     form = DoiMatKhauForm()
+
+    stl = SimTheoLoai.objects.all()
+    sns = SimNamSinh.objects.all()
+    nm = NhaMang.objects.all()
+    stg = SimTheoGia.objects.all()
+    # Sắp xếp danh mục sim theo giá theo title
+    stg_dsx = sorted(stg, key=operator.attrgetter('title'))
+
     if request.method == 'POST':
         form = DoiMatKhauForm(request.POST, user=request.user)
         #Kiểm tra thông tin
@@ -199,5 +264,10 @@ def doimatkhau(request):
             user.save()
             return HttpResponseRedirect('/user/dang-nhap/')
 
-    Data = {"form": form}
+    Data = {"form": form,
+            "stl": stl,
+            "sns": sns,
+            "nm": nm,
+            "stg": stg_dsx,
+            }
     return render(request, 'simso/page-user/doimatkhau.html', Data)

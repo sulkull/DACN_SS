@@ -43,15 +43,15 @@ def CTGHMoi(cart_obj=None):
     sanphams = cart_obj.SanPhams.all()
     for item in sanphams:
         ctgh_obj, created = CTGH.objects.get_or_create(GH=cart_obj, SP=item)
-        ctgh_obj.DonGia = item.GiaChinhThuc
+        ctgh_obj.DonGia = item.Gia
         ctgh_obj.save()
 
 
 # Tạo bảng giỏ hàng
 class GioHang(models.Model):
-    user = models.ForeignKey(CustomerUser, on_delete=models.CASCADE, null= True, blank= True)
-    SanPhams = models.ManyToManyField(SanPham, blank=True)
-    TongTien = models.FloatField(default=0)
+    user = models.ForeignKey(CustomerUser, on_delete=models.CASCADE, null= True, blank= True, verbose_name='Người dùng')
+    SanPhams = models.ManyToManyField(SanPham, blank=True, verbose_name='Danh sách sản phẩm')
+    TongTien = models.FloatField(default=0, verbose_name='Tổng tiền')
 
     objects = GioHangManager()
 
@@ -59,28 +59,32 @@ class GioHang(models.Model):
         return str(self.id)
 
     def get_sanphams(self):
-        return " - ".join([s.TenSanPham for s in self.SanPhams.all()])
+        return " - ".join([s.SoSim for s in self.SanPhams.all()])
+
+    get_sanphams.short_description = "Danh sách sản phẩm"
+
+    class Meta:
+        verbose_name_plural = 'Giỏ hàng'
 
 
 # Tạo bảng chi tiết giỏ hàng
 class CTGH(models.Model):
-    GH = models.ForeignKey(GioHang, on_delete=models.CASCADE, null=True)
-    SP = models.ForeignKey(SanPham, on_delete=models.CASCADE, null=True)
-    SoLuong = models.IntegerField(default=1)
-    DonGia = models.IntegerField(default=0)
+    GH = models.ForeignKey(GioHang, on_delete=models.CASCADE, null=True, verbose_name='Giỏ hàng')
+    SP = models.ForeignKey(SanPham, on_delete=models.CASCADE, null=True, verbose_name='Sản phẩm')
+    DonGia = models.IntegerField(default=0, verbose_name='Giá')
 
     def __str__(self):
         return str(self.id)
-
-    def ThanhTien(self):
-        return self.SoLuong * self.DonGia
 
     def ToUSD(self):
         req = 'https://openexchangerates.org/api/latest.json?app_id=256d3b5746664d27bc090b385afd574d&symbols=VND'
         data = urllib.request.urlopen(req).read()
         data = json.loads(data.decode('utf-8'))
         rates = data["rates"]
-        return self.SoLuong * self.DonGia / rates['VND']
+        return self.DonGia / rates['VND']
+
+    class Meta:
+        verbose_name_plural = 'Chi tiết giỏ hàng'
 
 #Cập nhật từ admin
 def m2m_changed_cart_receiver(sender, instance, action, *args, **kwargs):
@@ -98,8 +102,7 @@ def m2m_changed_cart_receiver(sender, instance, action, *args, **kwargs):
         CTGHMoi(instance)
         ListSP = CTGH.objects.filter(GH=instance)
         for item in ListSP:
-            tongtien += (item.SoLuong * item.DonGia)
-        tongtien += 30000
+            tongtien += item.DonGia
         instance.TongTien = tongtien
         instance.save()
 

@@ -13,7 +13,7 @@ class GioHangAdmin(admin.ModelAdmin):
 
 # Hiển thị chi tiết giỏ hàng trên trang admin
 class CTGHAdmin(admin.ModelAdmin):
-    list_display = ['id', 'GH', 'SP', 'SoLuong', 'DonGia']
+    list_display = ['id', 'GH', 'SP', 'DonGia']
     list_filter = ['GH']
     search_fields = ['GH']
     list_per_page = 10
