@@ -61,7 +61,7 @@
                     </td>
                     <td class="hide480"><span class="lg-{{ sim.Mang | lower}}">{{ sim.Mang }}</span>
                     </td>
-                    <td class="hide480 hide555"> <span class="cat2">{% for ls in stl|slice:"1" %}{{ ls.title}}{% endfor %}</span>
+                    <td class="hide480 hide555"> <span class="cat2">{% for ls in sim.LoaiSims.all|slice:"1" %}{{ ls.title}}{% endfor %}</span>
 
                     </td>
                     <td class=""><span class="news2 btn-mua" ><a href="{% url 'sanpham:sanpham' sim.slug %}" style="color: white">Mua sim</a> </span>

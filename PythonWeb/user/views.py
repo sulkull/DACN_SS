@@ -16,6 +16,8 @@ from user.models import CustomerUser
 from django.contrib.auth import login, authenticate
 
 import nexmo
+
+
 class Dataview(ListView):
     model = SanPham
     context_object_name = 'sp'
@@ -25,7 +27,7 @@ class Dataview(ListView):
         context = super(Dataview, self).get_context_data(**kwargs)
         context['stl'] = SimTheoLoai.objects.all()
         context['sns'] = SimNamSinh.objects.all()
-        context['nm']= NhaMang.objects.all()
+        context['nm'] = NhaMang.objects.all()
         context['stg'] = SimTheoGia.objects.all()
         # Sắp xếp danh mục sim theo giá theo title
         return context
@@ -110,7 +112,7 @@ def checkcode(request):
             user.is_active = True
             user.save()
             login(request, user)
-            return redirect('sanpham:home')
+            return redirect('sanpham:simso')
         else:
             error = "Mã xác thực không đúng!!!"
     return render(request, 'simso/page-user/confirm.html', )
@@ -125,7 +127,7 @@ def activate(request, uidb64, token):
         user.is_active = True
         user.save()
         login(request, user)
-        return redirect('sanpham:home')
+        return redirect('sanpham:simso')
     else:
         return render(request, 'simso/page-user/error.html',)
 
@@ -133,7 +135,7 @@ def activate(request, uidb64, token):
 def thongtintaikhoan(request):
     user = request.user
     if not user.is_authenticated:
-        return HttpResponseRedirect('/user/dangnhap/')
+        return HttpResponseRedirect('/user/dang-nhap/')
     firstname = user.first_name
     lastname = user.last_name
     email = user.email
@@ -148,7 +150,7 @@ def thongtintaikhoan(request):
             'sdt': sdt,
             'diachi': diachi,
             'gioitinh': gioitinh,
-            'ngaysinh': ngaysinh,}
+            'ngaysinh': ngaysinh}
 
     form = ThongTinForm(initial=data)
 
@@ -187,7 +189,7 @@ def thongtintaikhoan(request):
 def doimatkhau(request):
     user = request.user
     if not user.is_authenticated:
-        return HttpResponseRedirect('/user/dangnhap/')
+        return HttpResponseRedirect('/user/dang-nhap/')
     form = DoiMatKhauForm()
     if request.method == 'POST':
         form = DoiMatKhauForm(request.POST, user=request.user)
@@ -195,7 +197,7 @@ def doimatkhau(request):
         if form.is_valid():
             user.set_password(form['renewpassword'].value())
             user.save()
-            return HttpResponseRedirect('/user/dangnhap/')
+            return HttpResponseRedirect('/user/dang-nhap/')
 
     Data = {"form": form}
     return render(request, 'simso/page-user/doimatkhau.html', Data)

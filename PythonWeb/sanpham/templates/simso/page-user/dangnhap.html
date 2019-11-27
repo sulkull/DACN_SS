@@ -9,8 +9,8 @@
         <form action="" method="post">
             {% csrf_token %}
             {% if form.errors %}
-            <div class="error" style="margin: auto; margin-bottom:10px; color: red">
-                <i style="margin-right: 10px;">Tài khoản hoặc mật khẩu không đúng</i>
+            <div class="error" style="margin: auto; margin-bottom:10px; color: red; text-align: center">
+                <strong>Tài khoản hoặc mật khẩu không đúng</strong>
             </div>
         {% endif %}
 
@@ -18,7 +18,7 @@
             <tbody>
                 <tr>
                     <th>
-                        <label for="id_username">Tài khoản:</label>
+                        <label for="id_username" style="margin: 0 20px 0 100px;">Tài khoản:</label>
                     </th>
                     <td>
                         <input type="text" name="username" class="form-control" placeholder="Tài khoản" label="Tài khoản" maxlength="50" required="" id="id_username">
@@ -26,7 +26,7 @@
                 </tr>
                 <tr>
                     <th>
-                        <label for="id_password1">Mật khẩu:</label>
+                        <label for="id_password" style="margin: 0 20px 0 100px;">Mật khẩu:</label>
                     </th>
                    <td>
                         <input type="password" name="password" class="form-control" placeholder="Mật khẩu" required="" id="id_password">

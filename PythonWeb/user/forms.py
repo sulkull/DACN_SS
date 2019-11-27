@@ -13,7 +13,7 @@ class DangKyForm(forms.Form):
     firstname = forms.CharField(max_length=200, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Họ'}))
     lastname = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Tên'}))
     choices = [('0', 'Nam'), ('1', 'Nữ'), ('2', 'Không xác định')]
-    gioitinh = forms.ChoiceField(choices= choices, widget=forms.RadioSelect(attrs={'class':'form-check-input'}))
+    gioitinh = forms.ChoiceField(choices=choices, widget=forms.RadioSelect(attrs={'class': 'ul-none'}))
     ngaysinh = forms.DateField(widget=forms.DateInput(attrs={'class': 'form-control', 'placeholder': 'Ngày sinh', 'type': 'date'}))
     sdt = forms.CharField(max_length=10, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Số điện thoại'}))
     diachi = forms.CharField(max_length=400, widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Địa chỉ'}))
@@ -82,7 +82,7 @@ class ThongTinForm(forms.Form):
     firstname = forms.CharField(max_length=200, widget=forms.TextInput(attrs={'class': 'form-control'}))
     lastname = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
     choices = [('0', 'Nam'), ('1', 'Nữ'), ('2', 'Không xác định')]
-    gioitinh = forms.ChoiceField(choices= choices, widget=forms.RadioSelect)
+    gioitinh = forms.ChoiceField(choices=choices, widget=forms.RadioSelect(attrs={'class': 'form-check-input ul-none'}))
     ngaysinh = forms.DateField(widget=forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}))
     sdt = forms.CharField(max_length=10, widget=forms.TextInput(attrs={'class': 'form-control'}))
     diachi = forms.CharField(max_length=1000, widget=forms.Textarea(attrs={'class': 'form-control'}))

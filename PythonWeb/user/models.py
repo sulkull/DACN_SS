@@ -5,24 +5,18 @@ from sanpham.models import SanPham
 
 
 # Create your models here.
-
-class LoaiNguoiDung(models.Model):
-    TenLoai = models.CharField(max_length=10)
-
-    def __str__(self):
-        return self.TenLoai
-
-
 class CustomerUser(AbstractUser):
-    MaLND = models.ForeignKey(LoaiNguoiDung, on_delete=models.CASCADE, default='1')
-    SDT = models.CharField(default='', max_length=10)
-    DiaChi = models.TextField(default='')
+    SDT = models.CharField(default='', max_length=10, verbose_name='Số điện thoại')
+    DiaChi = models.TextField(default='', verbose_name='Địa chỉ')
     choices = [('0', 'Nam'), ('1', 'Nữ'), ('2', 'Không xác định')]
-    GioiTinh = models.CharField(choices=choices, default='2', max_length=20)
-    NgaySinh = models.DateField(null=True)
+    GioiTinh = models.CharField(choices=choices, default='2', max_length=20, verbose_name='Giới tính')
+    NgaySinh = models.DateField(null=True, verbose_name='Ngày sinh')
 
     def HoTen(self):
         return self.first_name + " " + self.last_name
+
+    class Meta:
+        verbose_name_plural = 'Người dùng'
 
 
 class BinhLuanDanhGia(models.Model):

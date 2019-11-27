@@ -2390,9 +2390,84 @@ input[type="radio"] {
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
+
+.form-group {
+    margin-bottom: 1rem;
+}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+.form-control {
+    display: block;
+    width: 98%;
+    height: calc(1.5em + .75rem + 2px);
+  padding: 2px 45px 5px 15px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+button, input {
+    overflow: visible;
+}
+#id_gioitinh li {
+            float: left;
+            margin-left:20px;
+        }
+#id_gioitinh {
+            float: left;
+            margin-top:12.2px;
+        }
+input[type="radio"] {
+    background-color: initial;
+    cursor: default;
+    -webkit-appearance: checkbox;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+}
+
+label#id_lastname {
+    margin-left: -270px;
+}
+@media (max-width: 360px) {
+    input#id_lastname {
+    margin-left: -70px;
+                }
+        label#id_lastname {
+    margin-left: -160px;
+                }
+}
+
 .btn-primary{
     background:#007bff;
     border-color: #007bff;
     color: white;
 
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.ul-none{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }

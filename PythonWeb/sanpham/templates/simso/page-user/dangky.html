@@ -4,188 +4,131 @@
 
 {% load static %}
 {% load humanize %}
+<style>
+    .errorlist {
+        list-style-type: none;
+        margin: 0;
+        padding: 10px;
+    }
+    .errorlist li {
+        color: red;
+    }
+</style>
 <article>
     <div class="dangky">
         <form action="" method="post">
             {% csrf_token %}
              <table>
+                 <tbody>
+                    <tr>
+                        <th>
+                            <label for="{{ form.username.id_for_label }}">Tài khoản: </label>
+                        </th>
+                        <td>
+                            {{ form.username }}
+                            {{ form.errors.username }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="{{ form.password1.id_for_label }}">Mật khẩu: </label>
+                        </th>
+                       <td>
+                            {{ form.password1 }}
+                            {{ form.errors.password1}}
+                       </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="{{ form.password2.id_for_label }}">Nhập lại mật khẩu: </label>
+                        </th>
+                       <td>
+                            {{ form.password2 }}
+                            {{ form.errors.password2 }}
+                       </td>
+                    </tr>
 
-            <tr id="hoten">
+                    <tr>
+                        <th>
+                            <label for="{{ form.firstname.id_for_label }}">Họ: </label>
+                        </th>
+                        <td >
+                            {{ form.firstname }}
+                            {{ form.errors.firstname}}
+                        </td>
+                    </tr>
+                     <tr>
+                         <th >
+                               <label for="{{ form.lastname.id_for_label }}">Tên: </label>
+                            </th>
+                            <td>
+                                {{ form.lastname }}
+                                {{ form.errors.lastname}}
+                            </td>
+                     </tr>
 
-                    <th>
-                        <label for="{{ form.firstname.id_for_label }}">Họ :</label>
-                    </th>
-                    <td>
-                        {{ form.firstname }}
-                    </td>
+                    <tr>
+                        <th>
+                            <label for="{{ form.email.id_for_label }}">Email: </label>
+                        </th>
+                       <td>
+                            {{ form.email }}
+                            {{ form.errors.email }}
+                       </td>
+                    </tr>
 
+                    <tr>
+                        <th>
+                            <label for="{{ form.sdt.id_for_label }}">Số điện thoại: </label>
+                        </th>
+                       <td>
+                            {{ form.sdt }}
+                            {{ form.errors.sdt }}
+                       </td>
+                    </tr>
 
-                    <th>
-                       <label id="{{ form.lastname.id_for_label }}">Tên</label>
-                    </th>
-                    <td>
-                        {{ form.lastname }}
-                    </td>
-            </tr>
+                    <tr>
+                        <th>
+                            <label for="{{ form.gioitinh.id_for_label }}">Giới tính: </label>
+                        </th>
+                       <td>
+                            {{ form.gioitinh }}
+                            {{ form.errors.gioitinh }}
+                       </td>
+                    </tr>
 
-            <tr>
-                <th>
-                    <label for="{{ form.username.id_for_label }}">Tài khoản:</label>
-                </th>
-                <td>
-                    {{ form.username }}
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <label for="{{ form.password1.id_for_label }}">Mật khẩu:</label>
-                </th>
-               <td>
-                    {{ form.password1 }}
-               </td>
-            </tr>
-            <tr>
-                <th>
-                    <label for="{{ form.password2.id_for_label }}">Nhập lại mật khẩu:</label>
-                </th>
-               <td>
-                    {{ form.password2 }}
-               </td>
-            </tr>
-            <tr>
-                <th>
-                    <label for="{{ form.email.id_for_label }}">Email:</label>
-                </th>
-                <td>
-                    {{ form.email }}
-                </td>
-            </tr>
+                    <tr>
+                        <th>
+                            <label for="{{ form.ngaysinh.id_for_label }}">Ngày sinh: </label>
+                        </th>
+                       <td>
+                            {{ form.ngaysinh }}
+                            {{ form.errors.ngaysinh }}
+                       </td>
+                    </tr>
 
-            <tr>
-                <th>
-                    <label for="{{ form.ngaysinh.id_for_label }}">Ngày sinh:</label>
-                </th>
-                <td>
-                    {{ form.ngaysinh }}
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <label for="{{ form.gioitinh.id_for_label }}">Giới tính:</label>
-                </th>
-                <td>
-                    {{ form.gioitinh }}
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <label for="{{ form.sdt.id_for_label }}">Số điện thoại :</label>
-                </th>
-                <td>
-                    {{ form.sdt }}
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <label for="{{ form.diachi.id_for_label }}">Địa chỉ :</label>
-                </th>
-                <td>
-                    {{ form.diachi }}
-                </td>
-            </tr>
-            <tr>
-                <th>
+                    <tr>
+                        <th>
+                            <label for="{{ form.diachi.id_for_label }}">Địa chỉ: </label>
+                        </th>
+                       <td>
+                            {{ form.diachi }}
+                            {{ form.errors.diachi }}
+                       </td>
+                    </tr>
 
-                </th>
-                <td>
-                  <button type="submit" class="btn btn-primary" style="background:#007bff;border-color: #007bff;color: white"> Đăng ký</button>
-                </td>
-            </tr>
-    </table>
+                    <tr>
+                        <th>
+
+                        </th>
+                        <td>
+                          <button type="submit" class="btn btn-primary" style="color: white"> Đăng ký</button>
+                        </td>
+                    </tr>
+                 </tbody>
+            </table>
 
         </form>
     </div>
 </article>
-<style>
-.form-group {
-    margin-bottom: 1rem;
-}
-label {
-    display: inline-block;
-    margin-bottom: .5rem;
-}
-.form-control {
-    display: block;
-    width: 98%;
-    height: calc(1.5em + .75rem + 2px);
-  padding: 2px 45px 5px 15px;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-button, input {
-    overflow: visible;
-}
-#id_gioitinh li {
-            float: left;
-            margin-left:20px;
-        }
-#id_gioitinh {
-            float: left;
-            margin-top:12.2px;
-        }
-input[type="radio"] {
-    background-color: initial;
-    cursor: default;
-    -webkit-appearance: checkbox;
-    box-sizing: border-box;
-    margin: 3px 3px 3px 4px;
-    padding: initial;
-    border: initial;
-}
-input#id_firstname {
-    width: 30%;
-}
-
-input#id_lastname {
-    margin-left: -125px;
-}
-label#id_lastname {
-    margin-left: -270px;
-}
-@media (max-width: 360px) {
-    input#id_lastname {
-    margin-left: -70px;
-                }
-        label#id_lastname {
-    margin-left: -160px;
-                }
-}
-.btn {
-    display: inline-block;
-    font-weight: 400;
-    color: #212529;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-</style>
-
-
 {% endblock %}

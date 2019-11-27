@@ -5,15 +5,15 @@ from django.contrib.auth import views as auth_views
 
 app_name = 'user'
 urlpatterns = [
-    path("dangky/", views.dangky, name='dangky'),
-    path("dangnhap/", auth_views.LoginView.as_view(template_name='simso/page-user/dangnhap.html',),
+    path("dang-ky/", views.dangky, name='dangky'),
+    path("dang-nhap/", auth_views.LoginView.as_view(template_name='simso/page-user/dangnhap.html',),
          name='dangnhap'),
-    path("dangxuat/", auth_views.LogoutView.as_view(next_page='/'), name='dangxuat'),
-    path("thongtintaikhoan/", views.thongtintaikhoan, name='thongtintaikhoan'),
-    path("doimatkhau/", views.doimatkhau, name='doimatkhau'),
+    path("dang-xuat/", auth_views.LogoutView.as_view(next_page='/'), name='dangxuat'),
+    path("thong-tin-tai-khoan/", views.thongtintaikhoan, name='thongtintaikhoan'),
+    path("doi-mat-khau/", views.doimatkhau, name='doimatkhau'),
     url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
         views.activate, name='activate'),
-    path("xacthuc/", views.verify, name='xacthuc'),
-    path("xacthucsdt/", views.checkcode, name='xacthucsdt'),
+    path("xac-thuc/", views.verify, name='xacthuc'),
+    path("xac-thuc-sdt/", views.checkcode, name='xacthucsdt'),
 
 ]

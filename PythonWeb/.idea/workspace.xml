@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/sanpham/templates/simso/index.html" line="76" />
+    <bookmark url="file://$PROJECT_DIR$/sanpham/templates/simso/index.html" line="77" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afecec9c-40c5-45f8-9fc1-71d07b16f7f2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/PythonWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonWeb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/category/category-index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/cot-trai.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/cot-trai.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/category/sim-nam-sinh.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/category/sim-nam-sinh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-gia.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-gia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-loai.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-loai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-mang.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-mang.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/cot-phai.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/cot-phai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/page-user/confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/page-user/confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/page-user/dangky.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/page-user/dangky.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/page-user/dangnhap.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/page-user/dangnhap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/page-user/doimatkhau.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/page-user/doimatkhau.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/page-user/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/page-user/success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/page-user/thongtintaikhoan.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/page-user/thongtintaikhoan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/page-user/verify.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/page-user/verify.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/home/css-main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/home/css-main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,19 +55,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PythonWeb/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="71" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="187">
+              <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -63,10 +69,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/user/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="132" column="30" selection-start-line="132" selection-start-column="30" selection-end-line="132" selection-end-column="30" />
+            <state relative-caret-position="799">
+              <caret line="119" column="15" selection-start-line="119" selection-start-column="15" selection-end-line="119" selection-end-column="15" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/verify.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#article#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#form#0;n#article#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,6 +123,9 @@
       <find>formdata</find>
       <find>form-control</find>
       <find>profile</find>
+      <find>nha</find>
+      <find>btn-primary</find>
+      <find>dangky</find>
     </findStrings>
     <replaceStrings>
       <replace>timkiem</replace>
@@ -122,23 +144,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/cot-trai.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/header.html" />
-        <option value="$PROJECT_DIR$/env/Lib/site-packages/sitetree/templates/sitetree/menu_bootstrap4.html" />
-        <option value="$PROJECT_DIR$/env/Lib/site-packages/sitetree/templates/sitetree/menu_bootstrap4_dropdown.html" />
-        <option value="$PROJECT_DIR$/env/Lib/site-packages/sitetree/static/css/sitetree_bootstrap_submenu.css" />
-        <option value="$PROJECT_DIR$/env/Lib/site-packages/sitetree/templates/sitetree/menu.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/menu.html" />
-        <option value="$PROJECT_DIR$/timkiem/forms.py" />
         <option value="$PROJECT_DIR$/timkiem/filters.py" />
         <option value="$PROJECT_DIR$/timkiem/timkiem_indexes.py" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem-nangcao.html" />
         <option value="$PROJECT_DIR$/timkiem/views.py" />
         <option value="$PROJECT_DIR$/timkiem/urls.py" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-nam-sinh.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-gia.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-loai.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-mang.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/timkiem-md.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/ketqua-timkiem.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/timkiem-nangcao.html" />
@@ -153,26 +163,38 @@
         <option value="$PROJECT_DIR$/daugia/admin.py" />
         <option value="$PROJECT_DIR$/daugia/forms.py" />
         <option value="$PROJECT_DIR$/daugia/models.py" />
-        <option value="$PROJECT_DIR$/user/models.py" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/navbar.html" />
         <option value="$PROJECT_DIR$/giohang/templates/pages/navbar.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/baselogin.html" />
-        <option value="$PROJECT_DIR$/sanpham/views.py" />
         <option value="$PROJECT_DIR$/sanpham/urls.py" />
-        <option value="$PROJECT_DIR$/user/admin.py" />
         <option value="$PROJECT_DIR$/user/templates/pages/dangky.html" />
-        <option value="$PROJECT_DIR$/user/forms.py" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/dangky.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/success.html" />
-        <option value="$PROJECT_DIR$/static/home/css-main.css" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/verify.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/thongtintaikhoan.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/doimatkhau.html" />
         <option value="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/auth/views.py" />
         <option value="$PROJECT_DIR$/PythonWeb/settings.py" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/dangnhap.html" />
+        <option value="$PROJECT_DIR$/sanpham/models.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/cot-phai.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-gia.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-nam-sinh.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-loai.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-mang.html" />
+        <option value="$PROJECT_DIR$/sanpham/views.py" />
         <option value="$PROJECT_DIR$/user/urls.py" />
+        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/contrib/auth/models.py" />
+        <option value="$PROJECT_DIR$/user/models.py" />
+        <option value="$PROJECT_DIR$/user/admin.py" />
+        <option value="$PROJECT_DIR$/user/forms.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/base.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/footer.html" />
+        <option value="$PROJECT_DIR$/static/home/css-main.css" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/doimatkhau.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/thongtintaikhoan.html" />
         <option value="$PROJECT_DIR$/user/views.py" />
+        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/contrib/auth/forms.py" />
+        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/contrib/auth/views.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/confirm.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/success.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/verify.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/dangky.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/dangnhap.html" />
       </list>
     </option>
   </component>
@@ -183,10 +205,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-27" />
-    <option name="y" value="14" />
-    <option name="width" value="1364" />
-    <option name="height" value="725" />
+    <option name="x" value="-40" />
+    <option name="width" value="980" />
+    <option name="height" value="525" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -240,19 +261,6 @@
               <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -263,7 +271,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sanpham/templates/simso" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/home" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -276,22 +285,22 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\DACN_SS\DACS_SS\PythonWeb\sanpham\templates\simso" />
-      <recent name="E:\DACN_SS\PythonWeb\sanpham\templates\simso\category" />
-      <recent name="F:\DACN_SS\DACS_SS\PythonWeb\sanpham\templates\simso\sub" />
-      <recent name="E:\DACN_SS\PythonWeb\static\home\img" />
-      <recent name="F:\DACN_SS\DACS_SS\PythonWeb\static\home\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\DACN_SS\PythonWeb\media" />
       <recent name="F:\DACN_SS\DACS_SS\PythonWeb\PythonWeb" />
       <recent name="F:\DACN_SS\DACS_SS\PythonWeb\daugia" />
       <recent name="F:\DACN_SS\DACS_SS\PythonWeb\sanpham\templates\simso\includes\timkiem" />
       <recent name="F:\DACN_SS\DACS_SS\PythonWeb\static\home" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\DACN_SS\PythonWeb\static\home" />
+      <recent name="E:\DACN_SS\PythonWeb\static\home\img" />
       <recent name="F:\DACN_SS\DACS_SS\PythonWeb\sanpham\templates\simso" />
+      <recent name="E:\DACN_SS\PythonWeb\sanpham\templates\simso\category" />
+      <recent name="F:\DACN_SS\DACS_SS\PythonWeb\sanpham\templates\simso\sub" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -306,7 +315,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.PythonWeb">
+  <component name="RunManager" selected="Python.Pythonweb">
     <configuration name="Pythonweb" type="PythonConfigurationType" factoryName="Python">
       <module name="PythonWeb" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -354,7 +363,6 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Django server.PythonWeb" />
       <item itemvalue="Python.Pythonweb" />
     </list>
   </component>
@@ -401,10 +409,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28366113" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28335536" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -418,7 +425,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.26350245" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.31400284" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -461,194 +468,11 @@
     <SUITE FILE_PATH="coverage/PythonWeb$Pythonweb.coverage" NAME="Pythonweb Coverage Results" MODIFIED="1574021059108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/daugia/consumers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/daugia/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-544">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/daugia/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/giohang/templates/pages/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="29" column="70" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/baselogin.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/sub/tinhdiem.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2314">
-          <caret line="918" selection-start-line="918" selection-end-line="918" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/sub/sim-gia-re.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/detail-sim/detail-sim.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="208" column="14" lean-forward="true" selection-start-line="208" selection-start-column="14" selection-end-line="208" selection-end-column="14" />
-          <folding>
-            <element signature="e#207#9083#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-loai.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="55" column="80" selection-start-line="55" selection-start-column="80" selection-end-line="55" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/news/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-576">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="20" lean-forward="true" selection-start-line="14" selection-end-line="39" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/templates/pages/dangky.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="118" column="43" lean-forward="true" selection-start-line="118" selection-start-column="43" selection-end-line="118" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django/views/generic/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-794">
-          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/dangky.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="100" column="124" lean-forward="true" selection-start-line="100" selection-start-column="71" selection-end-line="100" selection-end-column="124" />
-          <folding>
-            <element signature="e#2818#2879#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/success.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/home/css-main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="922">
-          <caret line="2392" column="13" lean-forward="true" selection-start-line="2392" selection-start-column="13" selection-end-line="2392" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/activeemail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/footer.html" />
     <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/error.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/danhmuc.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/verify.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/thongtintaikhoan.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="95" column="14" selection-start-line="95" selection-start-column="14" selection-end-line="95" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/danhmuc.html" />
     <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django/contrib/auth/signals.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -680,60 +504,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/doimatkhau.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-gia.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="57" column="89" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PythonWeb/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="28" column="46" lean-forward="true" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/tokens.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret column="15" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1628">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -789,37 +563,285 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/dangnhap.html">
+    <entry file="file://$PROJECT_DIR$/giohang/migrations/0002_auto_20191125_2130.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="39" column="94" selection-start-line="39" selection-start-column="94" selection-end-line="39" selection-end-column="94" />
-          <folding>
-            <element signature="e#324#351#0#HTML" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-153" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonWeb/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="71" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/sub/sim-vip.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/urls.py">
+    <entry file="file://$PROJECT_DIR$/giohang/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="17">
+          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/views.py">
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/category/sim-nam-sinh.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="63" column="97" selection-start-line="63" selection-start-column="97" selection-end-line="63" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-gia.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="65" column="97" selection-start-line="65" selection-start-column="81" selection-end-line="65" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-mang.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="132" column="30" selection-start-line="132" selection-start-column="30" selection-end-line="132" selection-end-column="30" />
+          <caret line="65" column="97" selection-start-line="65" selection-start-column="97" selection-end-line="65" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/category/sim-theo-loai.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="65" column="97" selection-start-line="65" selection-start-column="97" selection-end-line="65" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/tokens.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CauHinh/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-257">
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="50" lean-forward="true" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="106" column="40" lean-forward="true" selection-start-line="105" selection-start-column="4" selection-end-line="106" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/home/bootstrap/js/src/tab.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/cot-phai.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="239" selection-start-line="4" selection-start-column="239" selection-end-line="4" selection-end-column="239" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/doimatkhau.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#td#0;n#tr#3;n#table#0;n#div#0;n#form#0;n#article#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/home/css-main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="2436" lean-forward="true" selection-start-line="2436" selection-end-line="2436" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/thongtintaikhoan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="78" column="43" lean-forward="true" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#td#0;n#tr#7;n#table#0;n#form#0;n#article#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#0;n#tr#7;n#table#0;n#form#0;n#article#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="77" column="79" lean-forward="true" selection-start-line="76" selection-start-column="4" selection-end-line="77" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/contrib/auth/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="215" column="12" selection-start-line="215" selection-start-column="12" selection-end-line="218" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/contrib/auth/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="88" column="55" selection-start-line="88" selection-start-column="55" selection-end-line="88" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/confirm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding>
+            <element signature="e#2200#2241#0" expanded="true" />
+            <element signature="e#2367#2411#0" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#0;n#article#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="308" column="13" selection-start-line="308" selection-start-column="4" selection-end-line="308" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonWeb/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2283">
+          <caret line="14" column="71" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/success.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#article#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/verify.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#article#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#form#0;n#article#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/dangky.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="118" column="20" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/dangnhap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#article#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#th#0;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#div#0;n#article#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#th#0;n#tr#1;n#tbody#0;n#table#0;n#form#0;n#div#0;n#article#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="119" column="15" selection-start-line="119" selection-start-column="15" selection-end-line="119" selection-end-column="15" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
