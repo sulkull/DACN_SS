@@ -59,6 +59,7 @@ def cart_update(request):
     #Lấy id sản phẩm
     product_id = request.POST.get('product_id')
     current_url = request.POST.get('current_url')
+
     cart_obj, new_obj = GioHang.objects.new_or_get(request)
 
     if product_id is not None:
