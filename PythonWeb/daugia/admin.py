@@ -1,7 +1,5 @@
 from django.contrib import admin
+from .models import Auction
 
-from .models import Product
-#
-# admin.site.register(MyProfile)
-admin.site.register(Product)
-
+# Register your models here.
+admin.site.register(Auction)

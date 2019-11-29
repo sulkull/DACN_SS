@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block index %}
+    {% for auction in auctions %}
+        <article class="media content-section">
+          <img class="rounded-circle article-img" src="{{ auction.vendor.profile.image.url }}">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="{% url 'user-auctions' auction.vendor.username %}">{{ auction.vendor }}</a>
+              <small class="text-muted">{{ auction.date_posted }}</small>
+            </div>
+            <h2><a class="article-title" href="{% url 'auction-detail' auction.id %}">{{ auction.name }}</a></h2>
+            <p class="article-content">{{ auction.description }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock %}
