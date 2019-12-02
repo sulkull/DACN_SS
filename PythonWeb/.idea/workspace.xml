@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/sanpham/templates/simso/index.html" line="77" />
+    <bookmark url="file://$PROJECT_DIR$/sanpham/templates/simso/index.html" line="75" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afecec9c-40c5-45f8-9fc1-71d07b16f7f2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/PythonWeb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonWeb/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/giohang/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/giohang/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/giohang/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/giohang/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/giohang/templates/pages/capnhatsoluong.html" beforeDir="false" afterPath="$PROJECT_DIR$/giohang/templates/pages/capnhatsoluong.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/giohang/templates/pages/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/giohang/templates/pages/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/giohang/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/giohang/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/giohang/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/giohang/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hoadon/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/hoadon/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hoadon/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hoadon/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/detail-sim/detail-sim.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/detail-sim/detail-sim.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanpham/templates/simso/page-user/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/sanpham/templates/simso/page-user/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/home/css-main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/home/css-main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PythonWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonWeb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +37,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup_ui/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="51">
               <caret line="4" column="32" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="32" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -80,7 +66,31 @@
         <entry file="file://$PROJECT_DIR$/PythonWeb/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="101" column="23" lean-forward="true" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
+              <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/daugia/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/daugia/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
+              <folding>
+                <element signature="e#27#81#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,7 +98,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PythonWeb/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
+            <state relative-caret-position="476">
               <caret line="32" column="40" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="40" />
             </state>
           </provider>
@@ -97,7 +107,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup/tests/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
+            <state relative-caret-position="459">
               <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
               <folding>
                 <element signature="e#55#64#0" expanded="true" />
@@ -117,10 +127,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup_ui/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-234">
+            <state relative-caret-position="17">
               <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
               <folding>
                 <element signature="e#0#78#0" expanded="true" />
@@ -231,13 +241,13 @@
         <option value="$PROJECT_DIR$/sanpham/templates/simso/page-daugia/delete.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/base.html" />
         <option value="$PROJECT_DIR$/daugia/urls.py" />
-        <option value="$PROJECT_DIR$/daugia/views.py" />
         <option value="$PROJECT_DIR$/env/Lib/site-packages/twisted/web/static.py" />
         <option value="$PROJECT_DIR$/env/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_internal/index.py" />
         <option value="$PROJECT_DIR$/sanpham/admin.py" />
         <option value="$PROJECT_DIR$/PythonWeb/urls.py" />
         <option value="$PROJECT_DIR$/env/Lib/site-packages/dbbackup_ui/urls.py" />
         <option value="$PROJECT_DIR$/PythonWeb/settings.py" />
+        <option value="$PROJECT_DIR$/daugia/views.py" />
       </list>
     </option>
   </component>
@@ -289,67 +299,7 @@
             <path>
               <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="env" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="dbbackup_ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (PythonWeb) &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (PythonWeb) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="b5f07198:RTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (PythonWeb) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="b5f07198:RTreeStructureProvider$1" />
-              <item name="dbbackup_ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (PythonWeb) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="env" type="b5f07198:RTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (PythonWeb) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="env" type="b5f07198:RTreeStructureProvider$1" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (PythonWeb) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="env" type="b5f07198:RTreeStructureProvider$1" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (PythonWeb) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="env" type="b5f07198:RTreeStructureProvider$1" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="dbbackup_ui" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -405,7 +355,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.PythonWeb">
+  <component name="RunManager" selected="Python.Pythonweb">
     <configuration name="Pythonweb" type="PythonConfigurationType" factoryName="Python">
       <module name="PythonWeb" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -453,7 +403,6 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Django server.PythonWeb" />
       <item itemvalue="Python.Pythonweb" />
     </list>
   </component>
@@ -504,10 +453,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.301059" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3005284" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -521,7 +470,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006605" side_tool="true" weight="0.31400284" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4993395" weight="0.31260228" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4993395" visible="true" weight="0.3125884" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -616,9 +565,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.groovy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.groovy" />
     <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/dangnhap.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -769,26 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daugia/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/daugia/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/twisted/plugin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3985" />
@@ -841,38 +768,29 @@
     <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_access_logger/access_logger.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_access_logger/django_access_logger.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup/tests/settings.py">
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup_ui/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        <state relative-caret-position="51">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="32" />
           <folding>
-            <element signature="e#55#64#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PythonWeb/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
+        <state relative-caret-position="476">
           <caret line="32" column="40" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonWeb/settings.py">
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup/tests/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="101" column="23" lean-forward="true" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup_ui/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="459">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#55#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -886,22 +804,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup_ui/urls.py">
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup_ui/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="32" />
+        <state relative-caret-position="17">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#78#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup_ui/views.py">
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_access_logger/django_access_logger.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup_ui/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-234">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state>
           <folding>
-            <element signature="e#0#78#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonWeb/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daugia/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daugia/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+          <folding>
+            <element signature="e#27#81#0" expanded="true" />
           </folding>
         </state>
       </provider>
