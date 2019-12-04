@@ -16,6 +16,7 @@ def timkiem_nangcao(request):
             Q(SoSim__icontains=sosim)
 
         )
+
 # tim theo nha mang
 
     nhamang = request.GET.get('mang')

@@ -15,7 +15,7 @@ from django.core.mail import EmailMessage
 from user.models import CustomerUser
 from django.contrib.auth import login, authenticate
 
-import nexmo
+# import nexmo
 
 
 class Dataview(ListView):

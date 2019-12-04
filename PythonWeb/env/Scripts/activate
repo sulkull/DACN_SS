@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="F:\DACN_SS\DACS_SS\PythonWeb\env"
+VIRTUAL_ENV="F:\DACN_SS\DACN_SS\PythonWeb\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

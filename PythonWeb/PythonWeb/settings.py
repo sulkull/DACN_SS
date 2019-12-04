@@ -48,13 +48,11 @@ INSTALLED_APPS = [
     'contact',
     'CauHinh',
 
-
     #plugin them vao
-    'daugia',
     'sitetree',
     'dbbackup_ui',
     'import_export',
-    'django_access_logger'
+
 
 ]
 

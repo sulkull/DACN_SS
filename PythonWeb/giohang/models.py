@@ -49,7 +49,7 @@ def CTGHMoi(cart_obj=None):
 
 # Tạo bảng giỏ hàng
 class GioHang(models.Model):
-    user = models.ForeignKey(CustomerUser, on_delete=models.CASCADE, null= True, blank= True, verbose_name='Người dùng')
+    user = models.ForeignKey(CustomerUser, on_delete=models.CASCADE, null= True, blank= True, verbose_name='Người đặt')
     SanPhams = models.ManyToManyField(SanPham, blank=True, verbose_name='Danh sách sản phẩm')
     TongTien = models.FloatField(default=0, verbose_name='Tổng tiền')
 

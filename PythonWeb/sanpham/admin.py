@@ -10,9 +10,9 @@ from import_export.admin import ImportExportModelAdmin
 class SimResource(resources.ModelResource):
     class Meta:
         model = SanPham
-        #fields = ('')              #tuy chon data de xuat ra
-        #export_order = ('')         # sap xep lai thu tu
-        #exclude = ('created_on')   #loai bo                                                                                            #
+        # fields = ['SoSim','TacVu', 'Gia', 'Anh', 'Mang', 'NgayNhap','id', ]              #tuy chon data de xuat ra
+        #export_order = ['SoSim','TacVu', 'Gia', 'Anh', 'Mang', 'NgayNhap','id', ]         # sap xep lai thu tu
+        exclude = ['slug']   #loai bo                                                                                            #
 class SimAdmin(ImportExportModelAdmin):
     exclude = ['slug']
     list_display = ['SoSim','TacVu', 'Gia', 'Anh', 'Mang', 'NgayNhap','id', ]
@@ -30,12 +30,20 @@ class NhaMangAdmin(admin.ModelAdmin):
     list_per_page = 5
 
 
+
+
+class LoaiSimResource(resources.ModelResource):
+    class Meta:
+        model = SimTheoLoai
+        exclude = ['slug', ]
 # Hiển thị bảng Sim theo loại
-class SimTheoLoaiAdmin(admin.ModelAdmin):
-    list_display = [ 'title','id','slug']
-    search_fields = ['title']
-    exclude = ['slug', ]
+class LoaiSimAdmin(ImportExportModelAdmin):
+    exclude = ['slug']
+    list_display = ['title', 'id']
     list_per_page = 5
+    resource_class = LoaiSimResource
+admin.site.register(SimTheoLoai, LoaiSimAdmin)
+
 
 
 # Hiển thị bảng Sim theo giá
@@ -55,6 +63,5 @@ class SimTheoNamAdmin(admin.ModelAdmin):
 
 
 admin.site.register(NhaMang,NhaMangAdmin)
-admin.site.register(SimTheoLoai,SimTheoLoaiAdmin)
 admin.site.register(SimTheoGia,SimTheoGiaAdmin)
 admin.site.register(SimNamSinh,SimTheoNamAdmin)

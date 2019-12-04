@@ -29,7 +29,6 @@ urlpatterns = [
     path('gio-hang/', include('giohang.urls')),
     path('tim-kiem/', include('timkiem.urls')),
     # path('tintuc/', include('news.urls')),
-    path('daugia/', include('daugia.urls')),
     url(r'^admin/', include('dbbackup_ui.urls')),
 ]
 
