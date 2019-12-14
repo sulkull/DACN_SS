@@ -162,11 +162,3 @@ def tknc(request, slug):
             }
     return render(request, 'includes/timkiem/timkiem-nangcao.html', Data)
 
-def diem(request):
-
-    return render(request, 'simso/sub/tinhdiem.html')
-
-def diem2(request):
-    a = request.GET.get('so')
-
-    return render(request, 'simso/sub/kiem.html')

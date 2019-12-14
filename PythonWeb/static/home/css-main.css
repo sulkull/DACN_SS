@@ -2471,3 +2471,16 @@ label#id_lastname {
     margin: 0;
     padding: 0;
 }
+.nha-mang-none.spritestlvn {
+    background-position: -4px -3px;
+    display: block;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 11px;
+}

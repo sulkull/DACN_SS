@@ -158,7 +158,7 @@ def cart_empty(request):
 def checkout_home(request):
     user = request.user
     if not user.is_authenticated:
-        return redirect('/user/dangnhap')
+        return redirect('/user/dang-nhap')
 
     cart_obj, cart_created = GioHang.objects.new_or_get(request)
     ctgh = CTGH.objects.filter(GH=cart_obj)

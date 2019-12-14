@@ -1,7 +1,7 @@
 import re
 from django import template
 from django.shortcuts import render
-from CauHinh.models import CauHinhSeo
+from CauHinh.models import CauHinhSeo, CauHinhTrang
 
 register = template.Library()
 @register.simple_tag(name='seo')

@@ -10,8 +10,8 @@ Default_img = '/default.png'
 
 
 SIM_CHOICES = (
+    ('khuyenmai', 'Khuyến Mãi'),
     ('thuong', 'Sim Thường'),
-    ('khuyenmai', 'Sim Khuyến Mãi'),
     ('vip', 'Sim Vip'),
     ('vipdn', 'Sim Vip Doanh Nhân'))
 

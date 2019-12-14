@@ -1,1230 +1,382 @@
+{% extends 'base.html' %}
+
+{% block index %}
+
+{% load static %}
+{% load humanize %}
+<!---------Index -------------->
+<article>
+{% comment %}<div class="phongthuy_wp">
+                        <div class="form_phongthuy">
+                           <form method="post" style=" position: relative; " action="">
+                               {% csrf_token %}
+                              <div id="phongthuyloading" class="form_phongthuy_controls" style="display: none;position: absolute;left: 50%;margin-left: -65px;z-index: 9;">
+                                 <img style=" width: 130px; " src="/images/simthanglong-phongthuy.gif">
+                              </div>
+								<div class="form_phongthuy_controls">
+									<div>
+                                        <input name="hoten" value=" ">
+                                        <input name="menh" value=" ">
+                                        <input name="tuongsinh" value=" ">
+                                        <input name="tuongkhac" value=" ">
+                                        <input name="nguhanh" value=" ">
+										<div class="form_left">
+											<label>Giờ sinh:&nbsp;</label>
+										</div>
+										<div class="form_right">
+											<select style="width:100%;" class="combobox" name="giosinh" id="giosinh">
+											   <option value="">Giờ sinh</option>
+											   		<option selected="selected" value="1">Tý (23-01h)</option>
+
+													<option value="2">Sửu (1h-3h)</option>
+
+													<option value="3">Dần (3h-5h)</option>
+
+													<option value="4">Mão (5h-7h)</option>
+
+													<option value="5">Thìn (7h-9h)</option>
+
+													<option value="6">Tỵ (9h-11h)</option>
+
+													<option value="7">Ngọ (11h-13h)</option>
+
+													<option value="8">Mùi (13h-15h)</option>
+
+													<option value="9">Thân (15h-17h)</option>
+
+													<option value="10">Dậu (17h-19h)</option>
+
+													<option value="11">Tuất (19h-21h)</option>
+
+													<option value="12">Hợi (21h-23h)</option>
+
+											</select>
+										</div>
+									</div>
+								</div>
+                              <div class="form_phongthuy_controls">
+                                 <div>
+                                 <div class="form_left">
+                                    <label>Ngày&nbsp;sinh(DL):&nbsp;</label>
+                                 </div>
+                                 <div class="form_right">
+                                    <select class="combobox" name="ngay" id="ngaysinh">
+                                       <option value="">Ngày</option>
+                                       		<option value="01">01</option>
+
+											<option selected="selected" value="02">02</option>
+
+											<option value="03">03</option>
+
+											<option value="04">04</option>
+
+											<option value="05">05</option>
+
+											<option value="06">06</option>
+
+											<option value="07">07</option>
+
+											<option value="08">08</option>
+
+											<option value="09">09</option>
+
+											<option value="10">10</option>
+
+											<option value="11">11</option>
+
+											<option value="12">12</option>
+
+											<option value="13">13</option>
+
+											<option value="14">14</option>
+
+											<option value="15">15</option>
+
+											<option value="16">16</option>
+
+											<option value="17">17</option>
+
+											<option value="18">18</option>
+
+											<option value="19">19</option>
+
+											<option value="20">20</option>
+
+											<option value="21">21</option>
+
+											<option value="22">22</option>
+
+											<option value="23">23</option>
+
+											<option value="24">24</option>
+
+											<option value="25">25</option>
+
+											<option value="26">26</option>
+
+											<option value="27">27</option>
+
+											<option value="28">28</option>
+
+											<option value="29">29</option>
+
+											<option value="30">30</option>
+
+											<option value="31">31</option>
+
+                                    </select>
+                                    <select class="combobox" name="thang" id="thangsinh">
+                                       <option value="">Tháng</option>
+                                       											<option value="01">01</option>
+
+											<option value="02">02</option>
+
+											<option value="03">03</option>
+
+											<option value="04">04</option>
+
+											<option selected="selected" value="05">05</option>
+
+											<option value="06">06</option>
+
+											<option value="07">07</option>
+
+											<option value="08">08</option>
+
+											<option value="09">09</option>
+
+											<option value="10">10</option>
+
+											<option value="11">11</option>
+
+											<option value="12">12</option>
+
+                                    </select>
+                                    <select class="combobox combobox_namsinh" name="nam" id="namsinh">
 
 
+											<option value="1931">1931</option>
 
+											<option value="1932">1932</option>
 
+											<option value="1933">1933</option>
 
-<!DOCTYPE html>
-<html lang="en" class="app">
-    <head>
-        <title>Kho sim online của MobiFone: Sim số đẹp - Sim phong thủy - Sim giá gốc - Chọn số theo nhu cầu</title>
-        <!--<link rel="alternate" media="handheld" href="https://chonso.mobifone.vnhttps://chonso.mobifone.vn/wap/"  hreflang="vi-vn" />-->
-        <link rel="canonical" href="">
-        <meta name="google-site-verification" content="BZsiJxN8QbeIhj6M9uaEuYmLW2QpTzEhSedYyrB_4JU" />
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta http-equiv="content-language" content="vi" />
-        <meta name="description" content="Thỏa sức thể hiện phong cách mới cùng tìm số Mobifone theo ngũ hành, âm dương của khách hàng. Mang lại tài lộc và vận may cho chủ nhân" />
-        <meta name="keywords" content="chon so, sim mobifone, chonso mobifone" />
-        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-        <meta name=apple-mobile-web-app-capable content=yes>
-        <meta name=apple-mobile-web-app-status-bar-style content=black>
-        <meta name="format-detection" content="telephone=no">
-        <meta property="og:title" content="Tìm sim phong thủy" />
-        <meta property="og:site_name" content="Chon so Mobifone"/>
-        <meta property="og:description" content="Thỏa sức thể hiện phong cách mới cùng tìm số Mobifone theo ngũ hành, âm dương của khách hàng. Mang lại tài lộc và vận may cho chủ nhân" />
-        <meta property="article:author" content="https://www.facebook.com/chonsoonline" />
-        <meta property="article:publisher" content="https://www.facebook.com/chonsoonline" />
-        <meta property="og:image" content="http://chonso.mobifone.vn/images/chonso.jpg" />
-        <meta property="og:type" content="article" />
-        <meta property="fb:app_id" content="478313232351329" />
-        <meta name="author" content="OSP" /><meta name="copyright" content="OSP" />
-        <meta name="email" content="info@osp.com.vn" />
-        <link rel="shortcut icon" href="https://chonso.mobifone.vn/wap/resources/images/favicon.ico" />
-        <link rel="stylesheet" href="https://chonso.mobifone.vn/wap/resources/css/bootstrap.min.css" type="text/css"></link>
-        <link rel="stylesheet" href="https://chonso.mobifone.vn/wap/resources/css/style.css" type="text/css"></link>
-        <!--<link rel="stylesheet" href="https://chonso.mobifone.vn/wap/resources/fonts/fontface.css" type="text/css"></link>-->
-        <link rel="stylesheet" href="https://chonso.mobifone.vn/wap/resources/css/font-awesome.css" type="text/css"></link>
-        <link rel="stylesheet" href="https://chonso.mobifone.vn/wap/resources/css/jquery.flipcountdown.css" type="text/css"></link>
-        <link rel="stylesheet" href="https://chonso.mobifone.vn/wap/resources/css/bootstrap-datetimepicker.css" type="text/css"></link>
+											<option value="1934">1934</option>
 
-        <script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/jquery.min.js"></script>
-        <script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/bootstrap.js"></script>
-        <script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/custom.js"></script>
+											<option value="1935">1935</option>
 
+											<option value="1936">1936</option>
 
+											<option value="1937">1937</option>
 
+											<option value="1938">1938</option>
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129113038-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', 'UA-129113038-1');
-        </script>
+											<option value="1939">1939</option>
 
-        <!-- Global site tag (gtag.js) - Google Ads: 940009195 -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-940009195"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', 'AW-940009195');
-        </script>
-        
-        <script>
-            gtag('event','view_item', {
-              'value': 60000.0,
-              'items':[{
-              'id':'0931000666',
-              'google_business_vertical': 'custom',
-              }]
-              });
-            gtag('event','view_search_results', {
-              'value': 60000.0,
-              'items':[{
-              'id':'0931000666',
-              'google_business_vertical': 'custom',
-              }]
-              });  
-        </script>
+											<option value="1940">1940</option>
 
-        <!-- Yandex.Metrika counter -->
-<!--        <script type="text/javascript" >
-            (function (d, w, c) {
-                (w[c] = w[c] || []).push(function () {
-                    try {
-                        w.yaCounter51413755 = new Ya.Metrika2({
-                            id: 51413755,
-                            clickmap: true,
-                            trackLinks: true,
-                            accurateTrackBounce: true,
-                            webvisor: true
-                        });
-                    } catch (e) {
-                    }
-                });
+											<option value="1941">1941</option>
 
-                var n = d.getElementsByTagName("script")[0],
-                        s = d.createElement("script"),
-                        f = function () {
-                            n.parentNode.insertBefore(s, n);
-                        };
-                s.type = "text/javascript";
-                s.async = true;
-                s.src = "https://mc.yandex.ru/metrika/tag.js";
+											<option value="1942">1942</option>
 
-                if (w.opera == "[object Opera]") {
-                    d.addEventListener("DOMContentLoaded", f, false);
-                } else {
-                    f();
-                }
-            })(document, window, "yandex_metrika_callbacks2");
-        </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/51413755" style="position:absolute; left:-9999px;" alt="" /></div></noscript>-->
-    <!-- /Yandex.Metrika counter -->
-     <!-- Facebook Pixel Code -->
-    <script>
-        !function (f, b, e, v, n, t, s)
-        {
-            if (f.fbq)
-                return;n = f.fbq = function () {
-                n.callMethod ?
-                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq)
-                f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-                'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '900344510056163');
-        fbq('track', 'PageView');
-        
-    </script>
-    <noscript>
-    <img height="1" width="1" 
-         src="https://www.facebook.com/tr?id=900344510056163&ev=PageView
-         &noscript=1"/>
-    </noscript>
-    <!-- End Facebook Pixel Code -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '720770708422212',
-          cookie     : true,
-          xfbml      : true,
-          version    : 'v5.0'
-        });
+											<option value="1943">1943</option>
 
-        FB.AppEvents.logPageView();   
+											<option value="1944">1944</option>
 
-      };
+											<option value="1945">1945</option>
 
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "https://connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-    </script>
-</head>
-<body uri="" >
-    
+											<option value="1946">1946</option>
 
+											<option value="1947">1947</option>
 
+											<option value="1948">1948</option>
 
+											<option value="1949">1949</option>
 
-<div id="header" class="header">
-    <div class="container">
-        <div class="row topHead">
-            <div class="col-sm-6"><i class="fa fa-phone"></i>Hỗ trợ: 0931.000.666</div>
-            <div class="col-sm-6"><i class="fa fa-map-marker"></i><a href="https://chonso.mobifone.vn/wap/diem-giao-dich.html">Điểm giao dịch</a></div>
-        </div>
-        <div class="row heade">
-            <div class="col-sm-10"><a href="https://chonso.mobifone.vn/wap/"><img src="https://chonso.mobifone.vn/wap/resources/images/logoMobi.bmp"></a></div>
-            <div class="col-sm-2"><img src="https://chonso.mobifone.vn/wap/resources/images/nav-menu.png"></div>
-        </div>
-        <div class="row menuHide">
-            <div class="col-sm-12">
-                <ul>
-                    <li><a href="https://chonso.mobifone.vn/wap/"><i class="fa fa-home"> </i> &nbsp;Trang chủ</a></li>
-                    <li><a href="https://chonso.mobifone.vn/wap/gioi-thieu.html">Giới thiệu</a></li>
-                    <li><a href="https://chonso.mobifone.vn/wap/?rf=bn08966">Đầu số mới 08966</a></li>
-                    <li><a href="https://chonso.mobifone.vn/wap/tracuu/tim-so-theo-ten.html?rf=bnsimtheoten">Tìm số theo tên <img src='https://chonso.mobifone.vn/wap/resources/images/beta-icon.png' style="max-height: 45px; max-width: 70px;vertical-align: middle; margin-left: 5px;"></a></li>
-                    <li><a href="https://chonso.mobifone.vn/wap/tracuu/tim-sim-phong-thuy.html?rf=bnsimphongthuy">Tìm sim phong thủy</a></li>
-                    <li><a href="https://chonso.mobifone.vn/wap/tin-tuc.html">Tin tức</a></li>
-                    <li><a href="https://chonso.mobifone.vn/wap/booking/tra-cuu-thong-tin-giu-so.html">Tra cứu thông tin giữ số</a></li>
-                        
-                    <li class="col"><a rel="nofollow" href="https://chonso.mobifone.vn/wap/user/dang-nhap.html" class="button" >Đăng nhập</a><a rel="nofollow" href="https://chonso.mobifone.vn/wap/user/dang-ky.html" class="button" >Đăng ký</a></li>
-                        
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+											<option value="1950">1950</option>
 
-    
+											<option value="1951">1951</option>
 
+											<option value="1952">1952</option>
 
+											<option value="1953">1953</option>
 
+											<option value="1954">1954</option>
 
+											<option value="1955">1955</option>
 
+											<option value="1956">1956</option>
 
-<!--Section Chon sim so-->
+											<option value="1957">1957</option>
 
-<style>
-    .hotlinebottom {
-        position: fixed;
-        display: block;
-        bottom: 25px;
-        left: 10px;
-    } 
+											<option value="1958">1958</option>
 
-    .hotlinebottom a {
-        z-index: 9;
-        line-height: 37px;
-        color: #fff;
-        font-weight: bold;
-        font-size: 21px;
-        position: fixed;
-        bottom: 15px;
-        left: 9px;
-        padding: 0 10px 0 37px;
-        height: 36px;
-        background: #337ab7;
-        box-shadow: 0 4px 5px -1px rgba(0,0,0,.5);
-        border-radius: 50px;
-    }
+											<option value="1959">1959</option>
 
-    #phone {
-        position: absolute;
-        top: 2px;
-        left: 0;
-    }
+											<option value="1960">1960</option>
 
-    #phone span {
-        display: inline-block;
-        width: 36px;
-        height: 36px;
-        background: url(https://chonso.mobifone.vn/wap/resources/images/phone.png) no-repeat top;
-        -webkit-animation: Rotate 1300ms linear 1300ms 5;
-        animation: Rotate 1300ms linear 1300ms 5;
-        animation-iteration-count: infinite;
-        -webkit-animation-iteration-count: infinite;
-        -moz-animation-iteration-count: infinite;
-        -o-animation-iteration-count: infinite;
-    }
+											<option value="1961">1961</option>
 
-    .in { display:block !important } 
-    
-    .modal-dialog{
-        overflow-y: initial !important;
-    }
-    .fixWidth{
-        width: 90px !important;
-    }
-    .modal-body{
-        height: 350px;
-        overflow-y: auto;
-    }
-</style>
+											<option value="1962">1962</option>
 
+											<option value="1963">1963</option>
 
+											<option value="1964">1964</option>
 
+											<option value="1965">1965</option>
 
-<div class="content">
-    <div class="container">
-        <div class="row tittle">
-            <h1>Chọn số Online</h1>
-        </div>
-        <input type="hidden" name="search_type" id="search_type"
-               value="basic" class="search_number"> <input type="hidden"
-               id="search_count"
-               value="2" />
-        <div class="row timso">
-            <div class="col-sm-12">
-                <input type="text" placeholder="Tên khách hàng cần tìm" class="search_number enter" onfocus="return false" 
-                       id="so" name="so" maxlength="100" onchange="validateRegexByName2($(this));"/>
-            </div>
-        </div>
-        <div  class="row timso">
-            <div class="col-sm-4 loaiso" style="margin-top: 20px;">
-                <i class="fa fa-sort-desc"></i>
-                <select class="search_number enter" name="day" id="day" onchange="dayChange(this);">
-                    <option value="-1">&nbsp;&nbsp;Ngày sinh</option>
-                    
-                    <option value="1">&nbsp;&nbsp;01</option>
-                    
-                    <option value="2">&nbsp;&nbsp;02</option>
-                    
-                    <option value="3">&nbsp;&nbsp;03</option>
-                    
-                    <option value="4">&nbsp;&nbsp;04</option>
-                    
-                    <option value="5">&nbsp;&nbsp;05</option>
-                    
-                    <option value="6">&nbsp;&nbsp;06</option>
-                    
-                    <option value="7">&nbsp;&nbsp;07</option>
-                    
-                    <option value="8">&nbsp;&nbsp;08</option>
-                    
-                    <option value="9">&nbsp;&nbsp;09</option>
-                    
-                    <option value="10">&nbsp;&nbsp;10</option>
-                    
-                    <option value="11">&nbsp;&nbsp;11</option>
-                    
-                    <option value="12">&nbsp;&nbsp;12</option>
-                    
-                    <option value="13">&nbsp;&nbsp;13</option>
-                    
-                    <option value="14">&nbsp;&nbsp;14</option>
-                    
-                    <option value="15">&nbsp;&nbsp;15</option>
-                    
-                    <option value="16">&nbsp;&nbsp;16</option>
-                    
-                    <option value="17">&nbsp;&nbsp;17</option>
-                    
-                    <option value="18">&nbsp;&nbsp;18</option>
-                    
-                    <option value="19">&nbsp;&nbsp;19</option>
-                    
-                    <option value="20">&nbsp;&nbsp;20</option>
-                    
-                    <option value="21">&nbsp;&nbsp;21</option>
-                    
-                    <option value="22">&nbsp;&nbsp;22</option>
-                    
-                    <option value="23">&nbsp;&nbsp;23</option>
-                    
-                    <option value="24">&nbsp;&nbsp;24</option>
-                    
-                    <option value="25">&nbsp;&nbsp;25</option>
-                    
-                    <option value="26">&nbsp;&nbsp;26</option>
-                    
-                    <option value="27">&nbsp;&nbsp;27</option>
-                    
-                    <option value="28">&nbsp;&nbsp;28</option>
-                    
-                    <option value="29">&nbsp;&nbsp;29</option>
-                    
-                    <option value="30">&nbsp;&nbsp;30</option>
-                    
-                    <option value="31">&nbsp;&nbsp;31</option>
-                    
-                </select>
-            </div>
-            <div class="col-sm-4 loaiso">
-                <i class="fa fa-sort-desc"></i>
-                <select class="search_number enter" name="month" id="month" onchange="monthChange(this);">
-                    <option value="-1">&nbsp;&nbsp;Tháng sinh</option>
-                    
-                    <option value="1">&nbsp;&nbsp;01</option>
-                    
-                    <option value="2">&nbsp;&nbsp;02</option>
-                    
-                    <option value="3">&nbsp;&nbsp;03</option>
-                    
-                    <option value="4">&nbsp;&nbsp;04</option>
-                    
-                    <option value="5">&nbsp;&nbsp;05</option>
-                    
-                    <option value="6">&nbsp;&nbsp;06</option>
-                    
-                    <option value="7">&nbsp;&nbsp;07</option>
-                    
-                    <option value="8">&nbsp;&nbsp;08</option>
-                    
-                    <option value="9">&nbsp;&nbsp;09</option>
-                    
-                    <option value="10">&nbsp;&nbsp;10</option>
-                    
-                    <option value="11">&nbsp;&nbsp;11</option>
-                    
-                    <option value="12">&nbsp;&nbsp;12</option>
-                    
-                </select>
-            </div>       
-            <div class="col-sm-4 loaiso">
-                <i class="fa fa-sort-desc"></i>
-                <select class="search_number enter" name="year" id="year" onchange="yearChange(this);">
-                    <option value="-1">&nbsp;&nbsp;Năm sinh</option>
-                    
-                    <option value="1950">&nbsp;&nbsp;1950</option>
-                    
-                    <option value="1951">&nbsp;&nbsp;1951</option>
-                    
-                    <option value="1952">&nbsp;&nbsp;1952</option>
-                    
-                    <option value="1953">&nbsp;&nbsp;1953</option>
-                    
-                    <option value="1954">&nbsp;&nbsp;1954</option>
-                    
-                    <option value="1955">&nbsp;&nbsp;1955</option>
-                    
-                    <option value="1956">&nbsp;&nbsp;1956</option>
-                    
-                    <option value="1957">&nbsp;&nbsp;1957</option>
-                    
-                    <option value="1958">&nbsp;&nbsp;1958</option>
-                    
-                    <option value="1959">&nbsp;&nbsp;1959</option>
-                    
-                    <option value="1960">&nbsp;&nbsp;1960</option>
-                    
-                    <option value="1961">&nbsp;&nbsp;1961</option>
-                    
-                    <option value="1962">&nbsp;&nbsp;1962</option>
-                    
-                    <option value="1963">&nbsp;&nbsp;1963</option>
-                    
-                    <option value="1964">&nbsp;&nbsp;1964</option>
-                    
-                    <option value="1965">&nbsp;&nbsp;1965</option>
-                    
-                    <option value="1966">&nbsp;&nbsp;1966</option>
-                    
-                    <option value="1967">&nbsp;&nbsp;1967</option>
-                    
-                    <option value="1968">&nbsp;&nbsp;1968</option>
-                    
-                    <option value="1969">&nbsp;&nbsp;1969</option>
-                    
-                    <option value="1970">&nbsp;&nbsp;1970</option>
-                    
-                    <option value="1971">&nbsp;&nbsp;1971</option>
-                    
-                    <option value="1972">&nbsp;&nbsp;1972</option>
-                    
-                    <option value="1973">&nbsp;&nbsp;1973</option>
-                    
-                    <option value="1974">&nbsp;&nbsp;1974</option>
-                    
-                    <option value="1975">&nbsp;&nbsp;1975</option>
-                    
-                    <option value="1976">&nbsp;&nbsp;1976</option>
-                    
-                    <option value="1977">&nbsp;&nbsp;1977</option>
-                    
-                    <option value="1978">&nbsp;&nbsp;1978</option>
-                    
-                    <option value="1979">&nbsp;&nbsp;1979</option>
-                    
-                    <option value="1980">&nbsp;&nbsp;1980</option>
-                    
-                    <option value="1981">&nbsp;&nbsp;1981</option>
-                    
-                    <option value="1982">&nbsp;&nbsp;1982</option>
-                    
-                    <option value="1983">&nbsp;&nbsp;1983</option>
-                    
-                    <option value="1984">&nbsp;&nbsp;1984</option>
-                    
-                    <option value="1985">&nbsp;&nbsp;1985</option>
-                    
-                    <option value="1986">&nbsp;&nbsp;1986</option>
-                    
-                    <option value="1987">&nbsp;&nbsp;1987</option>
-                    
-                    <option value="1988">&nbsp;&nbsp;1988</option>
-                    
-                    <option value="1989">&nbsp;&nbsp;1989</option>
-                    
-                    <option value="1990">&nbsp;&nbsp;1990</option>
-                    
-                    <option value="1991">&nbsp;&nbsp;1991</option>
-                    
-                    <option value="1992">&nbsp;&nbsp;1992</option>
-                    
-                    <option value="1993">&nbsp;&nbsp;1993</option>
-                    
-                    <option value="1994">&nbsp;&nbsp;1994</option>
-                    
-                    <option value="1995">&nbsp;&nbsp;1995</option>
-                    
-                    <option value="1996">&nbsp;&nbsp;1996</option>
-                    
-                    <option value="1997">&nbsp;&nbsp;1997</option>
-                    
-                    <option value="1998">&nbsp;&nbsp;1998</option>
-                    
-                    <option value="1999">&nbsp;&nbsp;1999</option>
-                    
-                    <option value="2000">&nbsp;&nbsp;2000</option>
-                    
-                    <option value="2001">&nbsp;&nbsp;2001</option>
-                    
-                    <option value="2002">&nbsp;&nbsp;2002</option>
-                    
-                    <option value="2003">&nbsp;&nbsp;2003</option>
-                    
-                    <option value="2004">&nbsp;&nbsp;2004</option>
-                    
-                    <option value="2005">&nbsp;&nbsp;2005</option>
-                    
-                    <option value="2006">&nbsp;&nbsp;2006</option>
-                    
-                    <option value="2007">&nbsp;&nbsp;2007</option>
-                    
-                    <option value="2008">&nbsp;&nbsp;2008</option>
-                    
-                    <option value="2009">&nbsp;&nbsp;2009</option>
-                    
-                    <option value="2010">&nbsp;&nbsp;2010</option>
-                    
-                    <option value="2011">&nbsp;&nbsp;2011</option>
-                    
-                    <option value="2012">&nbsp;&nbsp;2012</option>
-                    
-                    <option value="2013">&nbsp;&nbsp;2013</option>
-                    
-                    <option value="2014">&nbsp;&nbsp;2014</option>
-                    
-                    <option value="2015">&nbsp;&nbsp;2015</option>
-                    
-                    <option value="2016">&nbsp;&nbsp;2016</option>
-                    
-                    <option value="2017">&nbsp;&nbsp;2017</option>
-                    
-                    <option value="2018">&nbsp;&nbsp;2018</option>
-                    
-                    <option value="2019">&nbsp;&nbsp;2019</option>
-                    
-                </select>
-            </div>       
-        </div>
-        <p class="warning" style="padding-left: 15px" id="time_err"></p>
-        <div  class="row timso" style="margin-top: 15px;">
-            <div class="col-sm-6 " >
-                <i class="fa fa-sort-desc"></i>
-                <select class="search_number enter" name="hours" id="hours" onchange="hoursChange(this);">
-                    <option value="-1">&nbsp;&nbsp;Chọn giờ sinh</option>
-                    
-                    <option value="0">&nbsp;&nbsp;00</option>
-                    
-                    <option value="1">&nbsp;&nbsp;01</option>
-                    
-                    <option value="2">&nbsp;&nbsp;02</option>
-                    
-                    <option value="3">&nbsp;&nbsp;03</option>
-                    
-                    <option value="4">&nbsp;&nbsp;04</option>
-                    
-                    <option value="5">&nbsp;&nbsp;05</option>
-                    
-                    <option value="6">&nbsp;&nbsp;06</option>
-                    
-                    <option value="7">&nbsp;&nbsp;07</option>
-                    
-                    <option value="8">&nbsp;&nbsp;08</option>
-                    
-                    <option value="9">&nbsp;&nbsp;09</option>
-                    
-                    <option value="10">&nbsp;&nbsp;10</option>
-                    
-                    <option value="11">&nbsp;&nbsp;11</option>
-                    
-                    <option value="12">&nbsp;&nbsp;12</option>
-                    
-                    <option value="13">&nbsp;&nbsp;13</option>
-                    
-                    <option value="14">&nbsp;&nbsp;14</option>
-                    
-                    <option value="15">&nbsp;&nbsp;15</option>
-                    
-                    <option value="16">&nbsp;&nbsp;16</option>
-                    
-                    <option value="17">&nbsp;&nbsp;17</option>
-                    
-                    <option value="18">&nbsp;&nbsp;18</option>
-                    
-                    <option value="19">&nbsp;&nbsp;19</option>
-                    
-                    <option value="20">&nbsp;&nbsp;20</option>
-                    
-                    <option value="21">&nbsp;&nbsp;21</option>
-                    
-                    <option value="22">&nbsp;&nbsp;22</option>
-                    
-                    <option value="23">&nbsp;&nbsp;23</option>
-                    
-                </select>
-            </div>
-            <div class="col-sm-6">
-                <i class="fa fa-sort-desc"></i>
-                <select class="search_number enter" name="minute" id="minute" onchange="minuteChange(this);">
-                    <option value="-1">&nbsp;&nbsp;Chọn phút sinh</option>
-                    
-                    <option value="0">&nbsp;&nbsp;00</option>
-                    
-                    <option value="1">&nbsp;&nbsp;01</option>
-                    
-                    <option value="2">&nbsp;&nbsp;02</option>
-                    
-                    <option value="3">&nbsp;&nbsp;03</option>
-                    
-                    <option value="4">&nbsp;&nbsp;04</option>
-                    
-                    <option value="5">&nbsp;&nbsp;05</option>
-                    
-                    <option value="6">&nbsp;&nbsp;06</option>
-                    
-                    <option value="7">&nbsp;&nbsp;07</option>
-                    
-                    <option value="8">&nbsp;&nbsp;08</option>
-                    
-                    <option value="9">&nbsp;&nbsp;09</option>
-                    
-                    <option value="10">&nbsp;&nbsp;10</option>
-                    
-                    <option value="11">&nbsp;&nbsp;11</option>
-                    
-                    <option value="12">&nbsp;&nbsp;12</option>
-                    
-                    <option value="13">&nbsp;&nbsp;13</option>
-                    
-                    <option value="14">&nbsp;&nbsp;14</option>
-                    
-                    <option value="15">&nbsp;&nbsp;15</option>
-                    
-                    <option value="16">&nbsp;&nbsp;16</option>
-                    
-                    <option value="17">&nbsp;&nbsp;17</option>
-                    
-                    <option value="18">&nbsp;&nbsp;18</option>
-                    
-                    <option value="19">&nbsp;&nbsp;19</option>
-                    
-                    <option value="20">&nbsp;&nbsp;20</option>
-                    
-                    <option value="21">&nbsp;&nbsp;21</option>
-                    
-                    <option value="22">&nbsp;&nbsp;22</option>
-                    
-                    <option value="23">&nbsp;&nbsp;23</option>
-                    
-                    <option value="24">&nbsp;&nbsp;24</option>
-                    
-                    <option value="25">&nbsp;&nbsp;25</option>
-                    
-                    <option value="26">&nbsp;&nbsp;26</option>
-                    
-                    <option value="27">&nbsp;&nbsp;27</option>
-                    
-                    <option value="28">&nbsp;&nbsp;28</option>
-                    
-                    <option value="29">&nbsp;&nbsp;29</option>
-                    
-                    <option value="30">&nbsp;&nbsp;30</option>
-                    
-                    <option value="31">&nbsp;&nbsp;31</option>
-                    
-                    <option value="32">&nbsp;&nbsp;32</option>
-                    
-                    <option value="33">&nbsp;&nbsp;33</option>
-                    
-                    <option value="34">&nbsp;&nbsp;34</option>
-                    
-                    <option value="35">&nbsp;&nbsp;35</option>
-                    
-                    <option value="36">&nbsp;&nbsp;36</option>
-                    
-                    <option value="37">&nbsp;&nbsp;37</option>
-                    
-                    <option value="38">&nbsp;&nbsp;38</option>
-                    
-                    <option value="39">&nbsp;&nbsp;39</option>
-                    
-                    <option value="40">&nbsp;&nbsp;40</option>
-                    
-                    <option value="41">&nbsp;&nbsp;41</option>
-                    
-                    <option value="42">&nbsp;&nbsp;42</option>
-                    
-                    <option value="43">&nbsp;&nbsp;43</option>
-                    
-                    <option value="44">&nbsp;&nbsp;44</option>
-                    
-                    <option value="45">&nbsp;&nbsp;45</option>
-                    
-                    <option value="46">&nbsp;&nbsp;46</option>
-                    
-                    <option value="47">&nbsp;&nbsp;47</option>
-                    
-                    <option value="48">&nbsp;&nbsp;48</option>
-                    
-                    <option value="49">&nbsp;&nbsp;49</option>
-                    
-                    <option value="50">&nbsp;&nbsp;50</option>
-                    
-                    <option value="51">&nbsp;&nbsp;51</option>
-                    
-                    <option value="52">&nbsp;&nbsp;52</option>
-                    
-                    <option value="53">&nbsp;&nbsp;53</option>
-                    
-                    <option value="54">&nbsp;&nbsp;54</option>
-                    
-                    <option value="55">&nbsp;&nbsp;55</option>
-                    
-                    <option value="56">&nbsp;&nbsp;56</option>
-                    
-                    <option value="57">&nbsp;&nbsp;57</option>
-                    
-                    <option value="58">&nbsp;&nbsp;58</option>
-                    
-                    <option value="59">&nbsp;&nbsp;59</option>
-                    
-                </select>
-            </div>             
-        </div>    
-        <div  class="row loaiso">
-            <div class="col-sm-12">
-                <div style="margin-bottom: 15px !important;display: none; padding-left: 0px;"
-                     class="col-md-6 col-sm-12 nopadding advancedCaptcha" id="captchaChonSo" >
-                    <div class="col-md-12 col-sm-12 col-xs-12 nopadding" style="padding-left: 0px;">
-                        <div class="form-group  col-md-8 col-sm-8 col-xs-8 nopadding" style="padding-left: 0px;">
-                            <input type="text" placeholder="Mã xác nhận" id="code_captcha"
-                                   name="captcha"  class="form-control search_number enter">
+											<option value="1966">1966</option>
+
+											<option value="1967">1967</option>
+
+											<option value="1968">1968</option>
+
+											<option value="1969">1969</option>
+
+											<option value="1970">1970</option>
+
+											<option value="1971">1971</option>
+
+											<option value="1972">1972</option>
+
+											<option value="1973">1973</option>
+
+											<option value="1974">1974</option>
+
+											<option value="1975">1975</option>
+
+											<option value="1976">1976</option>
+
+											<option value="1977">1977</option>
+
+											<option value="1978">1978</option>
+
+											<option value="1979">1979</option>
+
+											<option value="1980">1980</option>
+
+											<option value="1981">1981</option>
+
+											<option value="1982">1982</option>
+
+											<option value="1983">1983</option>
+
+											<option value="1984">1984</option>
+
+											<option value="1985">1985</option>
+
+											<option value="1986">1986</option>
+
+											<option value="1987">1987</option>
+
+											<option value="1988">1988</option>
+
+											<option selected="selected" value="1989">1989</option>
+
+											<option value="1990">1990</option>
+
+											<option value="1991">1991</option>
+
+											<option value="1992">1992</option>
+
+											<option value="1993">1993</option>
+
+											<option value="1994">1994</option>
+
+											<option value="1995">1995</option>
+
+											<option value="1996">1996</option>
+
+											<option value="1997">1997</option>
+
+											<option value="1998">1998</option>
+
+											<option value="1999">1999</option>
+
+											<option value="2000">2000</option>
+
+											<option value="2001">2001</option>
+
+											<option value="2002">2002</option>
+
+											<option value="2003">2003</option>
+
+											<option value="2004">2004</option>
+
+											<option value="2005">2005</option>
+
+											<option value="2006">2006</option>
+
+											<option value="2007">2007</option>
+
+											<option value="2008">2008</option>
+
+											<option value="2009">2009</option>
+
+											<option value="2010">2010</option>
+
+											<option value="2011">2011</option>
+
+											<option value="2012">2012</option>
+
+											<option value="2013">2013</option>
+
+											<option value="2014">2014</option>
+
+											<option value="2015">2015</option>
+
+											<option value="2016">2016</option>
+
+											<option value="2017">2017</option>
+
+											<option value="2018">2018</option>
+
+                                    </select>
+                                 </div>
+                                 </div>
+                              </div>
+							  <div class="form_phongthuy_controls">
+								<div>
+                                 <div class="form_left">
+                                    <label>Giới tính:&nbsp;&nbsp;</label>
+                                 </div>
+                                 <div class="form_right">
+                                    <div class="radio_box">
+                                       <input checked="checked" type="radio" id="radio_1" value="nam" name="gioitinh">
+                                       <label for="radio_1">Nam</label>
+                                    </div>
+                                    <div class="radio_box">
+                                       <input type="radio" id="radio_2" value="nu" name="gioitinh">
+                                       <label for="radio_2">Nữ</label>
+                                    </div>
+                                 </div>
+								</div>
+                              </div>
+
+                              <div class="form_phongthuy_controls">
+                              <div>
+                                      <button type="submit" class="btn btn-primary" style="color: white"> Tìm sim</button>
+                              </div>
+                              </div>
+                           </form>
                         </div>
-                        <div class="form-group col-md-3 col-sm-4 col-xs-4 text-center nopadding">
-                            <img src="https://chonso.mobifone.vn/wap/captcha.html"
-                                 style="max-width: 60%;" id="imgCaptcha"> <a
-                                 href="javascript:void(0)" onclick="changeCaptcha();"><span
-                                    class="fa fa-refresh"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-<!--        <div class="col-sm-12" style="padding:0px 0px 10px 0px;">
-            (*) Nội dung tìm kiếm trên chỉ mang tính chất tham khảo. 
-        </div>                         -->
-        <div class="row searchNumBtn" style="margin-top: 0px;">
-            <div class="col-sm-12">
-                <a href="javascript:void(0)" id="search_submit2" class="button" onclick="search_number_by_fengshui();">Tìm kiếm</a>
-            </div>
-        </div>
-        <div class="row">
-            <div id="searchResultByFengShui"></div>
-        </div>
-                    
-        <div class="row huongdan">
-            <h4>Hướng dẫn tìm kiếm <i class="fa fa-sort-desc"></i></h4>
-            <div class="col-sm-12">
-                <p style="text-align: justify;"><b>Bước 1:</b> Nhập họ tên hoặc 1 câu khách hàng cần tìm. Ví dụ : Nguyễn Quang Hải, ILikeYou, Family...</p>
-                <p style="text-align: justify;"><b>Bước 2:</b> Theo quy luật bấm số của bàn phím T9, các chữ cái được quy đổi theo số như sau:</p>
-                <ul style="text-align: justify;">
-                    <ul>
-                        <li>- Số 2 thay cho các ký tự ABC</li>
-                        <li>- Số 3 thay cho các ký tự DEF</li>
-                        <li>- Số 4 thay cho các ký tự GHI</li>
-                        <li>- Số 5 thay cho các ký tự JKL</li>
-                        <li>- Số 6 thay cho các ký tự MNO</li>
-                        <li>- Số 7 thay cho các ký tự PQRS</li>
-                        <li>- Số 8 thay cho các ký tự TUV</li>
-                        <li>- Số 9 thay cho các ký tự WXYZ</li>
-                        <li>- Số 0 thay cho ký tự khoảng trắng</li>
-                        <li>- Số 1 thay cho dấu chấm</li>
-                    </ul>
-                </ul>
-                <p style="text-align: justify;"><b>Bước 3:</b> Click chọn “TÌM KIẾM” khi bạn đã thiết lập xong các điều kiện tìm kiếm.</p>
-                <div class='col-sm-12'>
-                    <img src='https://chonso.mobifone.vn/wap/resources/images/T9.jpg' style='width: 100%; min-height: 193px; display: block; margin-left: auto; margin-right: auto; margin-top: 10px; float: right;'>
-                </div>
-            </div>
-        </div>
+                        <br>
+                     </div>{% endcomment %}
 
-    </div>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>
+
+<div class="show-pp">
+    {% if pt in data %}
+        {{ pt.ngay }}
+    {% endif %}
 </div>
-<div class="modal fade" id="viewInfoModal" tabindex="-1" role="dialog"
-     aria-labelledby="viewInfoModal" aria-hidden="true" aria-label="Close" onclick="closeModal(this);">
-    <div class="modal-dialog" onclick="closeModal(this);" style="margin-top: 50px !important">
-        <div class="modal-content" id="modal-contentDetail">
-            <div class="modal-header alert-info">
-                <button type="button" class="close" class="btn btn-default" onclick="closeModal(this);" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Chi tiết số thuê bao <font id ="msisdnSelected" ></font></h4>
-            </div>
-            <div class="modal-body" style="padding: 0px !important">
-                <table class="table table-bordered">
-                    <tbody>
-                        <tr>
-                            <td class="fixWidth"><span>Loại thuê bao:</span></td>
-                            <td><span id="msisdnType"/></td>
-                        </tr>
-                        <tr>
-                            <td class="fixWidth"><span>Loại số:</span></td>
-                            <td><span id="msisdnGroupName"/></td>
-                        </tr>
-                        <tr>
-                            <td class="fixWidth"><span>Phí giữ số/Gia hạn:</span></td>
-                            <td ><span id="msisdnBkFee"/></td>
-                        </tr>
-                        <tr>
-                            <td class="fixWidth"><span>Phí hòa mạng:</span></td>
-                            <td ><span id="msisdnFee"/></td>
-                        </tr>
-                        <tr>
-                            <td class="fixWidth"><span>Cước thuê bao:</span></td>
-                            <td ><span id="feeMonth"/></td>
-                        </tr>
-                        <tr >
-                            <td class="fixWidth"><span>Cước cam kết:</span></td>
-                            <td ><span id="msisdnCK"></span> <span id="msisdnFreeCall"></span><span id="msisdnFreeData">
-
-                            </span> </td>
-                        </tr>
-                        <tr> 
-                            <td class="fixWidth"><span>Thời gian cam kết:</span></td> 
-                            <td ><span id="msisdnTimeCK"/></td> 
-                        </tr>
-                        <tr class="ortherCamKet"> 
-                            <td ><span>Gói cước khác (không bắt buộc)</span></td> 
-                            <td ><span id="ortherCK"></span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-                <a id="aNumberDetail" href="javascript:;" class="btn btn-primary" data-dismiss="modal"   ><i class="fa fa-save"></i> Giữ số</a>
-                <!--<button type="button" class="btn btn-primary" data-dismiss="modal" style="text-transform: none;"><i class="fa fa-check"></i> Giữ số</button>-->
-                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="closeModal(this)"><i class="fa fa-times"></i> Đóng</button>
-            </div>
-        </div>
-    </div>
-</div>                
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        if ($(window).width() <= 767)
-            $("#wrapintroduction").removeClass("in");
-//        $("#day").select2();
-//        $("#month").select2();
-//        $("#year").select2();
-//        $("#hours").select2();
-//        $("#minute").select2();
-
-        $('[data-toggle="tooltip"]').tooltip();
-        $("#so").keyup(function () {
-            $(this).tooltip("hide");
-        });
-//        search_number_by_fengshui();
-    });
-
-    function search_number_by_fengshui() {
-        $(".warning").html('');
-        var search_count = $("#search_count").val();
-        var int_search_count = parseInt(search_count);
-        if (!customValidate()) {
-        } else if (!validateRegexByName2($("#so"))) {
-            $("#so").focus();
-        } else if ($("#so").val() == '') {
-            $("#so_err").html("Nhập thông tin họ tên khách hàng cần tìm kiếm");
-            $("#so").focus();
-        } else if ($("#day").val() === '-1' && ($("#month").val() !== '-1' || $("#year").val() !== '-1')) {
-            $("#time_err").html("Thông tin ngày sinh không hợp lệ. Vui lòng kiểm tra lại!");
-            $("#day").focus();
-        } else if ($("#month").val() === '-1' && ($("#day").val() !== '-1' || $("#year").val() !== '-1')) {
-            $("#time_err").html("Thông tin tháng sinh không hợp lệ. Vui lòng kiểm tra lại!");
-            $("#day").focus();
-        } else if ($("#year").val() === '-1' && ($("#month").val() !== '-1' || $("#day").val() !== '-1')) {
-            $("#time_err").html("Thông tin năm sinh không hợp lệ. Vui lòng kiểm tra lại!");
-            $("#day").focus();
-        } else if ($("#hours").val() === '-1' && $("#minute").val() !== '-1') {
-            $("#time_err").html("Thông tin giờ sinh không hợp lệ. Vui lòng kiểm tra lại!");
-            $("#hours").focus();
-        } else if ($("#minute").val() === '-1' && $("#hours").val() !== '-1') {
-            $("#time_err").html("Thông tin phút sinh không hợp lệ. Vui lòng kiểm tra lại!");
-            $("#minute").focus();
-        } else if ($("#minute").val() !== '-1' && $("#hours").val() !== '-1' && ($("#month").val() === '-1' || $("#day").val() === '-1' || $("#year").val() === '-1')) {
-            $("#time_err").html("Thông tin ngày/tháng/năm sinh không hợp lệ. Vui lòng kiểm tra lại!");
-            $("#day").focus();
-        } else if ($("#code_captcha").val() == '' && int_search_count >= 50) {
-            show_dialog("Thông báo", "Bạn chưa nhập mã xác nhận", "#code_captcha");
-            $(".advancedCaptcha").show();
-            $("#captchaChonSo").css("display", "block");
-        } else {
-            var _uri = $("body").attr("uri");
-            var formdata = $(".search_number").serialize();
-            $("#searchResultByFengShui").html('<div class="text-center"><img src="' + _uri + '/resources/images/loading.gif" /> Đang tải dữ liệu...</div>');
-            $("#searchResultByFengShui").load(_uri + "/tim?" + formdata + "&rcaptcha=true");
-//            $(window).scrollTop($('#searchResultByFengShui').offset().top);
-            $('html').scrollTop();
-            int_search_count++;
-            $("#search_count").val(int_search_count);
-            if (int_search_count >= 50) {
-                $(".advancedCaptcha").show();
-                $("#captchaChonSo").css("display", "block");
-            }
-            fbq('track', 'Search', {
-                search_string: formdata,
-                content_category: 'Wap: Search By Fengshui',
-                value: $("#so").val()
-            });
-            gtag('event', 'view_search_results', {
-                'value': 60000.0,
-                'search_term': [{
-                        'search_string': formdata,
-                        'google_business_vertical': 'retail'
-                    }]
-            });
-        }
-        return false;
-
-    }
-    document.getElementById("demo").innerHTML =  $("#so");
-
-    function dayChange(item) {
-        if (item.value === "-1") {
-//            $("#month").select2('val','-1');
-//            $("#year").select2('val','-1');
-        }
-    }
-    function monthChange(item) {
-        if (item.value === "-1") {
-//            $("#day").select2('val','-1');
-//            $("#year").select2('val','-1');
-        }
-    }
-    function yearChange(item) {
-        if (item.value === "-1") {
-//            $("#month").select2('val','-1');
-//            $("#day").select2('val','-1');
-        }
-    }
-    function hoursChange(item) {
-        if (item.value === "-1") {
-//            $("#minute").select2('val','-1');
-        }
-    }
-    function minuteChange(item) {
-        if (item.value === "-1") {
-//            $("#hours").select2('val','-1');
-        }
-    }
-
-    function closeModal(event) {
-        $(".modal-backdrop").remove();
-        $("#viewInfoModal").modal('hide');
-
-    }
-
-    function showDetail(msisdn, type, groupName, minPrice) {
-        $("#msisdnActive").val(msisdn);
-        $("#msisdnSelected").html(msisdn);
-        $("#msisdnSelected").val(msisdn);
-        $("#aNumberDetail").attr("href", "https://chonso.mobifone.vn/wap/booking/numberdetail-" + msisdn + ".html");
-        if (type == "1" && minPrice == "0") {
-            $("#msisdnType").html("Trả sau (MobiGold hoặc MobiF)");
-            $("#msisdnFee").html("60.000đ (gồm cước hòa mạng 35.000đ và tiền sim 25.000đ)");
-            $("#feeMonth").html("<b>MobiGold: 49.000đ/tháng" +
-                    "</br> " + "MobiF: 0đ/tháng và phải đăng ký 1 trong các gói cước sau:</b>" +
-                    "</br> " + "- <b>CS68T</b> (68.000đ/tháng - 268 phút nội mạng; 68 phút ngoại mạng)" +
-                    "</br> " + "- <b>CS68D</b> (68.000đ/tháng - 6.8GB data tốc độ cao)" +
-                    "</br> " + "- <b>MF69</b> (69.000đ/tháng - 1000 phút nội mạng)" +
-                    "</br> " + "- <b>MF99</b> (99.000đ/tháng - 1000 phút nội mạng; 40 phút ngoại mạng; 5GB tốc độ cao)" +
-                    "</br> " + "- <b>MF149</b> (149.000đ/tháng - 1500 phút nội mạng; 80 phút ngoại mạng; 8GB tốc độ cao)" +
-                    "</br> " + "- <b>MF199</b> (199.000đ/tháng - 1500 phút nội mạng; 160 phút ngoại mạng; 9GB tốc độ cao)" +
-                    "</br> " + "- <b>MF299</b> (299.000đ/tháng - 2000 phút nội mạng; 300 phút ngoại mạng; 12GB tốc độ cao)" +
-                    "</br> " + "- <b>MF399</b> (399.000đ/tháng - 3000 phút nội mạng; 400 phút ngoại mạng; 17GB tốc độ cao)"
-                    );
-        } else if (type == "1" && minPrice > 0) {
-            $("#msisdnType").html("Trả sau");
-            $("#msisdnFee").html("60.000đ (gồm cước hòa mạng 35.000đ và phôi sim 25.000đ)");
-            $("#feeMonth").html("49.000đ/tháng");
-        } else {
-            $("#msisdnType").html("Trả trước");
-            $("#msisdnFee").html("50.000đ (gồm cước hòa mạng 25.000đ và phôi sim 25.000đ)");
-            $("#feeMonth").html("Không mất cước thuê bao");
-        }
-        $("#msisdnGroupName").html(groupName.replace(new RegExp("<", 'g'), "&lt;").replace(new RegExp(">", 'g'), "&gt;"));
-
-        if (minPrice === "0") {
-            $("#msisdnBkFee").html("Miễn phí trong 24h; 10.000đ/24h tiếp theo");
-            $("#msisdnFreeCall").html("");
-            $("#msisdnFreeData").html("");
-        } else if (minPrice === "150000") {
-            $("#msisdnBkFee").html("10.000đ/12 giờ (tối đa gia hạn 72 giờ)");
-            $("#msisdnFreeCall").html("700 phút nội mạng Mobifone, cố định VNPT toàn quốc");
-            $("#msisdnFreeData").html("");
-        } else if (minPrice === "250000") {
-            $("#msisdnBkFee").html("10.000đ/8 giờ (Tối đa gia hạn 72 giờ)");
-            $("#msisdnFreeCall").html("700 phút nội mạng Mobifone, cố định VNPT toàn quốc");
-            $("#msisdnFreeData").html(" Được miễn phí 1 gói M50(450MB tốc độ cao/chu kỳ), vượt dung lượng sẽ tính cước phát sinh 25đ/50kB");
-        } else if (minPrice === "300000") {
-            $("#msisdnFreeCall").html("700 phút gọi Mobifone, Vinaphone và cố định VNPT toàn quốc");
-            $("#msisdnBkFee").html("10.000đ/4 giờ (tối đa gia hạn 72 giờ)");
-            $("#msisdnFreeData").html(" Được miễn phí 1 gói MIU(3,8GB tốc độ cao/chu kỳ), hết tốc độ cao truy cập tốc độ thông thường");
-        } else if (minPrice === "400000") {
-            $("#msisdnFreeCall").html("700 phút gọi Mobifone, Vinaphone và cố định VNPT toàn quốc. 50 phút liên mạng trong nước");
-            $("#msisdnBkFee").html("10.000đ/4 giờ (tối đa gia hạn 72 giờ)");
-            $("#msisdnFreeData").html(" Được miễn phí 1 gói M120(8,8GB tốc độ cao/chu kỳ). Sau khi hết dung lượng miễn phí, hệ thống tạm dừng kết nối Internet");
-        } else if (minPrice === "500000" || minPrice === "800000") {
-            $("#msisdnFreeData").html(" Được miễn phí 1 gói M120(8,8GB tốc độ cao/chu kỳ). Sau khi hết dung lượng miễn phí, hệ thống tạm dừng kết nối Internet");
-            $("#msisdnFreeCall").html("700 phút tới số di động MobiFone, Vinaphone và cố định VNPT toàn quốc. 150 phút liên mạng trong nước");
-            $("#msisdnBkFee").html("10.000đ/4 giờ (tối đa gia hạn 72 giờ)");
-        } else if (minPrice === "1200000") {
-            $("#msisdnFreeData").html(" Được miễn phí 1 gói BMIU(16,5GB tốc độ cao/chu kỳ). Sau khi hết dung lượng miễn phí, hệ thống tạm dừng kết nối Internet");
-            $("#msisdnFreeCall").html("700 phút tới số di động MobiFone, Vinaphone và cố định VNPT toàn quốc. 150 phút liên mạng trong nước");
-            $("#msisdnBkFee").html("10.000đ/4 giờ (tối đa gia hạn 72 giờ)");
-        }
-
-        var rgx = /(\d+)(\d{3})/;
-        var rgx2 = /(\d+)(\d{3})(\d{3})/;
-        var minPriceStr = minPrice;
-        var cket = minPrice / 1000;
-
-        if (minPrice >= 1000000) {
-            while (rgx.test(minPriceStr)) {
-                minPriceStr = minPrice.replace(rgx2, '$1' + ',' + '$2' + ',' + '$3')
-            }
-        } else if (minPrice < 1000000 && minPrice >= 150000) {
-            while (rgx.test(minPriceStr)) {
-                minPriceStr = minPrice.replace(rgx, '$1' + ',' + '$2')
-            }
-        }
-
-        if (minPrice > 0) {
-            $("#msisdnCK").html("Bắt buộc sử dụng gói cam kết CK" + cket + ": " + minPriceStr + "đ/tháng. KH được hưởng ưu đãi của gói cam kết gồm: ");
-        } else {
-            $("#msisdnCK").html("Không có cước cam kết");
-        }
-        if (minPrice > "0") {
-            $("#msisdnTimeCK").html("KH cam kết phải sử dụng tối thiểu 24 tháng");
-        } else if (type == "1") {
-            $("#msisdnTimeCK").html("- MobiGold: 6 tháng" +
-                    "</br> " + "- MobiF: 12 tháng" +
-                    "</br> " + "(*) Khách hàng có thể chuyển trả trước sau thời gian cam kết trên");
-        } else {
-            $("#msisdnTimeCK").html("Không phải cam kết thời gian sử dụng");
-        }
-
-        if (minPrice === "0" && type == "0") {
-            $("tr.ortherCamKet").show();
-            $("#ortherCK").html("Số thuê bao có thể đăng ký các gói cước ưu đãi:"
-                    + "</br> " + "- <b>CS68T</b> (68.000đ/tháng - 268 phút nội mạng; 68 phút ngoại mạng)"
-                    + "</br> " + "- <b>CS68D</b> (68.000đ/tháng - 6.8GB data tốc độ cao)"
-                    + "</br> " + "- <b>M79</b> (79.000đ/1 chu kỳ - 1000 phút nội mạng; 4GB tốc độ cao; 20 phút gọi ngoại mạng)"
-                    + "</br> " + "- <b>MC90</b> (90.000đ/1 chu kỳ - 1000 phút nội mạng cho cuộc gọi dưới 10 phút; 5GB tốc độ cao; 20 phút gọi ngoại mạng)"
-                    + "</br> " + "- <b>MC149</b> (149.000đ/1 chu kỳ - 1500 phút nội mạng cho cuộc gọi dưới 10 phút; 8GB tốc độ cao; 80 phút gọi ngoại mạng)"
-                    + "</br> " + "- <b>MC299</b> (299.000đ/1 chu kỳ - 3000 phút nội mạng cho cuộc gọi dưới 10 phút; 12GB tốc độ cao; 300 phút gọi ngoại mạng)"
-                    + "</br> " + "PS: Các gói cước ưu đãi có chu kỳ đầu 60 ngày, các chu kỳ tiếp theo 30 ngày"
-
-                    );
-        } else {
-            $("tr.ortherCamKet").hide();
-        }
-
-        addFbEventViewContent(msisdn, type, groupName, minPrice);
-    }
-//    
-//    function onDetailMsisdn(){
-//         location.href = "https://chonso.mobifone.vnhttps://chonso.mobifone.vn/wap/booking/numberdetail-" + $("#msisdnSelected").val() + ".html";
-//    }
 
 
-    function addFBEventBooking(so) {
-        fbq('track', 'Purchase', {
-            content_category: 'Web: Booking Number',
-            value: so,
-            currency: 'VND'
+</article>
 
-        });
-        gtag('event', 'purchase', {
-            'id': 'WAP',
-            'items': [{
-                    'google_business_vertical': 'retail'
-                }]
-        });
-    }
-    ;
+{% endblock %}
 
-    function addFbEventViewContent(msisdn, type, groupName, minPrice) {
-        fbq('track', 'ViewContent', {
-            content_ids: msisdn,
-            content_type: 'product',
-            contents: "{\"msisdn\":\"" + msisdn + "\", "
-                    + "\"type\":\"" + type + "\", "
-                    + "\"group\":\"" + groupName + "\", "
-                    + "\"price\":\"" + minPrice
-                    + "\"}",
-            content_category: 'Wap: ViewDetail Number',
-            value: minPrice,
-            currency: 'VND'
-        });
-        gtag('event', 'view_item', {
-                'id': 'WAP',
-                'value': (type === "1") ? 60000.0 : 50000.0,
-                'items': [{
-                        'id': msisdn,
-                        'google_business_vertical': 'custom'
-                    }]
-            });
-
-    }
-    ;
-
-    $(".modal-content").click(function (event) {
-        event.stopPropagation();
-    });
-
-
-
-    $('[data-toggle="tooltip"]').tooltip();
-    $(".enter").keyup(function (e) {
-        if (e.which === 13) {
-            search_number_by_fengshui();
-            $("#so").focusout();
-        } else {
-            return false;
-        }
-    });
-    $("#nav-home").addClass("active");
-
-    function validateRegexByName2(element) {
-        var target_msg = element.attr("id");
-        var msg = element.attr("data-pattern-message");
-        var regex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,<>\/?]/;
-        if (!checkRegexbyName(element, regex))
-        {
-            element.focus();
-            $("#" + target_msg + "_err").html(msg);
-            return false;
-        } else {
-            $("#" + target_msg + "_err").html('');
-            return true;
-        }
-
-    }
-
-    function  checkRegexbyName(element, regex) {
-        var result = false;
-        var input = element.val();
-        if (input != '') {
-            if (!regex.test(input))
-                result = true;
-        } else {
-            result = true;
-        }
-        return result;
-    }
-
-</script>
-
-    
-
-
-<div id="footer" class="footer">
-    <div class="container">
-        <div class="row topF">
-            <ul>
-                <li><a href="https://chonso.mobifone.vn/wap/gioi-thieu.html">GIỚI THIỆU</a></li>
-                <li><a href="https://chonso.mobifone.vn/wap/huong-dan.html">HƯỚNG DẪN</a></li>
-                <li><a href="https://chonso.mobifone.vn/wap/lien-he.html">LIÊN HỆ</a></li>
-                <li><a href="https://chonso.mobifone.vn/wap/tin-tuc.html">TIN TỨC</a></li>
-                <li><a href="https://chonso.mobifone.vn/wap/danh-sach-dau-so-viet-nam.html">DANH SÁCH ĐẦU SỐ CÁC NHÀ MẠNG</a></li> 
-            </ul>
-        </div>
-        <div class="wrap-copy col-sm-12 col-sm-12 col-xs-12">
-            <p style="color:#333;text-align: center"><a  target="_blank" href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=47860"><img src="https://chonso.mobifone.vn/wap/resources/images/dathongbaoBCT.png" style="width:80px;"/> </a>Tổng công ty Viễn thông MobiFone</p>
-            <p style="color:#333;text-align: center">Địa chỉ: Tòa nhà MobiFone - Lô VP1, Phường Yên Hòa, Quận Cầu Giấy, Thành phố Hà Nội.</p>
-            <p style="color:#333;text-align: center">Tổng đài hỗ trợ: <a href="tel:0931000666">0931.000.666</a> (Hỗ trợ trong giờ hành chính) hoặc 9090 (Hỗ trợ 24/7) – Email: <a href="mailto:chonso.cskh@osp.com.vn">chonso.cskh@osp.com.vn</a></p>
-            <p style="color:#333;text-align: center">Mã số doanh nghiệp: 0100686209, đăng ký lần đầu ngày 20/9/2010, đăng ký thay đổi lần thứ 9 ngày 27/7/2018, cấp bởi Sở KHĐT thành phố Hà Nội.</p>
-            <p style="color:#333;text-align: center">© 2015 - Bản quyền thuộc về Tổng công ty Viễn thông <a href="http://mobifone.vn/" target="_blank" style="font-weight: 550">MobiFone</a></p>
-
-        </div>
-    </div>
-</div>
-<div class="scrollToTop" style="display: none;">
-    <i class="fa fa-angle-up" style="width: 100%;height: 100%;line-height: 28px;"></i>
-</div>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $(".huongdan h4").click(function () {
-            $(".huongdan .col-sm-12").slideToggle();
-        });
-
-        $(".header .heade .col-sm-2 img").click(function () {
-            $(".header .menuHide").slideToggle();
-        });
-    });
-    $(".scrollToTop").click(function () {
-        $("body,html").animate({
-            scrollTop: 0
-        }, 500);
-    });
-</script>
-
-</body>
-<script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/CommonFunction.js"></script>
-<script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/owl.carousel.js"></script>
-<script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/TimeCircles.js"></script>
-<script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/bootstrap.js"></script>
-<script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/jquery.bootpag.min.js"></script>
-<script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/parsley/parsley.min.js" ></script>
-<script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/parsley/parsley.extend.js" ></script>
-<script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/jquery.flipcountdown.js"></script>
-<script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/bootstrap-filestyle.min.js"></script>
-<!--<script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/moment-with-locales.js"></script>-->
-<script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/bootstrap-datetimepicker.js"></script>
-<script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/js/bootstrap-dialog.min.js"></script>
-<script type="text/javascript" src="https://chonso.mobifone.vn/wap/resources/map/select2.min.js"></script>
-
-
-
-<script type="text/javascript" >
-    $(document).ready(function () {
-        var height = $('#header').height() + $('#footer').height() + 20;
-        if ($(document).height() > height) {
-            $(".content").css("min-height", $(document).height() - height);
-        }
-    });
-</script>
-</html>
