@@ -48,13 +48,12 @@ INSTALLED_APPS = [
     'contact',
     'CauHinh',
 
-
     #plugin them vao
-    'daugia',
     'sitetree',
     'dbbackup_ui',
     'import_export',
-    'django_access_logger'
+    'phongthuy',
+
 
 ]
 
@@ -154,7 +153,7 @@ AUTH_USER_MODEL = 'user.CustomerUser'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
+IMPORT_EXPORT_USE_TRANSACTIONS = False  #fix loi k import dc
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 

@@ -12,6 +12,7 @@ class HoaDon(models.Model):
     GiaoHang = models.BooleanField(default=False, verbose_name='Giao hàng')
     TongTien = models.FloatField(default=0, verbose_name='Tổng tiền')
 
+
     def __str__(self):
         return str(self.id)
 

@@ -11,6 +11,5 @@ urlpatterns = [
     path('sim-theo-loai/<str:slug>', views.simtheoloai, name='simtheoloai'),
     path('sim-nam-sinh/<str:slug>', views.simnamsinh, name='simnamsinh'),
 
-    path('diem', views.diem, name='diem'),
-    path('tim', views.diem2, name='diem'),
+
 ]

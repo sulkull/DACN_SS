@@ -27,7 +27,7 @@ function global:deactivate ([switch]$NonDestructive) {
 
 deactivate -nondestructive
 
-$env:VIRTUAL_ENV="F:\DACN_SS\DACS_SS\PythonWeb\env"
+$env:VIRTUAL_ENV="F:\DACN_SS\DACN_SS\PythonWeb\env"
 
 if (! $env:VIRTUAL_ENV_DISABLE_PROMPT) {
     # Set the prompt to include the env name

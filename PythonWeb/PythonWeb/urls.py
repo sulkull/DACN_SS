@@ -28,8 +28,7 @@ urlpatterns = [
     path('user/', include('user.urls')),
     path('gio-hang/', include('giohang.urls')),
     path('tim-kiem/', include('timkiem.urls')),
-    # path('tintuc/', include('news.urls')),
-    path('daugia/', include('daugia.urls')),
+    path('phongthuy/', include('phongthuy.urls')),
     url(r'^admin/', include('dbbackup_ui.urls')),
 ]
 

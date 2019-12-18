@@ -31,13 +31,47 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../PythonWeb\exportToHTML" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/giohang/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="21" column="27" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hoadon/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hoadon/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="33" column="39" selection-start-line="32" selection-start-column="4" selection-end-line="33" selection-end-column="39" />
+=======
         <entry file="file://$PROJECT_DIR$/daugia/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="149">
               <caret line="9" selection-start-line="9" selection-end-line="9" />
+>>>>>>> 314aaca672c714bf919e721d3e59b8fc8550fe97
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -46,12 +80,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/sanpham/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2414">
+              <caret line="154" column="29" lean-forward="true" selection-start-line="154" selection-start-column="29" selection-end-line="154" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+=======
         <entry file="file://$PROJECT_DIR$/giohang/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-85">
               <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
+>>>>>>> 314aaca672c714bf919e721d3e59b8fc8550fe97
               </folding>
             </state>
           </provider>
@@ -93,6 +136,7 @@
       <find>btn-primary</find>
       <find>dangky</find>
       <find>list-daugia</find>
+      <find>filter_form</find>
     </findStrings>
     <replaceStrings>
       <replace>timkiem</replace>
@@ -115,32 +159,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/user/models.py" />
-        <option value="$PROJECT_DIR$/user/admin.py" />
-        <option value="$PROJECT_DIR$/user/forms.py" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/footer.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/doimatkhau.html" />
-        <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/thongtintaikhoan.html" />
-        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/contrib/auth/forms.py" />
-        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/django/contrib/auth/views.py" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/confirm.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/success.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/verify.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/dangky.html" />
-        <option value="$PROJECT_DIR$/user/views.py" />
         <option value="$PROJECT_DIR$/user/urls.py" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/page-user/error.html" />
-        <option value="$PROJECT_DIR$/giohang/admin.py" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/page-cart/giohangtrong.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/index.html" />
         <option value="$PROJECT_DIR$/giohang/templates/pages/navbar.html" />
         <option value="$PROJECT_DIR$/giohang/templates/pages/capnhatsoluong.html" />
-        <option value="$PROJECT_DIR$/giohang/models.py" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/page-cart/xoakhoigiohang.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/page-cart/xoatatcasanpham.html" />
         <option value="$PROJECT_DIR$/giohang/urls.py" />
-        <option value="$PROJECT_DIR$/hoadon/admin.py" />
-        <option value="$PROJECT_DIR$/hoadon/models.py" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/menu.html" />
         <option value="$PROJECT_DIR$/static/home/css-main.css" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/page-cart/checkout.html" />
@@ -160,12 +191,28 @@
         <option value="$PROJECT_DIR$/daugia/urls.py" />
         <option value="$PROJECT_DIR$/env/Lib/site-packages/twisted/web/static.py" />
         <option value="$PROJECT_DIR$/env/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_internal/index.py" />
-        <option value="$PROJECT_DIR$/sanpham/admin.py" />
-        <option value="$PROJECT_DIR$/PythonWeb/urls.py" />
         <option value="$PROJECT_DIR$/env/Lib/site-packages/dbbackup_ui/urls.py" />
-        <option value="$PROJECT_DIR$/PythonWeb/settings.py" />
         <option value="$PROJECT_DIR$/daugia/views.py" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/user/views.py" />
+        <option value="$PROJECT_DIR$/PythonWeb/settings.py" />
+        <option value="$PROJECT_DIR$/PythonWeb/urls.py" />
+        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/dbbackup_ui/urls.py" />
+        <option value="$PROJECT_DIR$/sanpham/admin.py" />
+        <option value="$PROJECT_DIR$/timkiem/urls.py" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/timkiem-nangcao.html" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/ketqua-timkiem.html" />
+        <option value="$PROJECT_DIR$/sanpham/views.py" />
+        <option value="$PROJECT_DIR$/static/home/script.min.js" />
+        <option value="$PROJECT_DIR$/sanpham/templates/simso/tim-kiem.html" />
+        <option value="$PROJECT_DIR$/timkiem/views.py" />
+        <option value="$PROJECT_DIR$/giohang/admin.py" />
+        <option value="$PROJECT_DIR$/giohang/models.py" />
+        <option value="$PROJECT_DIR$/hoadon/models.py" />
+        <option value="$PROJECT_DIR$/hoadon/admin.py" />
+=======
         <option value="$PROJECT_DIR$/giohang/views.py" />
+>>>>>>> 314aaca672c714bf919e721d3e59b8fc8550fe97
       </list>
     </option>
   </component>
@@ -199,12 +246,24 @@
             <path>
               <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="giohang" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 314aaca672c714bf919e721d3e59b8fc8550fe97
             </path>
             <path>
               <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonWeb" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="sanpham" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+=======
               <item name="user" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 314aaca672c714bf919e721d3e59b8fc8550fe97
             </path>
           </expand>
           <select />
@@ -234,19 +293,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\DACN_SS\PythonWeb\sanpham\templates\simso\page-cart" />
-      <recent name="E:\DACN_SS\PythonWeb\static\home" />
-      <recent name="E:\DACN_SS\PythonWeb\static\home\img" />
-      <recent name="F:\DACN_SS\DACS_SS\PythonWeb\sanpham\templates\simso" />
-      <recent name="E:\DACN_SS\PythonWeb\sanpham\templates\simso\category" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\DACN_SS\PythonWeb\media" />
       <recent name="F:\DACN_SS\DACS_SS\PythonWeb\PythonWeb" />
       <recent name="F:\DACN_SS\DACS_SS\PythonWeb\daugia" />
       <recent name="F:\DACN_SS\DACS_SS\PythonWeb\sanpham\templates\simso\includes\timkiem" />
       <recent name="F:\DACN_SS\DACS_SS\PythonWeb\static\home" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\DACN_SS\PythonWeb\sanpham\templates\simso\page-cart" />
+      <recent name="E:\DACN_SS\PythonWeb\static\home" />
+      <recent name="E:\DACN_SS\PythonWeb\static\home\img" />
+      <recent name="F:\DACN_SS\DACS_SS\PythonWeb\sanpham\templates\simso" />
+      <recent name="E:\DACN_SS\PythonWeb\sanpham\templates\simso\category" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -261,8 +320,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Pythonweb">
+  <component name="RunManager" selected="Django server.PythonWeb">
     <configuration name="Pythonweb" type="PythonConfigurationType" factoryName="Python">
+      <module name="PythonWeb" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="F:\DACN_SS\DACS_SS\PythonWeb\env\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.idea" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonWeb" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -275,7 +356,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.idea" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -294,7 +375,7 @@
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
@@ -309,8 +390,15 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Django server.PythonWeb" />
       <item itemvalue="Python.Pythonweb" />
+      <item itemvalue="Python.manage" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.manage" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -343,11 +431,14 @@
       <workItem from="1574949319659" duration="10637000" />
       <workItem from="1574990359982" duration="902000" />
       <workItem from="1575023725587" duration="2585000" />
+      <workItem from="1575294468601" duration="1756000" />
+      <workItem from="1575312144822" duration="16578000" />
+      <workItem from="1575497305974" duration="1003000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149617000" />
+    <option name="totallyTimeSpent" value="168954000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -359,15 +450,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3139183" />
+=======
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1340819" />
+>>>>>>> 314aaca672c714bf919e721d3e59b8fc8550fe97
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32569557" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33060557" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33060557" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
@@ -375,7 +472,11 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006605" side_tool="true" weight="0.31400284" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3289689" />
+<<<<<<< HEAD
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4993395" visible="true" weight="0.31096563" />
+=======
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4993395" visible="true" weight="0.3125884" />
+>>>>>>> 314aaca672c714bf919e721d3e59b8fc8550fe97
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -414,88 +515,172 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PythonWeb$Pythonweb.coverage" NAME="Pythonweb Coverage Results" MODIFIED="1574985755047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonWeb$manage.coverage" NAME="manage Coverage Results" MODIFIED="1575295634854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/verify.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.groovy" />
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/dangnhap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="39" column="79" lean-forward="true" selection-start-line="39" selection-start-column="79" selection-end-line="39" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/giohang/urls.py">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup_ui/urls.py" />
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_access_logger/django_access_logger.py" />
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup_ui/forms.py" />
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup/tests/settings.py" />
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup_ui/utils.py" />
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup_ui/views.py" />
+    <entry file="file://$PROJECT_DIR$/daugia/views.py" />
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/user/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django/core/servers/basehttp.py">
+=======
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-user/verify.html">
+>>>>>>> 314aaca672c714bf919e721d3e59b8fc8550fe97
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="170" selection-start-line="170" selection-end-line="170" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="560" column="19" selection-start-line="560" selection-start-column="19" selection-end-line="560" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonWeb/routing.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/sitetree/models.py">
+=======
+    <entry file="file://$PROJECT_DIR$/sanpham/urls.py">
+>>>>>>> 314aaca672c714bf919e721d3e59b8fc8550fe97
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django/apps/registry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/socketserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11458">
+          <caret line="719" selection-start-line="719" selection-end-line="719" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django/contrib/admin/options.py">
+=======
     <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/detail-sim/detail-sim.html">
+>>>>>>> 314aaca672c714bf919e721d3e59b8fc8550fe97
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="123" column="61" lean-forward="true" selection-start-line="123" selection-start-column="61" selection-end-line="123" selection-end-column="61" />
+        <state relative-caret-position="-1028">
+          <caret line="612" column="39" selection-start-line="612" selection-start-column="39" selection-end-line="612" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-cart/cart.html">
+    <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#article#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daugia/consumers.py" />
-    <entry file="file://$PROJECT_DIR$/daugia/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/forms.py">
+    <entry file="file://$PROJECT_DIR$/daugia/urls.py" />
+    <entry file="file://$PROJECT_DIR$/daugia/models.py" />
+    <entry file="file://$PROJECT_DIR$/daugia/apps.py" />
+    <entry file="file://$PROJECT_DIR$/PythonWeb/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-935">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="231">
+          <caret line="31" column="40" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daugia/admin.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/dbbackup_ui/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        <state relative-caret-position="85">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/import_export/results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-918">
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/PythonWeb/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/import_export/resources.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="572" selection-start-line="572" selection-end-line="572" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/import_export/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="279" selection-start-line="279" selection-end-line="279" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django/contrib/admin/sites.py">
+=======
     <entry file="file://$PROJECT_DIR$/daugia/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -503,104 +688,139 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django/contrib/admin/__init__.py">
+>>>>>>> 314aaca672c714bf919e721d3e59b8fc8550fe97
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#117#169#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="128">
+          <caret line="222" selection-start-line="222" selection-end-line="222" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-daugia/detail-daugia.html">
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-daugia/delete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-daugia/update-daugia.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/page-daugia/list-daugia.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/twisted/plugin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3985" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/twisted/copyright.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/twisted/web/static.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="217" column="43" lean-forward="true" selection-start-line="217" selection-start-column="43" selection-end-line="217" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/pip-19.0.3-py3.7.egg/pip/_internal/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="218" column="57" lean-forward="true" selection-start-line="218" selection-start-column="57" selection-end-line="218" selection-end-column="57" />
+        <state relative-caret-position="128">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sanpham/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        <state relative-caret-position="22">
+          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_access_logger-0.4.2-py3.7.egg-info/installed-files.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_access_logger-0.4.2-py3.7.egg-info/not-zip-safe">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_access_logger-0.4.2-py3.7.egg-info/PKG-INFO">
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django/utils/decorators.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-98" />
+        <state relative-caret-position="842">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_access_logger-0.4.2-py3.7.egg-info/SOURCES.txt">
+    <entry file="file://$PROJECT_DIR$/timkiem/timkiem_indexes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timkiem/models.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_access_logger-0.4.2-py3.7.egg-info/top_level.txt">
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/sub/kiem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1105">
+          <caret line="25" column="80" lean-forward="true" selection-start-line="25" selection-start-column="80" selection-end-line="25" selection-end-column="80" />
+          <folding>
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timkiem/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/timkiem-nangcao.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="55" column="68" lean-forward="true" selection-start-line="55" selection-start-column="64" selection-end-line="55" selection-end-column="75" />
+          <folding>
+            <element signature="n#style#0;n#select#2;n#form#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/includes/timkiem/ketqua-timkiem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+          <folding>
+            <element signature="e#1656#1676#0#HTML" expanded="true" />
+            <element signature="e#3762#3782#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timkiem/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timkiem/filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timkiem/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_access_logger/access_logger.py">
+    <entry file="file://$PROJECT_DIR$/timkiem/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/sanpham/templates/simso/tim-kiem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="77" selection-start-line="4" selection-start-column="77" selection-end-line="4" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/home/script.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="74" column="12" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
+=======
     <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django_access_logger/django_access_logger.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -654,38 +874,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="32" column="40" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="40" />
+>>>>>>> 314aaca672c714bf919e721d3e59b8fc8550fe97
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup/tests/settings.py">
+    <entry file="file://$PROJECT_DIR$/timkiem/views.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="204">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+=======
         <state relative-caret-position="21">
           <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+>>>>>>> 314aaca672c714bf919e721d3e59b8fc8550fe97
           <folding>
-            <element signature="e#55#64#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup_ui/utils.py">
+    <entry file="file://$PROJECT_DIR$/giohang/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="120">
+          <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/dbbackup_ui/views.py">
+    <entry file="file://$PROJECT_DIR$/hoadon/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state relative-caret-position="204">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
           <folding>
-            <element signature="e#0#78#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/giohang/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+=======
     <entry file="file://$PROJECT_DIR$/giohang/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -702,10 +937,17 @@
           <caret line="12" column="12" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="12" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
+>>>>>>> 314aaca672c714bf919e721d3e59b8fc8550fe97
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/hoadon/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="33" column="39" selection-start-line="32" selection-start-column="4" selection-end-line="33" selection-end-column="39" />
+=======
     <entry file="file://$PROJECT_DIR$/sanpham/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -744,12 +986,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
+>>>>>>> 314aaca672c714bf919e721d3e59b8fc8550fe97
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/sanpham/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2414">
+          <caret line="154" column="29" lean-forward="true" selection-start-line="154" selection-start-column="29" selection-end-line="154" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+=======
     <entry file="file://$PROJECT_DIR$/giohang/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-628">
@@ -766,6 +1017,7 @@
           <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
+>>>>>>> 314aaca672c714bf919e721d3e59b8fc8550fe97
           </folding>
         </state>
       </provider>
