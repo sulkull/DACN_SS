@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ca1d334-84fd-4cd7-831a-18506e67a625" name="Default Changelist" comment="" />
+    <list default="true" id="7ca1d334-84fd-4cd7-831a-18506e67a625" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/timkiem/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/timkiem/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/timkiem/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            <state relative-caret-position="187">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -43,8 +45,8 @@
         <option value="$PROJECT_DIR$/sanpham/templates/simso/header.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/footer.html" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/base.html" />
-        <option value="$PROJECT_DIR$/timkiem/views.py" />
         <option value="$PROJECT_DIR$/sanpham/templates/simso/category/sim-nam-sinh.html" />
+        <option value="$PROJECT_DIR$/timkiem/views.py" />
       </list>
     </option>
   </component>
@@ -179,12 +181,12 @@
       <workItem from="1589580994158" duration="5929000" />
       <workItem from="1589769896915" duration="1371000" />
       <workItem from="1589774700724" duration="1012000" />
-      <workItem from="1589865817583" duration="1027000" />
+      <workItem from="1589865817583" duration="2046000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12213000" />
+    <option name="totallyTimeSpent" value="13232000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -415,8 +417,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/timkiem/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        <state relative-caret-position="187">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>

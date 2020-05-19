@@ -9,7 +9,7 @@ def timkiem_nangcao(request):
     stl = SimTheoLoai.objects.all()
     stg = SimTheoGia.objects.all()
 
-# tim theo so sim
+# tim theo so simmmm
     sosim = request.GET.get('so')
     if sosim:
         sp = sp.filter(
