@@ -66,6 +66,12 @@ def simtheogia(request, slug):
 
     stg1 = SimTheoGia.objects.get(slug=slug)
     sanpham = stg1.sanpham_set.all()
+
+    paginator = Paginator(sanpham, 10)  # Show 25 contacts per page
+
+    page = request.GET.get('page')
+    sanphams = paginator.get_page(page)
+
     stl = SimTheoLoai.objects.order_by('?')
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
@@ -76,7 +82,7 @@ def simtheogia(request, slug):
 
     Data = {
             'stg1': stg1,
-            'sanpham': sanpham,
+            'sanpham': sanphams,
             "stl": stl,
             "sns": sns,
             "nm": nm,
@@ -89,6 +95,12 @@ def simtheomang(request, slug):
 
     nm1 = NhaMang.objects.get(slug=slug)
     sanpham = nm1.sanpham_set.all()
+
+    paginator = Paginator(sanpham, 10)  # Show 25 contacts per page
+
+    page = request.GET.get('page')
+    sanphams = paginator.get_page(page)
+
     stl = SimTheoLoai.objects.order_by('?')
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
@@ -99,7 +111,7 @@ def simtheomang(request, slug):
 
     Data = {
             'nm1': nm1,
-            'sanpham': sanpham,
+            'sanpham': sanphams,
             "stl": stl,
             "sns": sns,
             "nm": nm,
@@ -111,6 +123,12 @@ def simtheoloai(request, slug):
 
     stl1 = SimTheoLoai.objects.get(slug=slug)
     sanpham = stl1.sanpham_set.all()
+
+    paginator = Paginator(sanpham, 10)  # Show 25 contacts per page
+
+    page = request.GET.get('page')
+    sanphams = paginator.get_page(page)
+
     stl = SimTheoLoai.objects.order_by('?')
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
@@ -121,7 +139,7 @@ def simtheoloai(request, slug):
 
     Data = {
             'stl1': stl1,
-            'sanpham': sanpham,
+            'sanpham': sanphams,
             "stl": stl,
             "sns": sns,
             "nm": nm,
@@ -135,6 +153,11 @@ def simnamsinh(request, slug):
     sns1 = SimNamSinh.objects.get(slug=slug)
     sanpham = sns1.sanpham_set.all()
 
+    paginator = Paginator(sanpham, 10)  # Show 25 contacts per page
+
+    page = request.GET.get('page')
+    sanphams = paginator.get_page(page)
+
     stl = SimTheoLoai.objects.order_by('?')
     sns = SimNamSinh.objects.all()
     nm = NhaMang.objects.all()
@@ -145,7 +168,7 @@ def simnamsinh(request, slug):
 
     Data = {
             'sns1': sns1,
-            'sanpham': sanpham,
+            'sanpham': sanphams,
             "stl": stl,
             "sns": sns,
             "nm": nm,
