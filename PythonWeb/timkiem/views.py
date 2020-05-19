@@ -13,8 +13,11 @@ def timkiem_nangcao(request):
     sosim = request.GET.get('so')
     if sosim:
         sp = sp.filter(
-            Q(SoSim__icontains=sosim)
-
+            Q(SoSim__iregex=sosim) or Q(SoSim__contains=sosim)
+        )
+    else:
+        sp = sp.filter(
+            Q(SoSim__contains=sosim)
         )
 
 # tim theo nha mang
